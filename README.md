@@ -1,4 +1,4 @@
-[Steam Workshop]() | [GitHub](https://github.com/splitque/Sandbox/)
+[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3470116979) | [GitHub](https://github.com/splitque/Sandbox/)
 
 ![](.icon/thumbnail.png)
 

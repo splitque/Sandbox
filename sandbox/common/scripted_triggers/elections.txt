@@ -1,0 +1,24 @@
+fascism_win = {
+    has_elections = yes
+    fascism > party_popularity@democratic
+    fascism > party_popularity@communism
+    fascism > party_popularity@neutrality
+}
+democratic_win = {
+    has_elections = yes
+    democratic > party_popularity@fascism
+    democratic > party_popularity@communism
+    democratic > party_popularity@neutrality
+}
+communism_win = {
+    has_elections = yes
+    communism > party_popularity@democratic
+    communism > party_popularity@fascism
+    communism > party_popularity@neutrality
+}
+neutrality_win = {
+    has_elections = yes
+    neutrality > party_popularity@democratic
+    neutrality > party_popularity@communism
+    neutrality > party_popularity@fascism
+}

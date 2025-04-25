@@ -1,0 +1,185 @@
+﻿add_namespace = elections
+
+# Fascism
+country_event = {
+	id = elections.100
+	title = elections.100.t
+	desc = elections.100.d
+	picture = GFX_report_event_fascist_gathering
+	is_triggered_only = yes
+
+	trigger = {
+		fascism_win = yes
+	}
+
+	option = {
+		name = elections.100.a
+		ai_chance = {
+			base = 90			
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = yes
+			election_frequency = 24
+		}
+	}
+	option = {
+		name = elections.100.b
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			OR = {
+				has_government = democratic
+				has_government = communism
+				has_government = neutrality
+			}
+		}
+		start_civil_war = {
+			ideology = fascism
+			size = party_popularity@fascism
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = -1.0
+		}
+	}
+}
+
+# Democratic
+country_event = {
+	id = elections.200
+	title = elections.200.t
+	desc = elections.200.d
+	picture = GFX_report_event_journalists_speech
+	is_triggered_only = yes
+
+	trigger = {
+		democratic_win = yes
+	}
+
+	option = {
+		name = elections.200.a
+		ai_chance = {
+			base = 90			
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+			election_frequency = 24
+		}
+	}
+	option = {
+		name = elections.200.b
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			OR = {
+				has_government = fascism
+				has_government = communism
+				has_government = neutrality
+			}
+		}
+		start_civil_war = {
+			ideology = democratic
+			size = party_popularity@democratic
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -1.0
+		}
+	}
+}
+
+# Communism
+country_event = {
+	id = elections.300
+	title = elections.300.t
+	desc = elections.300.d
+	picture = GFX_report_event_worker_protests
+	is_triggered_only = yes
+
+	trigger = {
+		communism_win = yes
+	}
+
+	option = {
+		name = elections.300.a
+		ai_chance = {
+			base = 90			
+		}
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = yes
+			election_frequency = 24
+		}
+	}
+	option = {
+		name = elections.300.b
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			OR = {
+				has_government = fascism
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+		start_civil_war = {
+			ideology = communism
+			size = party_popularity@communism
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -1.0
+		}
+	}
+}
+
+# Neutrality
+country_event = {
+	id = elections.400
+	title = elections.400.t
+	desc = elections.400.d
+	picture = GFX_report_event_worker_protests
+	is_triggered_only = yes
+
+	trigger = {
+		neutrality_win = yes
+	}
+
+	option = {
+		name = elections.400.a
+		ai_chance = {
+			base = 90			
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+			election_frequency = 24
+		}
+	}
+	option = {
+		name = elections.400.b
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			OR = {
+				has_government = fascism
+				has_government = democratic
+				has_government = communism
+			}
+		}
+		start_civil_war = {
+			ideology = neutrality
+			size = party_popularity@neutrality
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = -1.0
+		}
+	}
+}

@@ -1,0 +1,598 @@
+every_possible_country = {
+	generate_character = {
+		token_base = generic_communist_revolutionary
+		advisor = {
+			slot = political_advisor
+			traits = { communist_revolutionary }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_completed_focus = politics_communism
+					factor = 1
+				}
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_1_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_democratic_reformer
+		advisor = {
+			slot = political_advisor
+			traits = { democratic_reformer }
+			ledger = army
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_completed_focus = politics_democratic
+					factor = 1
+				}
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_2_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_fascist_demagogue # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { fascist_demagogue }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_completed_focus = politics_fascism
+					factor = 1
+				}
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_3_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_staunch_monarchist
+		advisor = {
+			slot = political_advisor
+			traits = { staunch_monarchist }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_completed_focus = politics_neutrality
+					factor = 1
+				}
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_4_small }
+		}
+	}
+}
+
+every_possible_country = {
+	generate_character = {
+		token_base = generic_head_of_intelligence # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { head_of_intelligence }
+			available = {
+				has_intelligence_agency = yes
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_5_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_mastermind_code_cracker # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { mastermind_code_cracker }
+			available = {
+				has_intelligence_agency = yes
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_6_small }
+		}
+	}
+}
+
+every_possible_country = {
+	generate_character = {
+		token_base = generic_captain_of_industry
+		advisor = {
+			slot = political_advisor
+			traits = { captain_of_industry }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_7_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_war_industrialist
+		advisor = {
+			slot = political_advisor
+			traits = { war_industrialist }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_8_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_quartermaster_general
+		advisor = {
+			slot = political_advisor
+			traits = { quartermaster_general }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_war = yes
+					factor = 1
+				}
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_9_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_fortification_engineer
+		advisor = {
+			slot = political_advisor
+			traits = { fortification_engineer }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_war = yes
+					factor = 1
+				}
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_10_small }
+		}
+	}
+}
+
+every_possible_country = {
+	generate_character = {
+		token_base = generic_popular_figurehead
+		advisor = {
+			slot = political_advisor
+			traits = { popular_figurehead }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_stability > 0.2
+					factor = 1
+				}
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_11_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_war_propagandist
+		advisor = {
+			slot = political_advisor
+			traits = { war_propagandist }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_war_support > 0.1
+					factor = 1
+				}
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_12_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_silent_workhorse
+		advisor = {
+			slot = political_advisor
+			traits = { silent_workhorse }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_13_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_undervisningsminister
+		advisor = {
+			slot = political_advisor
+			traits = { undervisningsminister }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_14_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_minister_of_corporations
+		advisor = {
+			slot = political_advisor
+			traits = { mussolini_minister_of_corporations }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_15_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_finance_graduate
+		advisor = {
+			slot = political_advisor
+			traits = { finance_graduate }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_16_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_prince_of_terror
+		advisor = {
+			slot = political_advisor
+			traits = { prince_of_terror }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					NOT = {
+						random_owned_controlled_state = {
+							limit = {
+								is_core_of = TAG
+							}
+						}
+					}
+					factor = 1
+				}
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_17_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_dealbroker
+		advisor = {
+			slot = political_advisor
+			traits = { dealbroker }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_politic_18_small }
+		}
+	}
+}
+
+every_possible_country = {
+	generate_character = {
+		token_base = generic_military_theorist # token will be TAG_token_base
+		advisor = {
+			slot = theorist
+			traits = { military_theorist }
+			ledger = army
+			cost = 50
+		}
+		portraits = {
+			army = { small = GFX_land_1_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_special_forces_theorist # token will be TAG_token_base
+		advisor = {
+			slot = theorist
+			traits = { special_forces_theorist }
+			ledger = army
+			cost = 50
+		}
+		portraits = {
+			army = { small = GFX_land_2_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_naval_theorist # token will be TAG_token_base
+		advisor = {
+			slot = theorist
+			traits = { naval_theorist }
+			ledger = navy
+			cost = 50
+		}
+		portraits = {
+			army = { small = GFX_navy_1_small }
+		}
+	}
+	generate_character = {
+		token_base = generic_air_warfare_theorist # token will be TAG_token_base
+		advisor = {
+			slot = theorist
+			traits = { air_warfare_theorist }
+			ledger = air
+			cost = 50
+		}
+		portraits = {
+			army = { small = GFX_air_1_small }
+		}
+	}
+}
+
+every_possible_country = {
+	generate_character = {
+		token_base = general_army_chief_ref
+		advisor = {
+			slot = army_chief
+			traits = { army_chief_reform_3 }
+			cost = 100
+			available = {
+				has_completed_focus = land_army
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_land_3_small }
+		}
+	}
+	generate_character = {
+		token_base = general_navy_chief_ref
+		advisor = {
+			slot = navy_chief
+			traits = { navy_chief_reform_3 }
+			cost = 100
+			available = {
+				has_completed_focus = navy_army
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_navy_2_small }
+		}
+	}
+}
+
+every_possible_country = {
+	generate_character = {
+		token_base = general_air_chief_reform
+		advisor = {
+			slot = air_chief
+			traits = { air_chief_reform_3 }
+			cost = 100
+			available = {
+				has_completed_focus = air_army
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_air_2_small }
+		}
+	}
+	generate_character = {
+		token_base = general_air_chief_all_weather
+		advisor = {
+			slot = air_chief
+			traits = { air_chief_all_weather_3 }
+			cost = 100
+			available = {
+				has_completed_focus = air_army
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_air_3_small }
+		}
+	}
+	generate_character = {
+		token_base = general_air_chief_ground_support
+		advisor = {
+			slot = air_chief
+			traits = { air_chief_ground_support_3 }
+			cost = 100
+			available = {
+				has_completed_focus = air_army
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_air_4_small }
+		}
+	}
+	generate_character = {
+		token_base = general_air_chief_night_operations
+		advisor = {
+			slot = air_chief
+			traits = { air_chief_night_operations_3 }
+			cost = 100
+			available = {
+				has_completed_focus = air_army
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_air_5_small }
+		}
+	}
+	generate_character = {
+		token_base = general_air_chief_safety
+		advisor = {
+			slot = air_chief
+			traits = { air_chief_safety_3 }
+			cost = 100
+			available = {
+				has_completed_focus = air_army
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_air_6_small }
+		}
+	}
+
+
+	generate_character = {
+		token_base = general_air_air_combat_training
+		advisor = {
+			slot = high_command
+			traits = { air_air_combat_training_3 }
+			ledger = air
+			cost = 50
+			available = {
+				has_completed_focus = air_army
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_air_7_small }
+		}
+	}
+	generate_character = {
+		token_base = general_air_naval_strike
+		advisor = {
+			slot = high_command
+			traits = { air_naval_strike_3 }
+			ledger = air
+			cost = 50
+			available = {
+				has_completed_focus = air_army
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_air_8_small }
+		}
+	}
+	generate_character = {
+		token_base = general_air_bomber_interception
+		advisor = {
+			slot = high_command
+			traits = { air_bomber_interception_3 }
+			ledger = air
+			cost = 50
+			available = {
+				has_completed_focus = air_army
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_air_9_small }
+		}
+	}
+	generate_character = {
+		token_base = general_air_air_superiority
+		advisor = {
+			slot = high_command
+			traits = { air_air_superiority_3 }
+			ledger = air
+			cost = 50
+			available = {
+				has_completed_focus = air_army
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_air_10_small }
+		}
+	}
+	generate_character = {
+		token_base = general_air_close_air_support
+		advisor = {
+			slot = high_command
+			traits = { air_close_air_support_3 }
+			ledger = air
+			cost = 50
+			available = {
+				has_completed_focus = air_army
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_air_11_small }
+		}
+	}
+	generate_character = {
+		token_base = general_air_strategic_bombing
+		advisor = {
+			slot = high_command
+			traits = { air_strategic_bombing_3 }
+			ledger = air
+			cost = 50
+			available = {
+				has_completed_focus = air_army
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_air_12_small }
+		}
+	}
+	generate_character = {
+		token_base = general_air_tactical_bombing
+		advisor = {
+			slot = high_command
+			traits = { air_tactical_bombing_3 }
+			ledger = air
+			cost = 50
+			available = {
+				has_completed_focus = air_army
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = {
+			army = { small = GFX_air_13_small }
+		}
+	}
+}

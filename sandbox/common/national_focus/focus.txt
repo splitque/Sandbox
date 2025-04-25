@@ -1,0 +1,930 @@
+focus_tree = {
+	id = focus
+	country = {
+		factor = 1
+	}
+	default = yes
+	reset_on_civilwar = no
+	continuous_focus_position = { x = 280 y = 750 }
+	focus = {
+		id = industrial
+		icon = GFX_focus_generic_industry_3
+		cost = 10,00
+		available_if_capitulated = yes
+		x = 5
+		y = 0
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = political
+		icon = GFX_focus_generic_self_management
+		cost = 10,00
+		available_if_capitulated = yes
+		x = 13
+		y = 0
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = consolidate_government
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 10,00
+		available_if_capitulated = yes
+		available = {
+			date > 1938.1.1
+		}
+		prerequisite = {
+			focus = democratic_pathfocus
+			focus = neutrality_pathfocus
+			focus = communism_pathfocus
+			focus = fascism_pathfocus
+		}
+		x = 13
+		y = 2
+		completion_reward = {
+			add_timed_idea = {
+				idea = focus_consolidate_government
+				days = 365
+			}
+		}
+	}
+	focus = {
+		id = army
+		icon = GFX_goal_demand_sudetenland
+		cost = 10,00
+		available_if_capitulated = yes
+		x = 26
+		y = 0
+		completion_reward = {
+			army_experience = 50
+			navy_experience = 50
+			air_experience = 50
+		}
+	}
+	focus = {
+		id = factory_1
+		icon = GFX_focus_generic_industry_2
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = industrial
+		}
+		x = 2
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = factory_2
+		icon = GFX_focus_generic_industry_2
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = factory_1
+		}
+		x = 2
+		y = 2
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = factory_3
+		icon = GFX_focus_generic_industry_2
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = factory_2
+		}
+		x = 2
+		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = infrastructure_1
+		icon = GFX_focus_generic_road_investment
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = industrial
+		}
+		x = 4
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = infrastructure_2
+		icon = GFX_focus_generic_road_investment
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = infrastructure_1
+		}
+		x = 4
+		y = 2
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = infrastructure_3
+		icon = GFX_focus_generic_road_investment
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = infrastructure_2
+		}
+		x = 4
+		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = research_slot
+		icon = GFX_focus_generic_university_2
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = infrastructure_3
+			focus = factory_3
+			focus = armament_3
+			focus = dockyard_3
+		}
+		x = 5
+		y = 4
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = armament_1
+		icon = GFX_focus_generic_reorient_production
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = industrial
+		}
+		x = 6
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = armament_2
+		icon = GFX_focus_generic_reorient_production
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = armament_1
+		}
+		x = 6
+		y = 2
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = armament_3
+		icon = GFX_focus_generic_reorient_production
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = armament_2
+		}
+		x = 6
+		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = dockyard_1
+		icon = GFX_focus_generic_refit_civilian_ships
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = industrial
+		}
+		available = {
+			any_core_state = {
+				is_coastal = yes
+			}
+		}
+		x = 8
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = dockyard_2
+		icon = GFX_focus_generic_refit_civilian_ships
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = dockyard_1
+		}
+		available = {
+			any_core_state = {
+				is_coastal = yes
+			}
+		}
+		x = 8
+		y = 2
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = dockyard_3
+		icon = GFX_focus_generic_refit_civilian_ships
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = dockyard_2
+		}
+		available = {
+			any_core_state = {
+				is_coastal = yes
+			}
+		}
+		x = 8
+		y = 3
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = democratic_pathfocus
+		icon = GFX_goal_support_democracy
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = political
+		}
+		mutually_exclusive = {
+			focus = neutrality_pathfocus
+			focus = communism_pathfocus
+			focus = fascism_pathfocus
+		}
+		x = 10
+		y = 1
+		completion_reward = {
+			add_timed_idea = {
+				idea = focus_democratic_path
+				days = 730
+			}
+		}
+	}
+	focus = {
+		id = neutrality_pathfocus
+		icon = GFX_goal_generic_demand_territory
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = political
+		}
+		mutually_exclusive = {
+			focus = democratic_pathfocus
+			focus = communism_pathfocus
+			focus = fascism_pathfocus
+		}
+		x = 12
+		y = 1
+		completion_reward = {
+			add_timed_idea = {
+				idea = focus_neutrality_path
+				days = 730
+			}
+		}
+	}
+	focus = {
+		id = communism_pathfocus
+		icon = GFX_goal_support_communism
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = political
+		}
+		mutually_exclusive = {
+			focus = democratic_pathfocus
+			focus = neutrality_pathfocus
+			focus = fascism_pathfocus
+		}
+		x = 14
+		y = 1
+		completion_reward = {
+			add_timed_idea = {
+				idea = focus_communism_path
+				days = 730
+			}
+		}
+	}
+	focus = {
+		id = fascism_pathfocus
+		icon = GFX_goal_support_fascism
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = political
+		}
+		mutually_exclusive = {
+			focus = democratic_pathfocus
+			focus = neutrality_pathfocus
+			focus = communism_pathfocus
+		}
+		x = 16
+		y = 1
+		completion_reward = {
+			add_timed_idea = {
+				idea = focus_fascism_path
+				days = 730
+			}
+		}
+	}
+	focus = {
+		id = land_army
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = army
+		}
+		x = 20
+		y = 1
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = land_weapons
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = land_army
+		}
+		x = 18
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = land_support
+		icon = GFX_focus_generic_land_reclamation
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = land_army
+		}
+		x = 20
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	focus = {
+		id = land_artillery
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = land_army
+		}
+		x = 22
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = land_motorization
+		icon = GFX_focus_generic_truck
+		cost = 10,00
+		available_if_capitulated = yes
+		bypass = {
+			has_tech = motorised_infantry
+		}
+		prerequisite = {
+			focus = land_weapons
+		}
+		prerequisite = {
+			focus = land_support
+		}
+		prerequisite = {
+			focus = land_artillery
+		}
+		x = 19
+		y = 3
+		completion_reward = {
+			set_technology = {
+				motorised_infantry = 1
+			}
+		}
+	}
+	focus = {
+		id = land_mechanization
+		icon = GFX_focus_SWE_lynx_armored_car
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = land_motorization
+		}
+		x = 19
+		y = 4
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = cat_mechanized_equipment
+				category = cat_armored_cars
+			}
+		}
+	}
+	focus = {
+		id = land_artillery_2
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = land_artillery
+		}
+		x = 22
+		y = 4
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = land_armored
+		icon = GFX_goal_generic_army_tanks
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = land_weapons
+		}
+		prerequisite = {
+			focus = land_support
+		}
+		prerequisite = {
+			focus = land_artillery
+		}
+		x = 17
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = land_armored_2
+		icon = GFX_focus_generic_army_tanks2
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = land_armored
+		}
+		x = 17
+		y = 4
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = land_amphibious
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = land_mechanization
+		}
+		prerequisite = {
+			focus = land_special_forces
+		}
+		x = 20
+		y = 5
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = amphibious
+			}
+		}
+	}
+	focus = {
+		id = air_army
+		icon = GFX_goal_generic_build_airforce
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = army
+		}
+		x = 26
+		y = 1
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = air_light
+		icon = GFX_goal_generic_air_fighter
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = air_support
+		}
+		x = 24
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = light_air
+			}
+		}
+	}
+	focus = {
+		id = air_support
+		icon = GFX_goal_generic_production
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = air_army
+		}
+		x = 26
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 2
+				category = air_equipment
+				category = radar_tech
+				category = electronics
+				category = cat_anti_tank
+			}
+		}
+	}
+	focus = {
+		id = air_medium
+		icon = GFX_goal_generic_air_bomber
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = air_support
+		}
+		x = 26
+		y = 3
+		completion_reward = {
+				add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = medium_air
+			}
+		}
+
+	}
+	focus = {
+		id = air_heavy
+		icon = GFX_focus_generic_long_range_aircraft
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = air_support
+		}
+		x = 28
+		y = 3	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = heavy_air
+			}
+		}
+	}
+	focus = {
+		id = navy_army
+		icon = GFX_goal_generic_build_navy
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = army
+		}
+		x = 32
+		y = 1
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = navy_destroyer
+		icon = GFX_focus_generic_destroyer
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = navy_support
+		}
+		x = 30
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+	focus = {
+		id = navy_support
+		icon = GFX_goal_generic_production
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = navy_army
+		}
+		x = 32
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = naval_equipment
+				category = radar_tech
+				category = electronics
+				category = cat_anti_air
+			}
+		}
+	}
+	focus = {
+		id = navy_submarine
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = navy_support
+		}
+		x = 32
+		y = 3
+		completion_reward = {
+				add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+		}
+		
+	}
+	focus = {
+		id = navy_cruiser
+		icon = GFX_focus_generic_cruiser2
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = navy_support
+		}
+		x = 34
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = cl_tech
+			}
+		}
+	}
+	focus = {
+		id = land_special_forces
+		icon = GFX_focus_generic_paratrooper
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = land_weapons
+		}
+		prerequisite = {
+			focus = land_support
+		}
+		prerequisite = {
+			focus = land_artillery
+		}
+		x = 21
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = cat_special_forces_generic
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = special_forces_doctrine
+			}
+		}
+	}
+	focus = {
+		id = navy_battleship
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = navy_support
+		}
+		x = 36
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+			}
+		}
+	}
+	focus = {
+		id = navy_carrier
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10,00
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = navy_support
+		}
+		x = 38
+		y = 3
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+}

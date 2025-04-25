@@ -1,0 +1,43 @@
+﻿add_namespace = war
+country_event = {
+	id = war.1
+	hidden = yes
+	trigger = {
+		sender = yes
+	}
+	mean_time_to_happen = {
+		days = 365
+	}
+	option = {
+		random_neighbor_country = {
+			country_event = {days = 1 id = war.2}
+		}
+	}
+}
+
+country_event = {
+	id = war.2
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		FROM = { country_event = { id = war.3 }}
+	}
+}
+
+country_event = {
+	id = war.3
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		FROM = {
+			random_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						is_owned_by = ROOT
+					}
+				}
+				add_claim_by = ROOT
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+bookmarks = {
+	bookmark = {
+		name = "bookmark_name"
+		date = 1936.1.1.12
+		default = yes
+
+		"---" = { }
+
+		effect = { randomize_weather = 22345 }
+	}
+}

@@ -1,0 +1,2130 @@
+﻿add_namespace = news
+add_namespace = bba_news
+add_namespace = bba_africa_news
+add_namespace = bba_italian_formables_news
+add_namespace = bftb_news
+add_namespace = nsb_news
+add_namespace = wtt_news
+add_namespace = lar_news
+add_namespace = country_capitulated
+
+# Альянс создан
+news_event = {
+	id = news.159
+	title = news.159.t
+	desc = {
+		text = news.159.d_01
+		trigger = { FROM = { has_government = neutrality } }
+	}
+	desc = {
+		text = news.159.d_02
+		trigger = { FROM = { has_government = democratic } }
+	}
+	desc = {
+		text = news.159.d_03
+		trigger = { FROM = { has_government = fascism } }
+	}
+	desc = {
+		text = news.159.d_04
+		trigger = { FROM = { has_government = communism } }
+	}
+
+	picture = GFX_news_event_009
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			NOT = { tag = FROM }
+			NOT = { is_in_faction_with = FROM }
+		}
+		name = news.159.a
+		every_other_country = {
+			limit = { is_in_faction_with = FROM }
+			custom_effect_tooltip = news.159.tt
+		}
+	}
+	option = {
+		trigger = { tag = FROM }
+		name = news.159.b
+	}
+	option = {
+		trigger = {
+			NOT = { tag = FROM }
+			is_in_faction_with = FROM
+		}
+		name = news.159.c
+	}
+}
+
+#FROM pursues nuclear technology
+news_event = {
+	id = news.174
+	title = news.174.t
+	picture = GFX_news_event_069
+	desc = news.174.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	#We should follow this development.
+	option = {
+		name = news.174.a
+		trigger = {
+			NOT = {
+				is_in_faction_with = FROM
+				has_war_with = FROM
+				tag = FROM
+			}
+		}
+	}
+
+	#Let us hope their research bears fruit.
+	option = {
+		name = news.174.b
+		trigger = {
+			is_in_faction_with = FROM
+			NOT = {
+				tag = FROM
+			}
+		}
+	}
+
+	#It will never amount to anything.
+	option = {
+		name = news.174.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+
+	#We will conduct our research in secret.
+	option = {
+		name = news.174.e
+		trigger = {
+			tag = FROM
+		}
+	}
+}
+
+# GENERIC nation joins an Alliance
+news_event = {
+	id = news.289
+	title = news.289.t
+	picture = GFX_news_event_generic_sign_treaty3
+	desc = news.289.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	#Together we will prevail.
+	option = {
+		name = news.289.a
+		trigger = {
+			OR = {
+				has_country_flag = alliance_inviter@FROM
+				has_country_flag = alliance_applicant@FROM
+			}
+		}
+		hidden_effect = {
+			clr_country_flag = alliance_inviter@FROM
+			clr_country_flag = alliance_applicant@FROM
+		}
+	}
+
+	#They prepare for what is coming.
+	option = {
+		name = news.289.b
+		trigger = {
+			NOT = { FROM = { has_war = yes } }
+			event_target:alliance_inviter = {
+				NOT = { has_war = yes }
+			}
+			NOT = {
+				any_allied_country = {
+					has_country_flag = alliance_applicant@FROM
+				}
+			}
+			AND = {
+				NOT = { has_country_flag = alliance_inviter@FROM }
+				NOT = { has_country_flag = alliance_applicant@FROM }
+			}
+		}
+		hidden_effect = {
+			clr_country_flag = alliance_inviter@FROM
+			clr_country_flag = alliance_applicant@FROM
+		}
+	}
+
+	#It will not avail them!
+	option = {
+		name = news.289.c
+		trigger = {
+			any_enemy_country = {
+				OR = {
+					has_country_flag = alliance_inviter@FROM
+					has_country_flag = alliance_applicant@FROM
+				}
+			}
+		}
+		hidden_effect = {
+			clr_country_flag = alliance_inviter@FROM
+			clr_country_flag = alliance_applicant@FROM
+		}
+	}
+
+	#The war escalates...
+	option = {
+		name = news.289.e
+		trigger = {
+			NOT = {
+				any_allied_country = {
+					OR = {
+						has_country_flag = alliance_inviter@FROM
+						has_country_flag = alliance_applicant@FROM
+					}
+				}
+				any_enemy_country = {
+					OR = {
+						has_country_flag = alliance_inviter@FROM
+						has_country_flag = alliance_applicant@FROM
+					}
+				}
+			}
+			event_target:alliance_inviter = {
+				has_war = yes
+			}
+			AND = {
+				NOT = { has_country_flag = alliance_inviter@FROM }
+				NOT = { has_country_flag = alliance_applicant@FROM }
+			}
+		}
+		hidden_effect = {
+			clr_country_flag = alliance_inviter@FROM
+			clr_country_flag = alliance_applicant@FROM
+		}
+	}
+
+	#Our alliance grows stronger.
+	option = {
+		name = news.289.f
+		trigger = {
+			any_allied_country = {
+				OR = {
+					has_country_flag = alliance_inviter@FROM
+					has_country_flag = alliance_applicant@FROM
+				}
+			}
+			AND = {
+				NOT = { has_country_flag = alliance_inviter@FROM }
+				NOT = { has_country_flag = alliance_applicant@FROM }
+			}
+		}
+		hidden_effect = {
+			clr_country_flag = alliance_inviter@FROM
+			clr_country_flag = alliance_applicant@FROM
+		}
+	}
+}
+
+### Country reunited
+news_event = {
+	id = news.350
+	title = news.350.t
+	desc = news.350.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.350.a
+		trigger = {
+			original_tag = ROOT
+			NOT = { has_government = ROOT }
+		}
+	}
+	option = {
+		name = news.350.b
+		trigger = {
+			original_tag = ROOT
+			has_government = ROOT
+		}
+	}
+	option = {
+		name = news.350.c
+		trigger = {
+			NOT = {
+				original_tag = ROOT
+			}
+		}
+	}
+}
+
+# Империя Аксум
+news_event = {
+	id = bba_news.1
+	title = bba_news.1.t
+	desc = bba_news.1.desc
+			
+	picture = GFX_news_event_ETH_selassie_league_of_nations
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bba_news.1.a
+		trigger = {
+			tag = ROOT
+		}
+	}
+	option = {
+		name = bba_news.1.b
+		trigger = {
+			NOT = {tag = ROOT}
+		}
+	}
+}
+
+# Соломонова Империя
+news_event = {
+	id = bba_news.5
+	title = bba_news.5.t
+		desc = {
+			text = bba_news.5.desc_owns_454
+			trigger = {
+				454 = {
+					is_owned_by = ETH
+				}
+			}				
+		}
+		desc = {
+			text = bba_news.5.desc_does_not_own_454
+			trigger = {
+				454 = {
+					NOT = { is_owned_by = ETH}
+				}
+			}
+		}
+	picture = GFX_news_event_ETH_selassie_league_of_nations
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bba_news.5.a
+		trigger = {
+			tag = ROOT
+		}
+	}
+	option = {
+		name = bba_news.5.b
+		trigger = {
+			NOT = {tag = ROOT}
+		}
+	}
+}
+
+# Империя Зион
+news_event = {
+	id = bba_news.6
+	title = bba_news.6.t
+	desc = bba_news.6.desc
+			
+	picture = GFX_news_event_ETH_selassie_league_of_nations
+	
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bba_news.6.a
+		trigger = {
+			tag = ROOT
+		}
+	}
+	option = {
+		name = bba_news.6.b
+		trigger = {
+			NOT = {tag = ROOT}
+		}
+	}
+}
+
+#East African Federation is founded
+news_event = {
+	id = bba_africa_news.1
+	title = bba_africa_news.1.t
+	desc = bba_africa_news.1.desc
+	picture = GFX_news_event_generic_parliament
+	
+	
+	
+	is_triggered_only = yes
+	
+	option = { #Us
+		name = bba_africa_news.1.a
+		trigger = {
+			tag = ROOT
+		}
+	}
+
+	option = { #Them
+		name = bba_africa_news.1.b
+		trigger = {
+			NOT = { tag = ROOT }
+		}
+	}
+
+}
+
+#The Horn of Africa has been unified
+news_event = {
+	id = bba_africa_news.2
+	title = bba_africa_news.2.t
+	desc = bba_africa_news.2.desc
+	picture = GFX_news_event_generic_parliament
+	
+	
+	
+	is_triggered_only = yes
+	
+	option = { #Us
+		name = bba_africa_news.2.a
+		trigger = {
+			tag = ROOT
+		}
+	}
+
+	option = { #Them
+		name = bba_africa_news.2.b
+		trigger = {
+			NOT = { tag = ROOT }
+		}
+	}
+
+}
+
+#Greater Italy Proclaimed
+news_event = {
+	id = bba_italian_formables_news.1
+	title = bba_italian_formables_news.1.t
+	desc = bba_italian_formables_news.1.desc
+	picture = GFX_news_event_generic_parliament
+	
+	
+	
+	is_triggered_only = yes
+	
+	option = { #Us
+		name = bba_italian_formables_news.1.a
+		trigger = {
+			tag = ROOT
+		}
+	}
+
+	option = { #Them
+		name = bba_italian_formables_news.1.b
+		trigger = {
+			NOT = { tag = ROOT }
+		}
+	}
+
+}
+
+#Turan
+news_event = {
+	id = bftb_news.209
+	title = bftb_news.209.t
+	desc = bftb_news.209.desc
+	picture = GFX_news_event_turanist_ambition
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bftb_news.209.a
+		trigger = {
+			tag = TUR
+		}
+	}
+	option = {
+		name = bftb_news.209.b
+		trigger = {
+			NOT = {
+				tag = TUR
+			}
+		}
+	}
+}
+
+# Greater Greece
+news_event = {
+	id = bftb_news.302
+	title = bftb_news.302.t
+	desc = bftb_news.302.desc
+	picture = GFX_news_event_the_megali_idea_succeeds
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bftb_news.302.a 
+		trigger = {
+			tag = GRE
+		}
+	}
+	option = {
+		name = bftb_news.302.b
+		trigger = {
+			OR = {
+				tag = ENG
+				tag = FRA
+				tag = USA
+			}
+		}
+	}
+	option = {
+		name = bftb_news.302.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+	option = {
+		name = bftb_news.302.d
+		trigger = {
+			NOT = {
+				OR = {
+					has_war_with = FROM
+					tag = GRE
+					tag = ENG
+					tag = FRA
+					tag = USA
+				}
+			}
+		}
+	}
+}
+
+# United Turkestan
+news_event = {
+	id = nsb_news.3
+	title = nsb_news.3.t
+	desc = nsb_news.3.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsb_news.3.a
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = nsb_news.3.b
+		trigger = {
+			NOT = { tag = FROM }
+		}
+	}
+}
+
+# United Mountainous Republics
+news_event = {
+	id = nsb_news.301
+	title = nsb_news.301.t
+	desc = nsb_news.301.d
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsb_news.301.a
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = nsb_news.301.b
+		trigger = {
+			NOT = { tag = FROM }
+		}
+	}
+}
+
+# Transcaucasian Federation
+news_event = {
+	id = nsb_news.302
+	title = nsb_news.302.t
+	desc = nsb_news.302.d
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsb_news.302.a
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = nsb_news.302.b
+		trigger = {
+			NOT = { tag = FROM }
+		}
+	}
+}
+
+# Siberian Republic
+news_event = {
+	id = nsb_news.303
+	title = nsb_news.303.t
+	desc = nsb_news.303.d
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsb_news.303.a
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = nsb_news.303.b
+		trigger = {
+			NOT = { tag = FROM }
+		}
+	}
+}
+
+# Idel-Ural Republic
+news_event = {
+	id = nsb_news.304
+	title = nsb_news.304.t
+	desc = nsb_news.304.d
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nsb_news.304.a
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = nsb_news.304.b
+		trigger = {
+			NOT = { tag = FROM }
+		}
+	}
+}
+
+# Canals - Suez Canal Blown
+news_event = {
+	id = wtt_news.40
+	title = wtt_news.40.t
+	desc = {
+		text = wtt_news.40.desc_eng
+		trigger = {
+			FROM = {
+				has_country_flag = blew_up_suez
+				owns_state = 446
+				#owns_state = 453
+			}
+		}
+	}
+	desc = {
+		text = wtt_news.40.desc_not_eng
+		trigger = {
+			FROM = {
+				OR = {
+					NOT = {	has_country_flag = blew_up_suez }
+					NOT = {
+						owns_state = 446
+						#owns_state = 453
+					}
+				}
+			}
+		}
+	}
+	picture = GFX_news_event_020
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.40.a
+		trigger = {
+			NOT = { has_country_flag = blew_up_suez }
+			owns_state = 446
+			#owns_state = 453
+		}
+		if = {
+			limit = {
+				original_tag = ENG
+			}
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+	}
+	option = {
+		name = wtt_news.40.b
+		trigger = {
+			has_country_flag = blew_up_suez
+			owns_state = 446
+			#owns_state = 453
+		}
+		if = {
+			limit = {
+				original_tag = ENG
+			}
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+		clr_country_flag = blew_up_suez
+	}
+	option = {
+		name = wtt_news.40.c
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 446
+				#owns_state = 453
+				has_country_flag = blew_up_suez
+			}
+		}
+	}
+	option = {
+		name = wtt_news.40.d
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 446
+				#owns_state = 453
+			}
+			has_country_flag = blew_up_suez
+		}
+		clr_country_flag = blew_up_suez
+	}
+	option = {
+		name = wtt_news.40.e
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 446
+				#owns_state = 453
+				NOT = { has_country_flag = blew_up_suez }
+			}
+			any_other_country = {
+				has_war_together_with = ROOT
+				has_country_flag = blew_up_suez
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+	option = {
+		name = wtt_news.40.f
+		trigger = {
+			any_other_country = {
+				has_war_together_with = ROOT
+				owns_state = 446
+				#owns_state = 453
+				has_country_flag = blew_up_suez
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+	option = {
+		name = wtt_news.40.g
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				has_country_flag = blew_up_suez
+			}
+			any_other_country = {
+				has_war_together_with = ROOT
+				owns_state = 446
+				#owns_state = 453
+				NOT = { has_country_flag = blew_up_suez }
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+	option = {
+		name = wtt_news.40.h
+		trigger = {
+			NOT = {
+				any_country = {
+					has_war_with = ROOT
+					has_country_flag = blew_up_suez
+				}
+			}
+			NOT = {
+				any_other_country = {
+					has_war_together_with = ROOT
+					owns_state = 446
+					#owns_state = 453
+					has_country_flag = blew_up_suez
+				}
+			}
+			NOT = { has_country_flag = blew_up_suez }
+		}
+	}
+}
+
+# Canals - Panama Canal Blown
+news_event = {
+	id = wtt_news.41
+	title = wtt_news.41.t
+	desc = {
+		text = wtt_news.41.desc_usa
+		trigger = {
+			FROM = {
+				has_country_flag = blew_up_panama
+				owns_state = 685
+			}
+		}
+	}
+	desc = {
+		text = wtt_news.41.desc_not_usa
+		trigger = {
+			FROM = {
+				OR = {
+					NOT = {	has_country_flag = blew_up_panama }
+					NOT = { owns_state = 685 }
+				}
+			}
+		}
+	}
+	picture = GFX_news_event_020
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.41.a
+		trigger = {
+			NOT = { has_country_flag = blew_up_panama }
+			owns_state = 685
+		}
+		if = {
+			limit = {
+				original_tag = USA
+			}
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+	}
+	option = {
+		name = wtt_news.41.b
+		trigger = {
+			has_country_flag = blew_up_panama
+			owns_state = 685
+		}
+		if = {
+			limit = {
+				original_tag = USA
+			}
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+		clr_country_flag = blew_up_panama
+	}
+	option = {
+		name = wtt_news.41.c
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 685
+				has_country_flag = blew_up_panama
+			}
+		}
+	}
+	option = {
+		name = wtt_news.41.d
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 685
+			}
+			has_country_flag = blew_up_panama
+		}
+		clr_country_flag = blew_up_panama
+	}
+	option = {
+		name = wtt_news.41.e
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				owns_state = 685
+				NOT = { has_country_flag = blew_up_panama }
+			}
+			any_other_country = {
+				has_war_together_with = ROOT
+				has_country_flag = blew_up_panama
+			}
+			NOT = { has_country_flag = blew_up_panama }
+		}
+	}
+	option = {
+		name = wtt_news.41.f
+		trigger = {
+			any_other_country = {
+				has_war_together_with = ROOT
+				owns_state = 685
+				has_country_flag = blew_up_panama
+			}
+			NOT = { has_country_flag = blew_up_panama }
+		}
+	}
+	option = {
+		name = wtt_news.41.g
+		trigger = {
+			any_country = {
+				has_war_with = ROOT
+				has_country_flag = blew_up_panama
+			}
+			any_other_country = {
+				has_war_together_with = ROOT
+				owns_state = 685
+				NOT = { has_country_flag = blew_up_panama }
+			}
+			NOT = { has_country_flag = blew_up_panama }
+		}
+	}
+	option = {
+		name = wtt_news.41.h
+		trigger = {
+			NOT = {
+				any_country = {
+					has_war_with = ROOT
+					has_country_flag = blew_up_panama
+				}
+			}
+			NOT = {
+				any_other_country = {
+					has_war_together_with = ROOT
+					owns_state = 685
+					has_country_flag = blew_up_panama
+				}
+			}
+			NOT = { has_country_flag = blew_up_panama }
+		}
+	}
+}
+
+# Canals - Suez Canal Rebuilt
+news_event = {
+	id = wtt_news.42
+	title = wtt_news.42.t
+	desc = wtt_news.42.desc
+	picture = GFX_news_event_020
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.42.a
+		trigger = {
+			original_tag = ENG
+			has_country_flag = rebuilt_suez
+		}
+		clr_country_flag = rebuilt_suez
+	}
+	option = {
+		name = wtt_news.42.b
+		trigger = {
+			NOT = { original_tag = ENG }
+			has_country_flag = rebuilt_suez
+		}
+		clr_country_flag = rebuilt_suez
+	}
+	option = {
+		name = wtt_news.42.c
+		trigger = {
+			any_other_country = {
+				has_war_together_with = ROOT
+				has_country_flag = rebuilt_suez
+			}
+			NOT = { has_country_flag = rebuilt_suez }
+		}
+	}
+	option = {
+		name = wtt_news.42.d
+		trigger = {
+			any_other_country = {
+				has_war_with = ROOT
+				has_country_flag = rebuilt_suez
+			}
+			NOT = { has_country_flag = rebuilt_suez }
+		}
+	}
+	option = {
+		name = wtt_news.42.e
+		trigger = {
+			NOT = { has_country_flag = rebuilt_suez }
+			NOT = {
+				any_other_country = {
+					has_war_together_with = ROOT
+					has_country_flag = rebuilt_suez
+				}
+			}
+			NOT = {
+				any_other_country = {
+					has_war_with = ROOT
+					has_country_flag = rebuilt_suez
+				}
+			}
+		}
+	}
+}
+
+# Canals - Panama Canal Rebuilt
+news_event = {
+	id = wtt_news.43
+	title = wtt_news.43.t
+	desc = wtt_news.43.desc
+	picture = GFX_news_event_020
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.43.a
+		trigger = {
+			original_tag = USA
+			has_country_flag = rebuilt_panama
+		}
+		clr_country_flag = rebuilt_panama
+	}
+	option = {
+		name = wtt_news.43.b
+		trigger = {
+			NOT = { original_tag = USA }
+			has_country_flag = rebuilt_panama
+		}
+		clr_country_flag = rebuilt_panama
+	}
+	option = {
+		name = wtt_news.43.c
+		trigger = {
+			any_other_country = {
+				has_war_together_with = ROOT
+				has_country_flag = rebuilt_panama
+			}
+			NOT = { has_country_flag = rebuilt_panama }
+		}
+	}
+	option = {
+		name = wtt_news.43.d
+		trigger = {
+			any_other_country = {
+				has_war_with = ROOT
+				has_country_flag = rebuilt_panama
+			}
+			NOT = { has_country_flag = rebuilt_panama }
+		}
+	}
+	option = {
+		name = wtt_news.43.e
+		trigger = {
+			NOT = { has_country_flag = rebuilt_panama }
+			NOT = {
+				any_other_country = {
+					has_war_together_with = ROOT
+					has_country_flag = rebuilt_panama
+				}
+			}
+			NOT = {
+				any_other_country = {
+					has_war_with = ROOT
+					has_country_flag = rebuilt_panama
+				}
+			}
+		}
+	}
+}
+
+# Formation of Scandinavia
+news_event = {
+	id = wtt_news.53
+	title = wtt_news.53.t
+	desc = wtt_news.53.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.53.a
+		trigger = {
+			OR = {
+				original_tag = DEN
+				original_tag = SWE
+				original_tag = NOR
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.b
+		trigger = {
+			NOT = { original_tag = DEN }
+			NOT = { original_tag = SWE }
+			NOT = { original_tag = NOR }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Nordic Council
+news_event = {
+	id = wtt_news.54
+	title = wtt_news.54.t
+	desc = wtt_news.54.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.54.a
+		trigger = {
+			OR = {
+				original_tag = DEN
+				original_tag = SWE
+				original_tag = NOR
+				original_tag = FIN
+				original_tag = ICE
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.54.b
+		trigger = {
+			NOT = { original_tag = DEN }
+			NOT = { original_tag = SWE }
+			NOT = { original_tag = NOR }
+			NOT = { original_tag = FIN }
+			NOT = { original_tag = ICE }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Gran Colombia
+news_event = {
+	id = wtt_news.55
+	title = wtt_news.55.t
+	desc = wtt_news.55.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.55.a
+		trigger = {
+			OR = {
+				original_tag = PAN
+				original_tag = ECU
+				original_tag = COL
+				original_tag = VEN
+				original_tag = PRU
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.55.b
+		trigger = {
+			NOT = { original_tag = PAN }
+			NOT = { original_tag = ECU }
+			NOT = { original_tag = COL }
+			NOT = { original_tag = VEN }
+			NOT = { original_tag = PRU }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Austria-Hungary
+news_event = {
+	id = wtt_news.56
+	title = wtt_news.56.t
+	desc = wtt_news.56.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.56.a
+		trigger = {
+			OR = {
+				original_tag = AUS
+				original_tag = CZE
+				original_tag = CRO
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.56.b
+		trigger = {
+			NOT = { original_tag = AUS }
+			NOT = { original_tag = CZE }
+			NOT = { original_tag = CRO }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Commonwealth
+news_event = {
+	id = wtt_news.57
+	title = wtt_news.57.t
+	desc = wtt_news.57.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.57.a
+		trigger = {
+			OR = {
+				original_tag = POL
+				original_tag = LIT
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.57.b
+		trigger = {
+			NOT = { original_tag = POL }
+			NOT = { original_tag = LIT }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of United Netherlands
+news_event = {
+	id = wtt_news.58
+	title = wtt_news.58.t
+	desc = wtt_news.58.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.58.a
+		trigger = {
+			OR = {
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.58.b
+		trigger = {
+			NOT = { original_tag = HOL }
+			NOT = { original_tag = BEL }
+			NOT = { original_tag = LUX }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of United Central America
+news_event = {
+	id = wtt_news.59
+	title = wtt_news.59.t
+	desc = wtt_news.59.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.59.a
+		trigger = {
+			OR = {
+				original_tag = GUA
+				original_tag = ELS
+				original_tag = HON
+				original_tag = NIC
+				original_tag = COS
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.59.b
+		trigger = {
+			NOT = { original_tag = GUA }
+			NOT = { original_tag = ELS }
+			NOT = { original_tag = HON }
+			NOT = { original_tag = NIC }
+			NOT = { original_tag = COS }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Baltic Federation
+news_event = {
+	id = wtt_news.60
+	title = wtt_news.60.t
+	desc = wtt_news.60.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.60.a
+		trigger = {
+			OR = {
+				original_tag = EST
+				original_tag = LAT
+				original_tag = LIT
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.60.b
+		trigger = {
+			NOT = { original_tag = EST }
+			NOT = { original_tag = LAT }
+			NOT = { original_tag = LIT }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Ottoman Empire
+news_event = {
+	id = wtt_news.61
+	title = wtt_news.61.t
+	desc = wtt_news.61.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.61.a
+		trigger = {
+			original_tag = TUR
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.61.b
+		trigger = {
+			NOT = { original_tag = TUR }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of European Union
+news_event = {
+	id = wtt_news.62
+	title = wtt_news.62.t
+	desc = wtt_news.62.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.62.a
+		trigger = {
+			OR = {
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = LUX
+				original_tag = FRA
+				original_tag = ITA
+				original_tag = GER
+				original_tag = WGR
+				AND = {
+					original_tag = ENG
+					has_government = fascism
+				}
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.62.b
+		trigger = {
+			NOT = { original_tag = HOL }
+			NOT = { original_tag = BEL }
+			NOT = { original_tag = LUX }
+			NOT = { original_tag = FRA }
+			NOT = { original_tag = ITA }
+			NOT = { original_tag = GER }
+			NOT = { original_tag = WGR }
+			NOT = { 
+				AND = {
+					original_tag = ENG
+					has_government = fascism
+				}
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Kingdom of Mutapa
+news_event = {
+	id = wtt_news.63
+	title = wtt_news.63.t
+	desc = wtt_news.63.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.63.a
+		trigger = {
+			OR = {
+				original_tag = SAF
+				original_tag = BOT
+				original_tag = ZIM
+				original_tag = MZB
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.63.b
+		trigger = {
+			NOT = { original_tag = SAF }
+			NOT = { original_tag = BOT }
+			NOT = { original_tag = ZIM }
+			NOT = { original_tag = MZB }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Roman Empire
+news_event = {
+	id = wtt_news.64
+	title = wtt_news.64.t
+	desc = wtt_news.64.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.64.a
+		trigger = {
+			original_tag = ITA
+		}
+	}
+	option = {
+		name = wtt_news.64.b
+		trigger = {
+			NOT = { original_tag = ITA }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Persian Empire
+news_event = {
+	id = wtt_news.65
+	title = wtt_news.65.t
+	desc = wtt_news.65.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.65.a
+		trigger = {
+			OR = {
+				original_tag = PER
+				original_tag = AFG
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.65.b
+		trigger = {
+			NOT = { original_tag = PER }
+			NOT = { original_tag = AFG }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Byzantine Empire
+news_event = {
+	id = wtt_news.66
+	title = wtt_news.66.t
+	desc = wtt_news.66.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.66.a
+		trigger = {
+			original_tag = GRE
+		}
+	}
+	option = {
+		name = wtt_news.66.b
+		trigger = {
+			NOT = { original_tag = GRE }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Arabia
+news_event = {
+	id = wtt_news.67
+	title = wtt_news.67.t
+	desc = wtt_news.67.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.67.a
+		trigger = {
+			OR = {
+				original_tag = IRQ
+				original_tag = SAU
+				original_tag = YEM
+				original_tag = OMA
+				original_tag = EGY
+				original_tag = LBA
+				original_tag = JOR
+				original_tag = PAL
+				original_tag = LEB
+				original_tag = SYR
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.67.b
+		trigger = {
+			NOT = { original_tag = IRQ }
+			NOT = { original_tag = SAU }
+			NOT = { original_tag = YEM }
+			NOT = { original_tag = OMA }
+			NOT = { original_tag = EGY }
+			NOT = { original_tag = LBA }
+			NOT = { original_tag = JOR }
+			NOT = { original_tag = PAL }
+			NOT = { original_tag = LEB }
+			NOT = { original_tag = SYR }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Majapahit Empire
+news_event = {
+	id = wtt_news.68
+	title = wtt_news.68.t
+	desc = wtt_news.68.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.68.a
+		trigger = {
+			OR = {
+				original_tag = INS
+				original_tag = MAL
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.68.b
+		trigger = {
+			NOT = { original_tag = INS }
+			NOT = { original_tag = MAL }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Rattanakosin Kingdom
+news_event = {
+	id = wtt_news.69
+	title = wtt_news.69.t
+	desc = wtt_news.69.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.69.a
+		trigger = {
+			OR = {
+				original_tag = INS
+				original_tag = MAL
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.69.b
+		trigger = {
+			NOT = { original_tag = INS }
+			NOT = { original_tag = MAL }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of HRE
+news_event = {
+	id = wtt_news.70
+	title = wtt_news.70.t
+	desc = wtt_news.70.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = wtt_news.70.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = wtt_news.70.b
+		trigger = {
+			NOT = { original_tag = GER }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+#Andalusia Restored
+news_event = {
+	id = lar_news.281
+	title = lar_news.281.t
+	desc = lar_news.281.desc
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.281.a
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = lar_news.281.b
+		trigger = {
+			NOT = { tag = FROM }
+		}
+	}
+}
+
+#Polynesia United
+news_event = {
+	id = lar_news.291
+	title = lar_news.291.t
+	desc = {
+		text = lar_news.291.new_zealand_desc
+		trigger = {
+			FROM = {
+				original_tag = NZL
+			}
+		}
+	}
+	desc = {
+		text = lar_news.291.desc
+		trigger = {
+			FROM = {
+				NOT = { original_tag = NZL }
+			}
+		}
+	}
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lar_news.291.a
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = lar_news.291.b
+		trigger = {
+			NOT = { tag = FROM }
+		}
+	}
+}
+
+# Капитуляция
+news_event = {
+	id = country_capitulated.0
+	title = country_capitulated.0.t
+	#Good news
+	desc = {
+		text = country_capitulated.0.d_positive_collab_diff_ideology
+		trigger = {
+			NOT = { tag = ROOT }
+			NOT = {
+				OR = {
+					AND = {
+						ROOT = { has_government = fascism }
+						FROM.FROM = { has_government = fascism }
+					}
+					AND = {
+						ROOT = { has_government = democratic }
+						FROM.FROM = { has_government = democratic }
+					}
+					AND = {
+						ROOT = { has_government = communism }
+						FROM.FROM = { has_government = communism }
+					}
+					AND = {
+						ROOT = { has_government = neutrality }
+						FROM.FROM = { has_government = neutrality }
+					}
+				}
+			}
+			FROM.FROM = {
+				has_collaboration = {
+					target = ROOT
+					value > 0.6
+				}
+			}
+		}
+	}
+	desc = {
+		text = country_capitulated.0.d_positive_collab_invaded_same_ideology
+		trigger = {
+			OR = {
+				AND = {
+					ROOT = { has_government = fascism }
+					FROM.FROM = { has_government = fascism }
+				}
+				AND = {
+					ROOT = { has_government = communism }
+					FROM.FROM = { has_government = communism }
+				}
+			}
+			FROM.FROM = {
+				has_collaboration = {
+					target = ROOT
+					value > 0.6
+				}
+			}
+		}
+	}
+	desc = {
+		text = country_capitulated.0.d_positive_both_no_faction
+		trigger = {
+			OR = {
+				has_war_with = ROOT
+				any_allied_country = { has_war_with = ROOT }
+			}
+			NOT = {
+				FROM.FROM = {
+					has_collaboration = {
+						target = ROOT
+						value > 0.6
+					}
+				}
+			}
+			ROOT = { is_in_faction = no }
+			FROM = { FROM = { NOT = { any_allied_country = { has_war_with = ROOT } } } }
+		}
+	}
+	desc = {
+		text = country_capitulated.0.d_positive_prev_no_faction
+		trigger = {
+			OR = {
+				has_war_with = ROOT
+				any_allied_country = { has_war_with = ROOT }
+			}
+			NOT = {
+				FROM.FROM = {
+					has_collaboration = {
+						target = ROOT
+						value > 0.6
+					}
+				}
+			}
+			ROOT = { is_in_faction = yes }
+			FROM = { FROM = { NOT = { any_allied_country = { has_war_with = ROOT } } } }
+		}
+	}
+	desc = {
+		text = country_capitulated.0.d_positive_prev_faction
+		trigger = {
+			OR = {
+				has_war_with = ROOT
+				any_allied_country = { has_war_with = ROOT }
+			}
+			NOT = {
+				FROM.FROM = {
+					has_collaboration = {
+						target = ROOT
+						value > 0.6
+					}
+				}
+			}
+			ROOT = { is_in_faction = yes }
+			FROM = { FROM = { any_allied_country = { has_war_with = ROOT } } }
+		}
+	}
+	#Bad news
+	desc = {
+		text = country_capitulated.0.d_negative_collab_diff_ideology
+		trigger = {
+			tag = ROOT
+			NOT = {
+				OR = {
+					AND = {
+						ROOT = { has_government = fascism }
+						FROM.FROM = { has_government = fascism }
+					}
+					AND = {
+						ROOT = { has_government = democratic }
+						FROM.FROM = { has_government = democratic }
+					}
+					AND = {
+						ROOT = { has_government = communism }
+						FROM.FROM = { has_government = communism }
+					}
+					AND = {
+						ROOT = { has_government = neutrality }
+						FROM.FROM = { has_government = neutrality }
+					}
+				}
+			}
+			FROM.FROM = {
+				has_collaboration = {
+					target = ROOT
+					value > 0.6
+				}
+			}
+		}
+	}
+	desc = {
+		text = country_capitulated.0.d_negative_both_no_faction
+		trigger = {
+			OR = {
+				has_war_together_with = ROOT
+				is_in_faction_with = ROOT
+				tag = ROOT
+			}
+			NOT = {
+				FROM.FROM = {
+					has_collaboration = {
+						target = ROOT
+						value > 0.6
+					}
+				}
+			}
+			ROOT = { is_in_faction = no }
+			FROM = { FROM = { NOT = { any_allied_country = { has_war_with = ROOT } } } }
+		}
+	}
+	desc = {
+		text = country_capitulated.0.d_negative_prev_no_faction
+		trigger = {
+			OR = {
+				is_in_faction_with = ROOT
+				tag = ROOT
+			}
+			NOT = {
+				FROM.FROM = {
+					has_collaboration = {
+						target = ROOT
+						value > 0.6
+					}
+				}
+			}
+			ROOT = { is_in_faction = yes }
+			FROM = { FROM = { NOT = { any_allied_country = { has_war_with = ROOT } } } }
+		}
+	}
+	desc = {
+		text = country_capitulated.0.d_negative_prev_faction
+		trigger = {
+			OR = {
+				is_in_faction_with = ROOT
+				tag = ROOT
+			}
+			NOT = {
+				FROM.FROM = {
+					has_collaboration = {
+						target = ROOT
+						value > 0.6
+					}
+				}
+			}
+			ROOT = { is_in_faction = yes }
+			FROM = { FROM = { any_allied_country = { has_war_with = ROOT } } }
+		}
+	}
+	#Neutral news
+	desc = {
+		text = country_capitulated.0.d_neutral_both_no_faction
+		trigger = {
+			NOT = { has_war_together_with = ROOT }
+			NOT = { is_in_faction_with = ROOT }
+			NOT = { has_war_with = ROOT }
+			NOT = { any_allied_country = { has_war_with = ROOT } }
+			ROOT = { is_in_faction = no }
+			NOT = {
+				FROM.FROM = {
+					has_collaboration = {
+						target = ROOT
+						value > 0.6
+					}
+				}
+			}
+			FROM = { FROM = { NOT = { any_allied_country = { has_war_with = ROOT } } } }
+		}
+	}
+	desc = {
+		text = country_capitulated.0.d_neutral_prev_no_faction
+		trigger = {
+			NOT = { is_in_faction_with = ROOT }
+			NOT = { has_war_with = ROOT }
+			NOT = { any_allied_country = { has_war_with = ROOT } }
+			ROOT = { is_in_faction = yes }
+			NOT = {
+				FROM.FROM = {
+					has_collaboration = {
+						target = ROOT
+						value > 0.6
+					}
+				}
+			}
+			FROM = { FROM = { NOT = { any_allied_country = { has_war_with = ROOT } } } }
+		}
+	}
+	desc = {
+		text = country_capitulated.0.d_neutral_prev_faction
+		trigger = {
+			NOT = { is_in_faction_with = ROOT }
+			NOT = { has_war_with = ROOT }
+			NOT = { any_allied_country = { has_war_with = ROOT } }
+			ROOT = { is_in_faction = yes }
+			NOT = {
+				FROM.FROM = {
+					has_collaboration = {
+						target = ROOT
+						value > 0.6
+					}
+				}
+			}
+			FROM = { FROM = { any_allied_country = { has_war_with = ROOT } } }
+		}
+	}
+
+	picture = GFX_news_event_generic_sign_treaty2
+
+	major = yes
+
+	is_triggered_only = yes
+
+	hidden = no
+
+	fire_only_once = no
+
+	option = {
+		name = country_capitulated.0.a
+		trigger = {
+			OR = {
+				any_allied_country = {
+					has_war_with = ROOT
+				}
+				has_war_with = ROOT
+			}
+		}
+	}
+	option = {
+		name = country_capitulated.0.b
+		trigger = {
+			OR = {
+				tag = ROOT
+				has_war_together_with = ROOT
+				is_in_faction_with = ROOT
+			}
+		}
+	}
+	option = {
+		name = country_capitulated.0.c
+		trigger = {
+			NOT = { has_war_together_with = ROOT }
+			NOT = { is_in_faction_with = ROOT }
+			NOT = { any_allied_country = { has_war_with = ROOT } }
+			NOT = { has_war_with = ROOT }
+			NOT = { tag = ROOT }
+		}
+	}
+}

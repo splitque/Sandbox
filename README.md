@@ -1,4 +1,4 @@
-[Steam Workshop]() | [GitHub]()
+[Steam Workshop]() | [GitHub](https://github.com/splitque/Sandbox/)
 
 ![](.icon/thumbnail.png)
 
@@ -17,8 +17,8 @@ This is mod for Hearts of Iron 4 that aims to unlock the full "sandbox" potentia
 If you want to support development you can do so:
 
 1. Donate me: https://www.donationalerts.com/r/splitque
-2. Finding bugs and send to [issues]()!
-3. [Contribute](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)!
+2. Finding bugs and send to [issues](https://github.com/splitque/Sandbox/issues)!
+3. [Contribute](https://github.com/splitque/Sandbox/pulls)!
 
 ## Credits
 

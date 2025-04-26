@@ -1,0 +1,20 @@
+﻿l_english:
+ elections.100.t: "Fascists are winning elections!"
+ elections.100.d: "The fascist party got the most votes in the election. What are our next steps?"
+ elections.100.a: "Celebrate the victory!"
+ elections.100.b: "We must hold on to our power at all costs..."
+
+ elections.200.t: "Democrats are winning elections!"
+ elections.200.d: "The democratic party got the most votes in the election. What are our next steps?"
+ elections.200.a: "Celebrate the victory!"
+ elections.200.b: "We must hold on to our power at all costs..."
+
+ elections.300.t: "Communists are winning elections!"
+ elections.300.d: "The communist party got the most votes in the election. What are our next steps?"
+ elections.300.a: "Celebrate the victory!"
+ elections.300.b: "We must hold on to our power at all costs..."
+
+ elections.400.t: "Centrists are winning elections!"
+ elections.400.d: "The neutrality party got the most votes in the election. What are our next steps?"
+ elections.400.a: "Celebrate the victory!"
+ elections.400.b: "We must hold on to our power at all costs..."

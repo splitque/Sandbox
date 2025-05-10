@@ -8,6 +8,8 @@ Current mod version: **v1.1.alpha**
 
 Current HOI4 version: **1.16.-**
 
+[**Changelog!**](https://github.com/splitque/Sandbox/commits/main/)
+
 ## Description
 
 This is mod for Hearts of Iron 4 that aims to unlock the full "sandbox" potential of this game. All contries equal before each other, same focuses, politicals and etc. You can made what do you want, without vanilla "limitations", but bots can do what they want too!

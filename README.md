@@ -4,7 +4,7 @@
 
 **(CURRENTLY MOD IN ALPHA STAGE!)**
 
-Current mod version: **v1.alpha** 
+Current mod version: **v1.1.alpha** 
 
 Current HOI4 version: **1.16.-**
 
@@ -16,9 +16,9 @@ This is mod for Hearts of Iron 4 that aims to unlock the full "sandbox" potentia
 
 If you want to support development you can do so:
 
-1. Donate me: https://www.donationalerts.com/r/splitque
-2. Finding bugs and send to [issues](https://github.com/splitque/Sandbox/issues)!
-3. [Contribute](https://github.com/splitque/Sandbox/pulls)!
+1. [Donate!](https://www.donationalerts.com/r/splitque)
+2. If you find a bug, send it to [issues!](https://github.com/splitque/Sandbox/issues)
+3. [Contribute!](https://github.com/splitque/Sandbox/pulls)
 
 ## Credits
 

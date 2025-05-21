@@ -2,6 +2,7 @@
 country_event = {
 	id = war.1
 	hidden = yes
+	fire_only_once = no
 	trigger = {
 		sender = yes
 	}

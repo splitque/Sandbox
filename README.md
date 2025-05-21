@@ -4,8 +4,6 @@
 
 **(CURRENTLY MOD IN ALPHA STAGE!)**
 
-Current mod version: **v1.1.alpha** 
-
 Current HOI4 version: **1.16.-**
 
 [**Changelog!**](https://github.com/splitque/Sandbox/commits/main/)

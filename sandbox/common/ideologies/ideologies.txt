@@ -87,7 +87,7 @@ ideologies = {
 			can_lower_tension = no
 			can_only_justify_war_on_threat_country = no
 			can_guarantee_other_ideologies = no
-			can_create_factions = no
+			can_create_factions = yes
 		}
 
 		modifiers = {

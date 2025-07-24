@@ -1,0 +1,6 @@
+sf_industry_modifier = {
+    #icon = 
+    enable = { always = yes }
+
+    production_speed_industrial_complex_factor = ROOT.sf_civil_construction_speed
+}

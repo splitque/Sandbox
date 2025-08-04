@@ -927,4 +927,20 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = TEST
+		cost = 1
+		available_if_capitulated = no
+		x = 38
+		y = 10
+
+	 	ai_will_do = {
+			base = 0
+		}
+
+		completion_reward = {
+			load_focus_tree = default
+		}
+	}
 }

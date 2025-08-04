@@ -3,4 +3,40 @@ sf_industry_modifier = {
     enable = { always = yes }
 
     production_speed_industrial_complex_factor = ROOT.sf_civil_construction_speed
+    production_speed_infrastructure_factor = ROOT.sf_infrastructure_construction_speed
+}
+
+sf_resources_modifier = {
+    #icon = 
+    enable = { always = yes }
+}
+
+sf_home_politic_modifier = {
+    #icon = 
+    enable = { always = yes }
+}
+
+sf_foreign_politic_modifier = {
+    #icon = 
+    enable = { always = yes }
+}
+
+sf_army_modifier = {
+    #icon = 
+    enable = { always = yes }
+}
+
+sf_air_modifier = {
+    #icon = 
+    enable = { always = yes }
+}
+
+sf_naval_modifier = {
+    #icon = 
+    enable = { always = yes }
+}
+
+sf_intelligence_modifier = {
+    #icon = 
+    enable = { always = yes }
 }

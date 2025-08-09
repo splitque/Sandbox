@@ -1,4 +1,4 @@
-name="Sandbox"
+name="Sandbox [RUS/ENG]"
 version="1.alpha"
 picture="thumbnail.png"
 tags={
@@ -23,5 +23,5 @@ replace_path="common/difficulty_settings"
 replace_path="events"
 replace_path="common/military_industrial_organization/organizations"
 supported_version="1.16.*"
-path="D:/User/Documents/Paradox Interactive/Hearts of Iron IV/mod/sandbox"
+path="C:/Users/Администратор/Documents/Paradox Interactive/Hearts of Iron IV/mod/sandbox"
 remote_file_id="3470116979"

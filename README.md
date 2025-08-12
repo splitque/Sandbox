@@ -1,16 +1,11 @@
-[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3470116979) | [GitHub](https://github.com/splitque/Sandbox/)
+[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3470116979) | 
+[Changelogs](https://github.com/splitque/Sandbox/commits/main/)
 
 ![](.icon/thumbnail.png)
 
-**(CURRENTLY MOD IN ALPHA STAGE!)**
+**This is mod for Hearts of Iron 4 that aims to unlock the full "sandbox" potential of this game. All contries equal before each other, same focuses, politicals and etc. You can made what do you want, without vanilla "limitations", but bots can do what they want too!**
 
-Current HOI4 version: **1.16.-**
-
-[**Changelog!**](https://github.com/splitque/Sandbox/commits/main/)
-
-## Description
-
-This is mod for Hearts of Iron 4 that aims to unlock the full "sandbox" potential of this game. All contries equal before each other, same focuses, politicals and etc. You can made what do you want, without vanilla "limitations", but bots can do what they want too!
+***Current HOI4 version: 1.16.-***
 
 ## Support
 

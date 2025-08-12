@@ -1,5 +1,5 @@
 [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3470116979) | 
-[Changelogs](https://github.com/splitque/Sandbox/commits/main/)
+[Changelogs](https://github.com/splitque/Sandbox/commits/release/)
 
 ![](.icon/thumbnail.png)
 

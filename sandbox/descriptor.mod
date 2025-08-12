@@ -1,5 +1,4 @@
 name="Sandbox [RUS/ENG]"
-version="1.alpha"
 picture="thumbnail.png"
 tags={
 	"Alternative History"

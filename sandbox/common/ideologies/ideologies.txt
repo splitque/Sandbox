@@ -1,6 +1,10 @@
 ideologies = {
 	democratic = {
 		
+		types = {
+			liberalism = {}
+		}
+
 		dynamic_faction_names = {
 			"FACTION_NAME_DEMOCRATIC_1"
 			"FACTION_NAME_DEMOCRATIC_2"
@@ -49,6 +53,10 @@ ideologies = {
 
 
 	communism = {
+
+		types = {
+			marxism = {}
+		}
 
 		dynamic_faction_names = {
 			"FACTION_NAME_COMMUNIST_1"
@@ -100,6 +108,10 @@ ideologies = {
 
 	fascism = {
 
+		types = {
+			fascism_ideology = {}
+		}
+
 		dynamic_faction_names = {
 			"FACTION_NAME_FASCIST_1"
 			"FACTION_NAME_FASCIST_2"
@@ -148,6 +160,10 @@ ideologies = {
 	}
 
 	neutrality = {
+
+		types = {
+			centrism = {}
+		}
 
 		dynamic_faction_names = {
 			"FACTION_NAME_NONALIGNED_1"

@@ -1,4 +1,313 @@
 ideologies = {
+    democratic = {
+        types = {
+            democratic = {}
+        }
+
+        dynamic_faction_names = {
+            "FACTION_NAME_1"
+            "FACTION_NAME_2"
+            "FACTION_NAME_3"
+            "FACTION_NAME_4"
+            "FACTION_NAME_5"
+            "FACTION_NAME_6"
+            "FACTION_NAME_7"
+            "FACTION_NAME_8"
+            "FACTION_NAME_9"
+            "FACTION_NAME_10"
+            "FACTION_NAME_11"
+            "FACTION_NAME_12"
+            "FACTION_NAME_13"
+            "FACTION_NAME_14"
+            "FACTION_NAME_15"
+        }
+
+        rules = {
+            can_be_called_to_war = yes
+            can_be_spymaster = yes
+            can_boost_other_ideologies = yes
+            can_create_collaboration_government = yes
+            can_create_factions = yes
+            can_declare_war_on_same_ideology = yes
+            can_declare_war_without_wargoal_when_in_war = yes
+            can_decline_call_to_war = yes
+            can_force_government = yes
+            can_generate_female_aces = yes
+            can_guarantee_other_ideologies = yes
+            can_join_factions = yes
+            can_join_factions_not_allowed_diplomacy = yes
+            can_join_opposite_factions = yes
+            can_lower_tension = yes
+            can_not_declare_war = no
+            can_occupy_non_war = no
+            can_only_justify_war_on_threat_country = no
+            can_puppet = yes
+            can_send_volunteers = yes
+            can_use_kamikaze_pilots = yes
+            contributes_operatives = yes
+            units_deployed_to_overlord = no
+            can_boost_own_ideology = yes
+            can_generate_female_unit_leaders = yes
+            can_generate_female_country_leaders = yes
+            can_access_market = yes
+            can_use_underway_replenishment = yes
+        }
+
+        modifiers = {
+            generate_wargoal_tension = 0.0
+            guarantee_tension = 0.0
+            join_faction_tension = 0.0
+            lend_lease_tension = 0.0
+            send_volunteers_tension = 0.0
+            send_volunteer_divisions_required = -0.5
+        }
+
+        faction_modifiers = {
+            faction_trade_opinion_factor = 1.0
+        }
+
+        color = { 0 0 255 }
+        can_host_government_in_exile = yes
+        can_be_boosted = yes
+        can_collaborate = yes
+        war_impact_on_world_tension = 0.07
+        faction_impact_on_world_tension = 0.07
+
+        ai_democratic = yes
+    }
+
+    fascism = {
+        types = {
+            fascism = {}
+        }
+
+        dynamic_faction_names = {
+            "FACTION_NAME_1"
+            "FACTION_NAME_2"
+            "FACTION_NAME_3"
+            "FACTION_NAME_4"
+            "FACTION_NAME_5"
+            "FACTION_NAME_6"
+            "FACTION_NAME_7"
+            "FACTION_NAME_8"
+            "FACTION_NAME_9"
+            "FACTION_NAME_10"
+            "FACTION_NAME_11"
+            "FACTION_NAME_12"
+            "FACTION_NAME_13"
+            "FACTION_NAME_14"
+            "FACTION_NAME_15"
+        }
+
+        rules = {
+            can_be_called_to_war = yes
+            can_be_spymaster = yes
+            can_boost_other_ideologies = yes
+            can_create_collaboration_government = yes
+            can_create_factions = yes
+            can_declare_war_on_same_ideology = yes
+            can_declare_war_without_wargoal_when_in_war = yes
+            can_decline_call_to_war = yes
+            can_force_government = yes
+            can_generate_female_aces = yes
+            can_guarantee_other_ideologies = yes
+            can_join_factions = yes
+            can_join_factions_not_allowed_diplomacy = yes
+            can_join_opposite_factions = yes
+            can_lower_tension = yes
+            can_not_declare_war = no
+            can_occupy_non_war = no
+            can_only_justify_war_on_threat_country = no
+            can_puppet = yes
+            can_send_volunteers = yes
+            can_use_kamikaze_pilots = yes
+            contributes_operatives = yes
+            units_deployed_to_overlord = no
+            can_boost_own_ideology = yes
+            can_generate_female_unit_leaders = yes
+            can_generate_female_country_leaders = yes
+            can_access_market = yes
+            can_use_underway_replenishment = yes
+        }
+
+        modifiers = {
+            generate_wargoal_tension = 0.0
+            guarantee_tension = 0.0
+            join_faction_tension = 0.0
+            lend_lease_tension = 0.0
+            send_volunteers_tension = 0.0
+            send_volunteer_divisions_required = -0.5
+        }
+
+        faction_modifiers = {
+            faction_trade_opinion_factor = 1.0
+        }
+
+        color = { 150 75 0 }
+        can_host_government_in_exile = yes
+        can_be_boosted = yes
+        can_collaborate = yes
+        war_impact_on_world_tension = 0.07
+        faction_impact_on_world_tension = 0.07
+
+        ai_fascist = yes
+    }
+
+    communism = {
+        types = {
+            communism = {}
+        }
+
+        dynamic_faction_names = {
+            "FACTION_NAME_1"
+            "FACTION_NAME_2"
+            "FACTION_NAME_3"
+            "FACTION_NAME_4"
+            "FACTION_NAME_5"
+            "FACTION_NAME_6"
+            "FACTION_NAME_7"
+            "FACTION_NAME_8"
+            "FACTION_NAME_9"
+            "FACTION_NAME_10"
+            "FACTION_NAME_11"
+            "FACTION_NAME_12"
+            "FACTION_NAME_13"
+            "FACTION_NAME_14"
+            "FACTION_NAME_15"
+        }
+
+        rules = {
+            can_be_called_to_war = yes
+            can_be_spymaster = yes
+            can_boost_other_ideologies = yes
+            can_create_collaboration_government = yes
+            can_create_factions = yes
+            can_declare_war_on_same_ideology = yes
+            can_declare_war_without_wargoal_when_in_war = yes
+            can_decline_call_to_war = yes
+            can_force_government = yes
+            can_generate_female_aces = yes
+            can_guarantee_other_ideologies = yes
+            can_join_factions = yes
+            can_join_factions_not_allowed_diplomacy = yes
+            can_join_opposite_factions = yes
+            can_lower_tension = yes
+            can_not_declare_war = no
+            can_occupy_non_war = no
+            can_only_justify_war_on_threat_country = no
+            can_puppet = yes
+            can_send_volunteers = yes
+            can_use_kamikaze_pilots = yes
+            contributes_operatives = yes
+            units_deployed_to_overlord = no
+            can_boost_own_ideology = yes
+            can_generate_female_unit_leaders = yes
+            can_generate_female_country_leaders = yes
+            can_access_market = yes
+            can_use_underway_replenishment = yes
+        }
+
+        modifiers = {
+            generate_wargoal_tension = 0.0
+            guarantee_tension = 0.0
+            join_faction_tension = 0.0
+            lend_lease_tension = 0.0
+            send_volunteers_tension = 0.0
+            send_volunteer_divisions_required = -0.5
+        }
+
+        faction_modifiers = {
+            faction_trade_opinion_factor = 1.0
+        }
+
+        color = { 255 0 0 }
+        can_host_government_in_exile = yes
+        can_be_boosted = yes
+        can_collaborate = yes
+        war_impact_on_world_tension = 0.07
+        faction_impact_on_world_tension = 0.07
+
+        ai_fascist = yes
+    }
+
+    neutrality = {
+        types = {
+            neutrality = {}
+        }
+
+        dynamic_faction_names = {
+            "FACTION_NAME_1"
+            "FACTION_NAME_2"
+            "FACTION_NAME_3"
+            "FACTION_NAME_4"
+            "FACTION_NAME_5"
+            "FACTION_NAME_6"
+            "FACTION_NAME_7"
+            "FACTION_NAME_8"
+            "FACTION_NAME_9"
+            "FACTION_NAME_10"
+            "FACTION_NAME_11"
+            "FACTION_NAME_12"
+            "FACTION_NAME_13"
+            "FACTION_NAME_14"
+            "FACTION_NAME_15"
+        }
+
+        rules = {
+            can_be_called_to_war = yes
+            can_be_spymaster = yes
+            can_boost_other_ideologies = yes
+            can_create_collaboration_government = yes
+            can_create_factions = yes
+            can_declare_war_on_same_ideology = yes
+            can_declare_war_without_wargoal_when_in_war = yes
+            can_decline_call_to_war = yes
+            can_force_government = yes
+            can_generate_female_aces = yes
+            can_guarantee_other_ideologies = yes
+            can_join_factions = yes
+            can_join_factions_not_allowed_diplomacy = yes
+            can_join_opposite_factions = yes
+            can_lower_tension = yes
+            can_not_declare_war = no
+            can_occupy_non_war = no
+            can_only_justify_war_on_threat_country = no
+            can_puppet = yes
+            can_send_volunteers = yes
+            can_use_kamikaze_pilots = yes
+            contributes_operatives = yes
+            units_deployed_to_overlord = no
+            can_boost_own_ideology = yes
+            can_generate_female_unit_leaders = yes
+            can_generate_female_country_leaders = yes
+            can_access_market = yes
+            can_use_underway_replenishment = yes
+        }
+
+        modifiers = {
+            generate_wargoal_tension = 0.0
+            guarantee_tension = 0.0
+            join_faction_tension = 0.0
+            lend_lease_tension = 0.0
+            send_volunteers_tension = 0.0
+            send_volunteer_divisions_required = -0.5
+        }
+
+        faction_modifiers = {
+            faction_trade_opinion_factor = 1.0
+        }
+
+        color = { 124 124 124 }
+        can_host_government_in_exile = yes
+        can_be_boosted = yes
+        can_collaborate = yes
+        war_impact_on_world_tension = 0.07
+        faction_impact_on_world_tension = 0.07
+
+        ai_neutral = yes
+    }
+
+
 	democratic = {
 		
 		types = {

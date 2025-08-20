@@ -1,8 +1,8 @@
 ﻿l_english:
- ban_neutrality_party: "Ban centrism"
+ ban_neutrality_party: "Ban neutrality"
  ban_neutrality_party_desc: "In the current situation, further actions of centrist organizations may undermine our power. We need to take urgent measures to prevent this from happening."
- ban_neutrality_party_tt: "Change in popularuty of neutrality: §G-§![?.Root.party_popularity@fascism|%0G].\n"
- anti_neutrality_raids: "Anti-centrists raids"
+ ban_neutrality_party_tt: "Change in popularuty of neutrality: §G-§![?.Root.party_popularity@neutrality|%0G].\n"
+ anti_neutrality_raids: "Anti-neutrality raids"
  anti_neutrality_raids_desc: "We must deal with the centrist elements at home for the sake of long-term stability in the country. The influence of centrists is so great that it risks becoming a potential problem for the government."
 
  neutrality_on_the_rise: "Centrism on the Rise"

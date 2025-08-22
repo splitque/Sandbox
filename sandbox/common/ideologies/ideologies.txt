@@ -5,7 +5,6 @@ ideologies = {
         }
 
         dynamic_faction_names = {
-            "FACTION_NAME_1"
             "FACTION_NAME_2"
             "FACTION_NAME_3"
             "FACTION_NAME_4"
@@ -20,6 +19,7 @@ ideologies = {
             "FACTION_NAME_13"
             "FACTION_NAME_14"
             "FACTION_NAME_15"
+            "FACTION_NAME_16"
         }
 
         rules = {
@@ -29,10 +29,10 @@ ideologies = {
             can_create_collaboration_government = yes
             can_create_factions = yes
             can_declare_war_on_same_ideology = yes
-            can_declare_war_without_wargoal_when_in_war = yes
+            can_declare_war_without_wargoal_when_in_war = no
             can_decline_call_to_war = yes
             can_force_government = yes
-            can_generate_female_aces = yes
+            can_generate_female_aces = no
             can_guarantee_other_ideologies = yes
             can_join_factions = yes
             can_join_factions_not_allowed_diplomacy = yes
@@ -47,8 +47,8 @@ ideologies = {
             contributes_operatives = yes
             units_deployed_to_overlord = no
             can_boost_own_ideology = yes
-            can_generate_female_unit_leaders = yes
-            can_generate_female_country_leaders = yes
+            can_generate_female_unit_leaders = no
+            can_generate_female_country_leaders = no
             can_access_market = yes
             can_use_underway_replenishment = yes
         }
@@ -59,7 +59,8 @@ ideologies = {
             join_faction_tension = 0.0
             lend_lease_tension = 0.0
             send_volunteers_tension = 0.0
-            send_volunteer_divisions_required = -0.5
+            send_volunteer_divisions_required = -0.4
+            justify_war_goal_time = 0.6
         }
 
         faction_modifiers = {
@@ -72,6 +73,7 @@ ideologies = {
         can_collaborate = yes
         war_impact_on_world_tension = 0.07
         faction_impact_on_world_tension = 0.07
+        ai_ideology_wanted_units_factor = 1.0
 
         ai_democratic = yes
     }
@@ -97,6 +99,7 @@ ideologies = {
             "FACTION_NAME_13"
             "FACTION_NAME_14"
             "FACTION_NAME_15"
+            "FACTION_NAME_16"
         }
 
         rules = {
@@ -106,10 +109,10 @@ ideologies = {
             can_create_collaboration_government = yes
             can_create_factions = yes
             can_declare_war_on_same_ideology = yes
-            can_declare_war_without_wargoal_when_in_war = yes
+            can_declare_war_without_wargoal_when_in_war = no
             can_decline_call_to_war = yes
             can_force_government = yes
-            can_generate_female_aces = yes
+            can_generate_female_aces = no
             can_guarantee_other_ideologies = yes
             can_join_factions = yes
             can_join_factions_not_allowed_diplomacy = yes
@@ -124,8 +127,8 @@ ideologies = {
             contributes_operatives = yes
             units_deployed_to_overlord = no
             can_boost_own_ideology = yes
-            can_generate_female_unit_leaders = yes
-            can_generate_female_country_leaders = yes
+            can_generate_female_unit_leaders = no
+            can_generate_female_country_leaders = no
             can_access_market = yes
             can_use_underway_replenishment = yes
         }
@@ -136,7 +139,8 @@ ideologies = {
             join_faction_tension = 0.0
             lend_lease_tension = 0.0
             send_volunteers_tension = 0.0
-            send_volunteer_divisions_required = -0.5
+            send_volunteer_divisions_required = -0.4
+            justify_war_goal_time = 0.6
         }
 
         faction_modifiers = {
@@ -149,6 +153,7 @@ ideologies = {
         can_collaborate = yes
         war_impact_on_world_tension = 0.07
         faction_impact_on_world_tension = 0.07
+        ai_ideology_wanted_units_factor = 1.0
 
         ai_fascist = yes
     }
@@ -174,6 +179,7 @@ ideologies = {
             "FACTION_NAME_13"
             "FACTION_NAME_14"
             "FACTION_NAME_15"
+            "FACTION_NAME_16"
         }
 
         rules = {
@@ -183,10 +189,10 @@ ideologies = {
             can_create_collaboration_government = yes
             can_create_factions = yes
             can_declare_war_on_same_ideology = yes
-            can_declare_war_without_wargoal_when_in_war = yes
+            can_declare_war_without_wargoal_when_in_war = no
             can_decline_call_to_war = yes
             can_force_government = yes
-            can_generate_female_aces = yes
+            can_generate_female_aces = no
             can_guarantee_other_ideologies = yes
             can_join_factions = yes
             can_join_factions_not_allowed_diplomacy = yes
@@ -201,8 +207,8 @@ ideologies = {
             contributes_operatives = yes
             units_deployed_to_overlord = no
             can_boost_own_ideology = yes
-            can_generate_female_unit_leaders = yes
-            can_generate_female_country_leaders = yes
+            can_generate_female_unit_leaders = no
+            can_generate_female_country_leaders = no
             can_access_market = yes
             can_use_underway_replenishment = yes
         }
@@ -213,7 +219,8 @@ ideologies = {
             join_faction_tension = 0.0
             lend_lease_tension = 0.0
             send_volunteers_tension = 0.0
-            send_volunteer_divisions_required = -0.5
+            send_volunteer_divisions_required = -0.4
+            justify_war_goal_time = 0.6
         }
 
         faction_modifiers = {
@@ -226,6 +233,7 @@ ideologies = {
         can_collaborate = yes
         war_impact_on_world_tension = 0.07
         faction_impact_on_world_tension = 0.07
+        ai_ideology_wanted_units_factor = 1.0
 
         ai_fascist = yes
     }
@@ -251,6 +259,7 @@ ideologies = {
             "FACTION_NAME_13"
             "FACTION_NAME_14"
             "FACTION_NAME_15"
+            "FACTION_NAME_16"
         }
 
         rules = {
@@ -260,10 +269,10 @@ ideologies = {
             can_create_collaboration_government = yes
             can_create_factions = yes
             can_declare_war_on_same_ideology = yes
-            can_declare_war_without_wargoal_when_in_war = yes
+            can_declare_war_without_wargoal_when_in_war = no
             can_decline_call_to_war = yes
             can_force_government = yes
-            can_generate_female_aces = yes
+            can_generate_female_aces = no
             can_guarantee_other_ideologies = yes
             can_join_factions = yes
             can_join_factions_not_allowed_diplomacy = yes
@@ -278,8 +287,8 @@ ideologies = {
             contributes_operatives = yes
             units_deployed_to_overlord = no
             can_boost_own_ideology = yes
-            can_generate_female_unit_leaders = yes
-            can_generate_female_country_leaders = yes
+            can_generate_female_unit_leaders = no
+            can_generate_female_country_leaders = no
             can_access_market = yes
             can_use_underway_replenishment = yes
         }
@@ -290,7 +299,8 @@ ideologies = {
             join_faction_tension = 0.0
             lend_lease_tension = 0.0
             send_volunteers_tension = 0.0
-            send_volunteer_divisions_required = -0.5
+            send_volunteer_divisions_required = -0.4
+            justify_war_goal_time = 0.6
         }
 
         faction_modifiers = {
@@ -303,221 +313,8 @@ ideologies = {
         can_collaborate = yes
         war_impact_on_world_tension = 0.07
         faction_impact_on_world_tension = 0.07
+        ai_ideology_wanted_units_factor = 1.0
 
         ai_neutral = yes
     }
-
-
-	democratic = {
-		
-		types = {
-			liberalism = {}
-		}
-
-		dynamic_faction_names = {
-			"FACTION_NAME_DEMOCRATIC_1"
-			"FACTION_NAME_DEMOCRATIC_2"
-			"FACTION_NAME_DEMOCRATIC_3"
-			"FACTION_NAME_DEMOCRATIC_4"
-			"FACTION_NAME_DEMOCRATIC_5"
-			"FACTION_NAME_DEMOCRATIC_6"
-		}
-
-		color = { 0 0 255 }
-
-		can_host_government_in_exile = yes
-		war_impact_on_world_tension = 0.25
-		faction_impact_on_world_tension = 0.1
-
-		rules = {
-			can_create_collaboration_government = no
-			can_declare_war_on_same_ideology = yes
-			can_force_government = yes
-			can_send_volunteers = yes
-			can_puppet = yes
-			can_lower_tension = yes
-			can_only_justify_war_on_threat_country = yes
-			can_guarantee_other_ideologies = yes
-			can_create_factions = yes
-		}
-
-		modifiers = {
-			weekly_bombing_war_support = 0.005
-			generate_wargoal_tension = 0.75
-			guarantee_tension = 0.45
-			join_faction_tension = 0.50
-			lend_lease_tension = 0.15
-			send_volunteers_tension = 0.20
-			embargo_threshold_factor = 0.10
-			guarantee_cost = -0.5
-			annex_cost_factor = 1.0
-			puppet_cost_factor = 1.0
-			civilian_intel_to_others = 10.0
-			army_intel_to_others = 10.0
-			navy_intel_to_others = 10.0
-			airforce_intel_to_others = 10.0
-		}
-		ai_democratic = yes # uses the democratic AI behaviour
-	}
-
-
-	communism = {
-
-		types = {
-			marxism = {}
-		}
-
-		dynamic_faction_names = {
-			"FACTION_NAME_COMMUNIST_1"
-			"FACTION_NAME_COMMUNIST_2"
-			"FACTION_NAME_COMMUNIST_3"
-			"FACTION_NAME_COMMUNIST_4"
-			"FACTION_NAME_COMMUNIST_5"
-		}
-
-		color = { 255 0 0 }
-
-		can_host_government_in_exile = yes
-		war_impact_on_world_tension = 0.50
-		faction_impact_on_world_tension = 0.1
-		
-		rules = {
-			can_create_collaboration_government = yes
-			can_declare_war_on_same_ideology = no
-			can_force_government = yes
-			can_send_volunteers = yes
-			can_puppet = yes
-			can_lower_tension = no
-			can_only_justify_war_on_threat_country = no
-			can_guarantee_other_ideologies = no
-			can_create_factions = yes
-		}
-
-		modifiers = {
-			defensive_war_stability_factor = 0.5
-			weekly_casualties_war_support = 0.005
-			weekly_convoys_war_support = 0.005
-			weekly_bombing_war_support = 0.005
-			generate_wargoal_tension = 0.0
-			guarantee_tension = 0.15
-			join_faction_tension = 0.25
-			lend_lease_tension = 0.10
-			send_volunteers_tension = 0.15
-			embargo_threshold_factor = 0.05
-			justify_war_goal_time = -0.5
-			send_volunteer_divisions_required = -0.6
-			civilian_intel_to_others = 10.0
-			army_intel_to_others = 10.0
-			navy_intel_to_others = 10.0
-			airforce_intel_to_others = 10.0
-		}
-
-		ai_communist = yes
-	}
-
-	fascism = {
-
-		types = {
-			fascism_ideology = {}
-		}
-
-		dynamic_faction_names = {
-			"FACTION_NAME_FASCIST_1"
-			"FACTION_NAME_FASCIST_2"
-			"FACTION_NAME_FASCIST_3"
-			"FACTION_NAME_FASCIST_4"
-			"FACTION_NAME_FASCIST_5"
-		}
-
-		color = { 150 75 0 }
-
-		can_host_government_in_exile = yes
-		war_impact_on_world_tension = 0.50
-		faction_impact_on_world_tension = 0.1
-
-		rules = {
-			can_create_collaboration_government = yes
-			can_declare_war_on_same_ideology = yes
-			can_force_government = no
-			can_send_volunteers = yes
-			can_puppet = yes
-			can_lower_tension = no
-			can_only_justify_war_on_threat_country = no
-			can_guarantee_other_ideologies = no
-			can_create_factions = yes
-		}
-
-		modifiers = {
-			offensive_war_stability_factor = 0.5
-			political_power_gain = 0.3
-			generate_wargoal_tension = 0.0
-			guarantee_tension = 1.0
-			join_faction_tension = 0.5
-			lend_lease_tension = 0.25
-			send_volunteers_tension = 0.1
-			embargo_threshold_factor = 0.3
-			send_volunteer_divisions_required = -0.6
-			guarantee_cost = 3.0
-			justify_war_goal_time = -1.0
-			civilian_intel_to_others = 10.0
-			army_intel_to_others = 10.0
-			navy_intel_to_others = 10.0
-			airforce_intel_to_others = 10.0
-		}
-
-		ai_fascist = yes
-	}
-
-	neutrality = {
-
-		types = {
-			centrism = {}
-		}
-
-		dynamic_faction_names = {
-			"FACTION_NAME_NONALIGNED_1"
-			"FACTION_NAME_NONALIGNED_2"
-			"FACTION_NAME_NONALIGNED_3"
-			"FACTION_NAME_NONALIGNED_4"
-			"FACTION_NAME_NONALIGNED_5"
-		}
-
-		color = { 124 124 124 }
-
-
-		can_host_government_in_exile = no
-		war_impact_on_world_tension = 0.50
-		faction_impact_on_world_tension = 0.1
-
-		rules = {
-			can_create_collaboration_government = no
-			can_declare_war_on_same_ideology = yes
-			can_force_government = no
-			can_send_volunteers = no
-			can_puppet = no
-			can_lower_tension = yes
-			can_only_justify_war_on_threat_country = yes
-			can_guarantee_other_ideologies = yes
-			can_create_factions = no
-		}
-
-		modifiers = {
-			generate_wargoal_tension = 1.0
-			guarantee_tension = 1.0
-			join_faction_tension = 1.0
-			lend_lease_tension = 1.0
-			embargo_threshold_factor = 0.5
-			request_lease_tension = 0.1
-			justify_war_goal_time = 3.0
-			annex_cost_factor = 1.5
-			guarantee_cost = 3.0
-			weekly_bombing_war_support = 0.005
-			civilian_intel_to_others = 10.0
-			army_intel_to_others = 10.0
-			navy_intel_to_others = 10.0
-			airforce_intel_to_others = 10.0
-		}
-
-		ai_neutral = yes
-	}
 }

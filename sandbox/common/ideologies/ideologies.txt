@@ -60,7 +60,7 @@ ideologies = {
             lend_lease_tension = 0.0
             send_volunteers_tension = 0.0
             send_volunteer_divisions_required = -0.4
-            justify_war_goal_time = 0.6
+            justify_war_goal_time = -0.5
         }
 
         faction_modifiers = {
@@ -140,7 +140,7 @@ ideologies = {
             lend_lease_tension = 0.0
             send_volunteers_tension = 0.0
             send_volunteer_divisions_required = -0.4
-            justify_war_goal_time = 0.6
+            justify_war_goal_time = -0.5
         }
 
         faction_modifiers = {
@@ -220,7 +220,7 @@ ideologies = {
             lend_lease_tension = 0.0
             send_volunteers_tension = 0.0
             send_volunteer_divisions_required = -0.4
-            justify_war_goal_time = 0.6
+            justify_war_goal_time = -0.5
         }
 
         faction_modifiers = {
@@ -300,7 +300,7 @@ ideologies = {
             lend_lease_tension = 0.0
             send_volunteers_tension = 0.0
             send_volunteer_divisions_required = -0.4
-            justify_war_goal_time = 0.6
+            justify_war_goal_time = -0.5
         }
 
         faction_modifiers = {

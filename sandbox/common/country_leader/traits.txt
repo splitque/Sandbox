@@ -8930,6 +8930,18 @@ leader_traits = {
 		}
 	}
 
+	special_forces_theorist = {
+		random = yes
+		sprite = 14
+		cat_marines_doctrine_cost_factor = -0.1
+		cat_paratroopers_doctrine_cost_factor = -0.1
+		cat_mountaineers_doctrine_cost_factor = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	naval_theorist = {
 		random = yes
 		sprite = 14

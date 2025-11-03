@@ -1,2 +1,6 @@
 ﻿l_english:
- war_propagandist: "War propagandist"
+ war_propagandist: "War Propagandist"
+ special_forces_theorist: "Special Forces Theorist"
+ cat_mountaineers_doctrine_cost_factor: "Mountaineers Doctrine Cost"
+ cat_marines_doctrine_cost_factor: "Marines Doctrine Cost"
+ cat_paratroopers_doctrine_cost_factor: "Paratroopers Doctrine Cost"

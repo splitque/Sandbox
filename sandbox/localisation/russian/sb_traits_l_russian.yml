@@ -1,2 +1,6 @@
 ﻿l_russian:
  war_propagandist:0 "Военный корреспондент"
+ special_forces_theorist:0 "Теоретик спец. войск"
+ cat_mountaineers_doctrine_cost_factor:0 "Стоимость доктрины горно-стрелковых войск"
+ cat_marines_doctrine_cost_factor:0 "Стоимость доктрины морской пехоты"
+ cat_paratroopers_doctrine_cost_factor:0 "Стоимость доктрины парашютистов"

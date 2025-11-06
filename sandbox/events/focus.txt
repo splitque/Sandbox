@@ -1,0 +1,107 @@
+add_namespace = sbfocus_events
+
+country_event = {
+    id = sbfocus_events.0
+    title = sbfocus_events.0.t
+    desc = sbfocus_events.0.d
+
+    #picture =
+
+    is_triggered_only = yes
+
+    option = {
+        name = sbfocus_events.0.a
+        add_ideas = extension_civil_industry
+    }
+    option = {
+        name = sbfocus_events.0.b
+        add_ideas = extension_war_industry
+    }
+    option = {
+        name = sbfocus_events.0.c
+        add_ideas = extension_naval_industry
+    }
+}
+
+country_event = {
+    id = sbfocus_events.1
+    title = sbfocus_events.1.t
+    desc = sbfocus_events.1.d
+
+    #picture =
+
+    is_triggered_only = yes
+
+    option = {
+        name = sbfocus_events.1.a
+        random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+
+            add_resource = {
+                type = aluminium
+                amount = 20
+            }
+        }
+    }
+    option = {
+        name = sbfocus_events.1.b
+        random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+
+            add_resource = {
+                type = tungsten
+                amount = 20
+            }
+        }
+    }
+    option = {
+        name = sbfocus_events.1.c
+        random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+
+            add_resource = {
+                type = steel
+                amount = 20
+            }
+        }
+    }
+    option = {
+        name = sbfocus_events.1.d
+        random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+
+            add_resource = {
+                type = chromium
+                amount = 20
+            }
+        }
+    }
+}
+
+country_event = {
+    id = sbfocus_events.2
+    title = sbfocus_events.2.t
+    desc = sbfocus_events.2.d
+
+    #picture =
+
+    is_triggered_only = yes
+
+    option = {
+        name = sbfocus_events.2.a
+        add_ideas = standard_economy
+    }
+
+    option = {
+        name = sbfocus_events.2.b
+        add_ideas = mobile_economy
+    }
+}

@@ -1,0 +1,58 @@
+ideas = {
+    country = {
+        investition_to_economy = {
+            #picture =
+            modifier = {
+                consumer_goods_factor = -0.15
+            }
+        }
+        extension_civil_industry = {
+            #picture = 
+            modifier = {
+                production_speed_industrial_complex_factor = 0.15
+            }
+        }
+        extension_war_industry = {
+            #picture = 
+            modifier = {
+                production_speed_arms_factory_factor = 0.15
+            }
+        }
+        extension_naval_industry = {
+            #picture = 
+            modifier = {
+                production_speed_dockyard_factor = 0.15
+            }
+        }
+
+        standard_economy = {
+            #picture =
+            modifier = {
+                production_factory_max_efficiency_factor = 0.1
+            }
+        }
+        mobile_economy = {
+            #picture =
+            modifier = {
+                production_factory_start_efficiency_factor = 0.1
+            }
+        }
+
+        railroad_bonus = {
+            #picture =
+            modifier = {
+                production_speed_railway_factor = 0.15
+                production_speed_supply_hub_factor = 0.15
+            } 
+        }
+
+        fortification_bonus = {
+            #picture =
+            modifier = {
+                production_speed_land_fort_factor = 0.15
+                production_speed_coastal_fort_factor = 0.15
+                production_speed_anti_air_factor = 0.15
+            } 
+        }
+    }
+}

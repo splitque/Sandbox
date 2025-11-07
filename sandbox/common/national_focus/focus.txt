@@ -7,6 +7,8 @@ focus_tree = {
 	default = yes
 	reset_on_civilwar = no
 
+	# ---- ECONOMY ----
+
 	focus = {
 		id = sbfocus_economic
 		#icon =
@@ -18,8 +20,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_timed_idea = {
-				idea = investition_to_economy
-				days = 365
+				idea = sbfocus_investition_to_economy_idea
+				days = 730
 			}
 		}
 	}
@@ -58,7 +60,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			has_idea = extension_civil_industry
+			has_idea = sbfocus_extension_civil_industry_idea
 		}
 
 		prerequisite = {
@@ -90,7 +92,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			has_idea = extension_civil_industry
+			has_idea = sbfocus_extension_civil_industry_idea
 		}
 
 		prerequisite = {
@@ -122,7 +124,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			has_idea = extension_civil_industry
+			has_idea = sbfocus_extension_civil_industry_idea
 		}
 
 		prerequisite = {
@@ -154,7 +156,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			has_idea = extension_war_industry
+			has_idea = sbfocus_extension_war_industry_idea
 		}
 
 		prerequisite = {
@@ -186,7 +188,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			has_idea = extension_war_industry
+			has_idea = sbfocus_extension_war_industry_idea
 		}
 
 		prerequisite = {
@@ -218,7 +220,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			has_idea = extension_war_industry
+			has_idea = sbfocus_extension_war_industry_idea
 		}
 
 		prerequisite = {
@@ -250,7 +252,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			has_idea = extension_naval_industry
+			has_idea = sbfocus_extension_naval_industry_idea
 		}
 
 		prerequisite = {
@@ -261,8 +263,6 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
-				}
-				limit = {
 					is_coastal = yes
 				}
 				add_extra_state_shared_building_slots = 2
@@ -285,7 +285,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			has_idea = extension_naval_industry
+			has_idea = sbfocus_extension_naval_industry_idea
 		}
 
 		prerequisite = {
@@ -296,8 +296,6 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
-				}
-				limit = {
 					is_coastal = yes
 				}
 				add_extra_state_shared_building_slots = 2
@@ -320,11 +318,42 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			has_idea = extension_naval_industry
+			has_idea = sbfocus_extension_naval_industry_idea
 		}
 
 		prerequisite = {
 			focus = sbfocus_naval_industry_2
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = sbfocus_additional_infrastructure
+		#icon =
+		x = 3
+		y = 5
+		cost = 10
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus = sbfocus_naval_industry_3
+			focus = sbfocus_war_industry_3
+			focus = sbfocus_civil_industry_3
 		}
 
 		completion_reward = {
@@ -337,11 +366,36 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = dockyard
+					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = sbfocus_trains_and_convoys
+		#icon =
+		x = 10
+		y = 1
+		cost = 5
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus = sbfocus_economic
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 35
+			}	
 		}
 	}
 
@@ -410,6 +464,24 @@ focus_tree = {
 	}
 
 	focus = {
+		id = sbfocus_special_projects
+		#icon =
+		x = 11
+		y = 2
+		cost = 5
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus = sbfocus_infrastructure_1
+		}
+
+		completion_reward = {
+			country_event = sbfocus_events.4
+		}
+	}
+
+	focus = {
 		id = sbfocus_infrastructure_2
 		#icon =
 		x = 8
@@ -460,7 +532,7 @@ focus_tree = {
 	focus = {
 		id = sbfocus_war_economy
 		#icon =
-		x = 9
+		x = 8
 		y = 5
 		cost = 10
 		search_filters = {  }
@@ -481,7 +553,7 @@ focus_tree = {
 		#icon =
 		x = 11
 		y = 4
-		cost = 10
+		cost = 5
 		search_filters = {  }
 		available_if_capitulated = yes
 
@@ -491,7 +563,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_timed_idea = {
-				idea = railroad_bonus
+				idea = sbfocus_railroad_bonus_idea
 				days = 730
 			}
 		}
@@ -502,7 +574,7 @@ focus_tree = {
 		#icon =
 		x = 13
 		y = 4
-		cost = 10
+		cost = 5
 		search_filters = {  }
 		available_if_capitulated = yes
 
@@ -512,9 +584,372 @@ focus_tree = {
 
 		completion_reward = {
 			add_timed_idea = {
-				idea = fortification_bonus
+				idea = sbfocus_fortification_bonus_idea
 				days = 730
 			}
+		}
+	}
+
+	focus = {
+		id = sbfocus_license_agreement
+		#icon =
+		x = 10
+		y = 5
+		cost = 10
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		available = {
+			is_in_faction = yes
+		}
+
+		prerequisite = {
+			focus = sbfocus_infrastructure_2
+		}
+
+		completion_reward = {
+			add_ideas = sbfocus_license_agreement_idea
+		}
+	}
+
+	focus = {
+		id = sbfocus_oil_rubber
+		#icon =
+		x = 9
+		y = 6
+		cost = 10
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus = sbfocus_war_economy
+			focus = sbfocus_license_agreement
+		}
+		prerequisite = {
+			focus = sbfocus_resource_prospecting
+		}
+
+		completion_reward = {
+			country_event = sbfocus_events.3
+		}
+	}
+
+	focus = {
+		id = sbfocus_mio_investition
+		#icon =
+		x = 7
+		y = 6
+		cost = 5
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus = sbfocus_war_economy
+		}
+		prerequisite = {
+			focus = sbfocus_additional_infrastructure
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = sbfocus_mio_investition
+				days = 730
+			}
+		}
+	}
+
+	# ---- ECONOMY ----
+
+	# ---- POLITICS ----
+
+	focus = {
+		id = sbfocus_politics
+		#icon =
+		x = 16
+		y = 0
+		cost = 5
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = sbfocus_democratic_path
+		#icon =
+		x = 13
+		y = 1
+		cost = 10
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus =	sbfocus_politics
+		}
+
+		mutually_exclusive = {
+			focus = sbfocus_neutrality_path
+			focus = sbfocus_communism_path
+			focus = sbfocus_fascism_path
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = sbfocus_democratic_path_idea
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = sbfocus_neutrality_path
+		#icon =
+		x = 15
+		y = 1
+		cost = 5
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus =	sbfocus_politics
+		}
+
+		mutually_exclusive = {
+			focus = sbfocus_democratic_path
+			focus = sbfocus_communism_path
+			focus = sbfocus_fascism_path
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = sbfocus_neutrality_path_idea
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = sbfocus_communism_path
+		#icon =
+		x = 17
+		y = 1
+		cost = 5
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus =	sbfocus_politics
+		}
+
+		mutually_exclusive = {
+			focus = sbfocus_democratic_path
+			focus = sbfocus_communism_path
+			focus = sbfocus_fascism_path
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = sbfocus_communism_path_idea
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = sbfocus_fascism_path
+		#icon =
+		x = 19
+		y = 1
+		cost = 5
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus =	sbfocus_politics
+		}
+
+		mutually_exclusive = {
+			focus = sbfocus_neutrality_path
+			focus = sbfocus_democratic_path
+			focus = sbfocus_communism_path
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = sbfocus_fascism_path_idea
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = sbfocus_consolidate_government
+		#icon =
+		x = 21
+		y = 2
+		cost = 5
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		mutually_exclusive = {
+			focus = sbfocus_war_propaganda
+		}
+
+		prerequisite = {
+			focus = sbfocus_democratic_path
+			focus = sbfocus_neutrality_path
+			focus = sbfocus_communism_path
+			focus = sbfocus_fascism_path
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = sbfocus_consolidate_government_idea
+				days = 180
+			}
+		}
+	}
+
+	focus = {
+		id = sbfocus_war_propaganda
+		#icon =
+		x = 23
+		y = 2
+		cost = 5
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		mutually_exclusive = {
+			focus = sbfocus_consolidate_government
+		}
+
+		prerequisite = {
+			focus = sbfocus_democratic_path
+			focus = sbfocus_neutrality_path
+			focus = sbfocus_communism_path
+			focus = sbfocus_fascism_path
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = sbfocus_war_propaganda_idea
+				days = 180
+			}
+		}
+	}
+
+	focus = {
+		id = sbfocus_assemble_government
+		#icon =
+		x = 16
+		y = 2
+		cost = 5
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus = sbfocus_democratic_path
+			focus = sbfocus_neutrality_path
+			focus = sbfocus_communism_path
+			focus = sbfocus_fascism_path
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = sbfocus_assemble_government_idea
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = sbfocus_elimninate_competitors
+		#icon =
+		x = 18
+		y = 2
+		cost = 5
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus = sbfocus_communism_path
+			focus = sbfocus_fascism_path
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_government = communism
+				}
+				add_timed_idea = {
+					idea = sbfocus_elimninate_competitors_communism_idea
+					days = 365
+				}
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				add_timed_idea = {
+					idea = sbfocus_elimninate_competitors_fascism_idea
+					days = 365
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = sbfocus_cancel_elections
+		#icon =
+		x = 18
+		y = 3
+		cost = 5
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		available = {
+			if = {
+				limit = {
+					has_government = communism
+				}
+				party_popularity@communism > 80
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				party_popularity@fascism > 80
+			}
+		}
+
+		prerequisite = {
+			focus = sbfocus_elimninate_competitors
+		}
+
+		completion_reward = {
+			set_politics = {
+				elections_allowed = no
+			}
+		}
+	}
+
+	# ---- POLITICS ----
+
+	# ---- ARMY ----
+	
+	focus = {
+		id = sbfocus_army
+		#icon =
+		x = 32
+		y = 0
+		cost = 5
+		search_filters = {  }
+		available_if_capitulated = yes
+
+		completion_reward = {
+			country_event = sbfocus_events.5
 		}
 	}
 }

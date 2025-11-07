@@ -1,58 +1,158 @@
 ideas = {
     country = {
-        investition_to_economy = {
+        sbfocus_investition_to_economy_idea = {
             #picture =
             modifier = {
                 consumer_goods_factor = -0.15
             }
         }
-        extension_civil_industry = {
+        sbfocus_extension_civil_industry_idea = {
             #picture = 
             modifier = {
                 production_speed_industrial_complex_factor = 0.15
             }
         }
-        extension_war_industry = {
+        sbfocus_extension_war_industry_idea = {
             #picture = 
             modifier = {
                 production_speed_arms_factory_factor = 0.15
             }
         }
-        extension_naval_industry = {
+        sbfocus_extension_naval_industry_idea = {
             #picture = 
             modifier = {
                 production_speed_dockyard_factor = 0.15
             }
         }
 
-        standard_economy = {
+        sbfocus_standard_economy_idea = {
             #picture =
             modifier = {
                 production_factory_max_efficiency_factor = 0.1
             }
         }
-        mobile_economy = {
+        sbfocus_mobile_economy_idea = {
             #picture =
             modifier = {
                 production_factory_start_efficiency_factor = 0.1
             }
         }
 
-        railroad_bonus = {
+        sbfocus_railroad_bonus_idea = {
             #picture =
             modifier = {
-                production_speed_railway_factor = 0.15
-                production_speed_supply_hub_factor = 0.15
+                production_speed_rail_way_factor = 0.15
+                production_speed_supply_node_factor = 0.15
+            } 
+        }
+        sbfocus_fortification_bonus_idea = {
+            #picture =
+            modifier = {
+                production_speed_bunker_factor = 0.15
+                production_speed_coastal_bunker_factor = 0.15
+                production_speed_anti_air_building_factor = 0.15
+                production_speed_stronghold_network_factor = 0.15
             } 
         }
 
-        fortification_bonus = {
+        sbfocus_license_agreement_idea = {
+            #picture = 
+            modifier = {
+                license_production_speed = 0.05
+                license_purchase_cost_factor = 0.1 
+            }
+        }
+
+        sbfocus_mio_investition = {
+            #picture = 
+            modifier = {
+                military_industrial_organization_research_bonus = 0.1
+                military_industrial_organization_funds_gain = 0.45
+            }
+        }
+
+        sbfocus_democratic_path_idea = {
+            #picture = 
+			modifier = {
+				democratic_drift = 0.15
+			}
+        }
+        sbfocus_neutrality_path_idea = {
+            #picture = 
+			modifier = {
+				neutrality_drift = 0.15
+			}
+        }
+        sbfocus_communism_path_idea = {
+            #picture = 
+			modifier = {
+				communism_drift = 0.15
+			}
+        }
+        sbfocus_fascism_path_idea = {
+            #picture = 
+			modifier = {
+				fascism_drift = 0.15
+			}
+        }
+
+        sbfocus_consolidate_government_idea = {
             #picture =
             modifier = {
-                production_speed_land_fort_factor = 0.15
-                production_speed_coastal_fort_factor = 0.15
-                production_speed_anti_air_factor = 0.15
-            } 
+                stability_weekly = 0.01
+            }
+        }
+        sbfocus_war_propaganda_idea = {
+            #picture =
+            modifier = {
+                war_support_weekly = 0.01
+            }
+        }
+
+        sbfocus_assemble_government_idea = {
+            #picture = 
+            modifier = {
+                political_power_factor = 0.15
+                political_advisor_cost_factor = -0.25
+            }
+        }
+
+        sbfocus_elimninate_competitors_communism_idea = {
+            #picture = 
+            modifier = {
+                neutrality_drift = -0.005
+                democratic_drift = -0.005
+                communism_drift = 0.005
+                fascism_drift = -0.005
+            }
+        }
+        sbfocus_elimninate_competitors_fascism_idea = {
+            #picture = 
+            modifier = {
+                neutrality_drift = -0.005
+                democratic_drift = -0.005
+                communism_drift = -0.005
+                fascism_drift = 0.005
+            }
+        }
+
+        sbfocus_army_land_idea = {
+            #picture = 
+            modifier = {
+                experience_gain_army = 0.15
+            }
+        }
+        sbfocus_army_air_idea = {
+            #picture = 
+            modifier = {
+                experience_gain_army = 0.15
+            }
+        }
+        sbfocus_army_navy_idea = {
+            #picture = 
+            modifier = {
+                experience_gain_army = 0.15
+            }
         }
     }
 }

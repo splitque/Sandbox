@@ -11,15 +11,24 @@ country_event = {
 
     option = {
         name = sbfocus_events.0.a
-        add_ideas = extension_civil_industry
+        add_timed_idea = {
+            idea = sbfocus_extension_civil_industry_idea
+            days = 365
+        } 
     }
     option = {
         name = sbfocus_events.0.b
-        add_ideas = extension_war_industry
+        add_timed_idea = {
+            idea = sbfocus_extension_war_industry_idea
+            days = 365
+        }
     }
     option = {
         name = sbfocus_events.0.c
-        add_ideas = extension_naval_industry
+        add_timed_idea = {
+            idea = sbfocus_extension_naval_industry_idea
+            days = 365
+        } 
     }
 }
 
@@ -38,7 +47,6 @@ country_event = {
 			limit = {
 				is_core_of = ROOT
 			}
-
             add_resource = {
                 type = aluminium
                 amount = 20
@@ -51,7 +59,6 @@ country_event = {
 			limit = {
 				is_core_of = ROOT
 			}
-
             add_resource = {
                 type = tungsten
                 amount = 20
@@ -64,7 +71,6 @@ country_event = {
 			limit = {
 				is_core_of = ROOT
 			}
-
             add_resource = {
                 type = steel
                 amount = 20
@@ -77,7 +83,6 @@ country_event = {
 			limit = {
 				is_core_of = ROOT
 			}
-
             add_resource = {
                 type = chromium
                 amount = 20
@@ -97,11 +102,220 @@ country_event = {
 
     option = {
         name = sbfocus_events.2.a
-        add_ideas = standard_economy
+        add_ideas = sbfocus_standard_economy_idea
     }
 
     option = {
         name = sbfocus_events.2.b
-        add_ideas = mobile_economy
+        add_ideas = sbfocus_mobile_economy_idea
+    }
+}
+
+country_event = {
+    id = sbfocus_events.3
+    title = sbfocus_events.3.t
+    desc = sbfocus_events.3.d
+
+    #picture = 
+
+    is_triggered_only = yes
+
+    option = {
+        name = sbfocus_events.3.a
+        random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+
+            add_resource = {
+                type = oil
+                amount = 25
+            }
+        }
+        add_tech_bonus = {
+			name = sbfocus_oil_bonus
+    		bonus = 1.0
+   			uses = 2
+    		category = cat_synth_oil
+		}
+    }
+    option = {
+        name = sbfocus_events.3.b
+        random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+
+            add_resource = {
+                type = rubber
+                amount = 25
+            }
+        }
+        add_tech_bonus = {
+			name = sbfocus_oil_bonus
+    		bonus = 1.0
+   			uses = 2
+    		category = cat_synth_rubber
+		}
+    }
+}
+
+country_event = {
+    id = sbfocus_events.4
+    title = sbfocus_events.4.t
+    desc = sbfocus_events.4.d
+
+    #picture = 
+
+    is_triggered_only = yes
+
+    option = {
+        name = sbfocus_events.4.a
+        random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+                NOT = {
+                    has_built = {
+                        type = land_facility
+                        value > 1
+                    }
+                    has_built = {
+                        type = nuclear_facility
+                        value > 1
+                    }
+                    has_built = {
+                        type = air_facility
+                        value > 1
+                    }
+                    has_built = {
+                        type = naval_facility
+                        value > 1
+                    }
+                }
+			}
+            construct_building_in_random_province = {
+                land_facility = 1
+            }
+        }
+    }
+    option = {
+        name = sbfocus_events.4.b
+        random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+                NOT = {
+                    has_built = {
+                        type = land_facility
+                        value > 1
+                    }
+                    has_built = {
+                        type = nuclear_facility
+                        value > 1
+                    }
+                    has_built = {
+                        type = air_facility
+                        value > 1
+                    }
+                    has_built = {
+                        type = naval_facility
+                        value > 1
+                    }
+                }
+			}
+            construct_building_in_random_province = {
+                nuclear_facility = 1
+            }
+        }
+    }
+    option = {
+        name = sbfocus_events.4.c
+        random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+                NOT = {
+                    has_built = {
+                        type = land_facility
+                        value > 1
+                    }
+                    has_built = {
+                        type = nuclear_facility
+                        value > 1
+                    }
+                    has_built = {
+                        type = air_facility
+                        value > 1
+                    }
+                    has_built = {
+                        type = naval_facility
+                        value > 1
+                    }
+                }
+			}
+            construct_building_in_random_province = {
+                air_facility = 1
+            }
+        }
+    }
+    option = {
+        name = sbfocus_events.4.d
+        random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+                is_coastal = yes
+                NOT = {
+                    has_built = {
+                        type = land_facility
+                        value > 1
+                    }
+                    has_built = {
+                        type = nuclear_facility
+                        value > 1
+                    }
+                    has_built = {
+                        type = air_facility
+                        value > 1
+                    }
+                    has_built = {
+                        type = naval_facility
+                        value > 1
+                    }
+                }
+			}
+            construct_building_in_random_province = {
+                naval_facility = 1
+            }
+        }
+    }
+}
+
+country_event = {
+    id = sbfocus_events.5
+    title = sbfocus_events.5.t
+    desc = sbfocus_events.5.d
+
+    #picture = 
+
+    is_triggered_only = yes
+
+    option = {
+        name = sbfocus_events.5.a
+        add_timed_idea = {
+            idea = sbfocus_army_land_idea
+            days = 365
+        }
+    }
+    option = {
+        name = sbfocus_events.5.b
+        add_timed_idea = {
+            idea = sbfocus_army_air_idea
+            days = 365
+        }        
+    }
+    option = {
+        name = sbfocus_events.5.c
+        add_timed_idea = {
+            idea = sbfocus_army_navy_idea
+            days = 365
+        }        
     }
 }

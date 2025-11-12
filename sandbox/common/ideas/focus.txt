@@ -109,6 +109,27 @@ ideas = {
             }
         }
 
+        sbfocus_civil_society_idea = {
+            #picture = 
+            modifier = {
+                political_power_factor = 0.1
+                stability_factor = 0.1
+            }
+        }
+
+        sbfocus_unity_on_war_idea = {
+            cancel = {
+                has_war = no
+            }
+
+            #picture = 
+            modifier = {
+                defensive_war_stability_factor = 0.1
+                war_support_factor = 0.15
+                mobilization_speed = 0.3
+            }
+        }
+
         sbfocus_assemble_government_idea = {
             #picture = 
             modifier = {
@@ -153,6 +174,61 @@ ideas = {
             modifier = {
                 experience_gain_army = 0.15
             }
+        }
+
+        sbfocus_air_light_production_timed = {
+            #picture = 
+			equipment_bonus = {
+				light_air = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+        }
+        sbfocus_air_medium_production_timed = {
+            #picture = 
+			equipment_bonus = {
+				medium_air = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+        }
+        sbfocus_air_heavy_production_timed = {
+            #picture = 
+			equipment_bonus = {
+				heavy_air = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+        }
+
+        sbfocus_air_light_production = {
+            #picture = 
+			equipment_bonus = {
+				light_air = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+        }
+        sbfocus_air_medium_production = {
+            #picture = 
+			equipment_bonus = {
+				medium_air = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+        }
+        sbfocus_air_heavy_production = {
+            #picture = 
+			equipment_bonus = {
+				heavy_air = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+        }
+
+        sbfocus_horses_idea = {
+            cavalry_attack_factor = 0.05
+            cavalry_defense_factor = 0.05
         }
     }
 }

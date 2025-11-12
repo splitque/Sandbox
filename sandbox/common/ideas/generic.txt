@@ -86,53 +86,6 @@ ideas = {
 
 	country = {
 
-		focus_fascism_path = {
-			name = fascism_path
-			picture = generic_fascism_drift_bonus
-			allowed = { always = no }
-
-			modifier = {
-				fascism_drift = 0.15
-			}
-		}
-		focus_communism_path = {
-			name = communism_path
-			picture = generic_communism_drift_bonus
-			allowed = { always = no }
-
-			modifier = {
-				communism_drift = 0.15
-			}
-		}
-		focus_democratic_path = {
-			name = democratic_path
-			picture = generic_democratic_drift_bonus
-			allowed = { always = no }
-
-			modifier = {
-				democratic_drift = 0.15
-			}
-		}
-		focus_neutrality_path = {
-			name = neutrality_path
-			picture = generic_neutrality_drift_bonus
-			allowed = { always = no }
-
-			modifier = {
-				neutrality_drift = 0.15
-			}
-		}
-
-		focus_consolidate_government = {
-			name = consolidate_government
-			picture = generic_neutrality_drift_bonus
-			allowed = { always = no }
-
-			modifier = {
-				stability_weekly = 0.01
-			}
-		}
-
 		nationalism = {
 			
 			allowed = {

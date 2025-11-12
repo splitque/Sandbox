@@ -319,3 +319,128 @@ country_event = {
         }        
     }
 }
+
+country_event = {
+    id = sbfocus_events.6
+    title = sbfocus_events.6.t
+    desc = sbfocus_events.6.d
+
+    #picture = 
+
+    is_triggered_only = yes
+
+    option = {
+        name = sbfocus_events.6.a
+		add_tech_bonus = {
+			name = sbfocus_air_bonus
+    		bonus = 2.0
+   			uses = 1
+    		category = light_air
+		}
+        add_timed_idea = {
+            idea = sbfocus_air_light_production_timed
+            days = 365
+        }
+    }
+    option = {
+        name = sbfocus_events.6.b
+		add_tech_bonus = {
+			name = sbfocus_air_bonus
+    		bonus = 2.0
+   			uses = 1
+    		category = medium_air
+		} 
+        add_timed_idea = {
+            idea = sbfocus_air_medium_production_timed
+            days = 365
+        }      
+    }
+    option = {
+        name = sbfocus_events.6.c
+		add_tech_bonus = {
+			name = sbfocus_air_bonus
+    		bonus = 2.0
+   			uses = 1
+    		category = heavy_air
+		}
+        add_timed_idea = {
+            idea = sbfocus_air_heavy_production_timed
+            days = 365
+        }       
+    }
+}
+
+country_event = {
+    id = sbfocus_events.7
+    title = sbfocus_events.7.t
+    desc = sbfocus_events.7.d
+
+    #picture = 
+
+    is_triggered_only = yes
+
+    option = {
+        name = sbfocus_events.7.a
+        add_ideas = sbfocus_air_light_production
+    }
+    option = {
+        name = sbfocus_events.7.b
+		add_ideas = sbfocus_air_medium_production    
+    }
+    option = {
+        name = sbfocus_events.7.c
+		add_ideas = sbfocus_air_heavy_production    
+    }
+}
+
+country_event = {
+    id = sbfocus_events.8
+    title = sbfocus_events.8.t
+    desc = sbfocus_events.8.d
+
+    #picture = 
+
+    is_triggered_only = yes
+
+    option = {
+        name = sbfocus_events.8.a
+		set_technology = {
+			marines = 1
+		}
+    }
+    option = {
+        name = sbfocus_events.8.b
+		set_technology = {
+			paratroopers = 1
+		}  
+    }
+    option = {
+        name = sbfocus_events.8.c
+        set_technology = {
+			tech_mountaineers = 1
+		}  
+    }
+}
+
+country_event = {
+    id = sbfocus_events.9
+    title = sbfocus_events.9.t
+    desc = sbfocus_events.9.d
+
+    #picture = 
+
+    is_triggered_only = yes
+
+    option = {
+        name = sbfocus_events.9.a
+		set_technology = {
+			marines = 1
+		}
+    }
+    option = {
+        name = sbfocus_events.9.b
+		set_technology = {
+			paratroopers = 1
+		}  
+    }
+}

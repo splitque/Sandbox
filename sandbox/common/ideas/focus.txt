@@ -1,52 +1,52 @@
 ideas = {
     country = {
         sbfocus_investition_to_economy_idea = {
-            #picture =
+            picture = GFX_idea_ARG_civilian_economy_boost
             modifier = {
                 consumer_goods_factor = -0.15
             }
         }
         sbfocus_extension_civil_industry_idea = {
-            #picture = 
+            picture = GFX_idea_GER_recovering_economy
             modifier = {
                 production_speed_industrial_complex_factor = 0.15
             }
         }
         sbfocus_extension_war_industry_idea = {
-            #picture = 
+            picture = GFX_idea_GER_recovering_economy
             modifier = {
                 production_speed_arms_factory_factor = 0.15
             }
         }
         sbfocus_extension_naval_industry_idea = {
-            #picture = 
+            picture = GFX_idea_GER_recovering_economy
             modifier = {
                 production_speed_dockyard_factor = 0.15
             }
         }
 
         sbfocus_standard_economy_idea = {
-            #picture =
+            picture = GFX_idea_generic_production_bonus
             modifier = {
                 production_factory_max_efficiency_factor = 0.1
             }
         }
         sbfocus_mobile_economy_idea = {
-            #picture =
+            picture = GFX_idea_generic_production_bonus
             modifier = {
                 production_factory_start_efficiency_factor = 0.1
             }
         }
 
         sbfocus_railroad_bonus_idea = {
-            #picture =
+            picture = idea_generic_railroads
             modifier = {
                 production_speed_rail_way_factor = 0.15
                 production_speed_supply_node_factor = 0.15
             } 
         }
         sbfocus_fortification_bonus_idea = {
-            #picture =
+            picture = GFX_idea_FRA_fortification_focus
             modifier = {
                 production_speed_bunker_factor = 0.15
                 production_speed_coastal_bunker_factor = 0.15
@@ -56,7 +56,7 @@ ideas = {
         }
 
         sbfocus_license_agreement_idea = {
-            #picture = 
+            picture = GFX_idea_generic_license_production
             modifier = {
                 license_production_speed = 0.05
                 license_purchase_cost_factor = 0.1 
@@ -64,7 +64,7 @@ ideas = {
         }
 
         sbfocus_mio_investition = {
-            #picture = 
+            picture = GFX_idea_RAJ_external_investments
             modifier = {
                 military_industrial_organization_research_bonus = 0.1
                 military_industrial_organization_funds_gain = 0.45
@@ -72,45 +72,45 @@ ideas = {
         }
 
         sbfocus_democratic_path_idea = {
-            #picture = 
+            picture = GFX_idea_generic_democratic_drift_bonus
 			modifier = {
 				democratic_drift = 0.15
 			}
         }
         sbfocus_neutrality_path_idea = {
-            #picture = 
+            picture = GFX_idea_generic_neutrality_drift_bonus
 			modifier = {
 				neutrality_drift = 0.15
 			}
         }
         sbfocus_communism_path_idea = {
-            #picture = 
+            picture = GFX_idea_generic_communism_drift_bonus
 			modifier = {
 				communism_drift = 0.15
 			}
         }
         sbfocus_fascism_path_idea = {
-            #picture = 
+            picture = GFX_idea_generic_fascism_drift_bonus
 			modifier = {
 				fascism_drift = 0.15
 			}
         }
 
         sbfocus_consolidate_government_idea = {
-            #picture =
+            picture = idea_generic_political_support
             modifier = {
                 stability_weekly = 0.01
             }
         }
         sbfocus_war_propaganda_idea = {
-            #picture =
+            picture = GFX_idea_generic_war_preparation
             modifier = {
                 war_support_weekly = 0.01
             }
         }
 
         sbfocus_civil_society_idea = {
-            #picture = 
+            picture = GFX_idea_generic_agrarian_society
             modifier = {
                 political_power_factor = 0.1
                 stability_factor = 0.1
@@ -122,7 +122,7 @@ ideas = {
                 has_war = no
             }
 
-            #picture = 
+            picture = GFX_idea_SWI_spirit_of_helvetia_passive_war
             modifier = {
                 defensive_war_stability_factor = 0.1
                 war_support_factor = 0.15
@@ -131,7 +131,7 @@ ideas = {
         }
 
         sbfocus_assemble_government_idea = {
-            #picture = 
+            picture = idea_generic_political_support
             modifier = {
                 political_power_factor = 0.15
                 political_advisor_cost_factor = -0.25
@@ -139,7 +139,7 @@ ideas = {
         }
 
         sbfocus_elimninate_competitors_communism_idea = {
-            #picture = 
+            picture = GFX_idea_generic_spy_political
             modifier = {
                 neutrality_drift = -0.005
                 democratic_drift = -0.005
@@ -148,7 +148,7 @@ ideas = {
             }
         }
         sbfocus_elimninate_competitors_fascism_idea = {
-            #picture = 
+            picture = GFX_idea_generic_spy_political
             modifier = {
                 neutrality_drift = -0.005
                 democratic_drift = -0.005
@@ -158,21 +158,21 @@ ideas = {
         }
 
         sbfocus_army_land_idea = {
-            #picture = 
+            picture = GFX_idea_chi_army_corruption3
             modifier = {
                 experience_gain_army = 0.15
             }
         }
         sbfocus_army_air_idea = {
-            #picture = 
+            picture = GFX_idea_generic_air_fighter
             modifier = {
-                experience_gain_army = 0.15
+                experience_gain_air = 0.15
             }
         }
         sbfocus_army_navy_idea = {
-            #picture = 
+            picture = GFX_idea_generic_navy_bonus
             modifier = {
-                experience_gain_army = 0.15
+                experience_gain_navy = 0.15
             }
         }
 
@@ -185,7 +185,7 @@ ideas = {
 			}
         }
         sbfocus_air_medium_production_timed = {
-            #picture = 
+            picture = GFX_idea_man_five_year_plan_air
 			equipment_bonus = {
 				medium_air = {
 					build_cost_ic = -0.15 instant = yes
@@ -193,7 +193,7 @@ ideas = {
 			}
         }
         sbfocus_air_heavy_production_timed = {
-            #picture = 
+            picture = GFX_idea_man_five_year_plan_air
 			equipment_bonus = {
 				heavy_air = {
 					build_cost_ic = -0.15 instant = yes
@@ -202,7 +202,7 @@ ideas = {
         }
 
         sbfocus_air_light_production = {
-            #picture = 
+            picture = GFX_idea_man_five_year_plan_air
 			equipment_bonus = {
 				light_air = {
 					build_cost_ic = -0.05 instant = yes
@@ -210,7 +210,7 @@ ideas = {
 			}
         }
         sbfocus_air_medium_production = {
-            #picture = 
+            picture = GFX_idea_man_five_year_plan_air
 			equipment_bonus = {
 				medium_air = {
 					build_cost_ic = -0.05 instant = yes
@@ -218,7 +218,7 @@ ideas = {
 			}
         }
         sbfocus_air_heavy_production = {
-            #picture = 
+            picture = GFX_idea_man_five_year_plan_air
 			equipment_bonus = {
 				heavy_air = {
 					build_cost_ic = -0.05 instant = yes
@@ -227,6 +227,7 @@ ideas = {
         }
 
         sbfocus_horses_idea = {
+            picture = GFX_idea_generic_victors_of_ww1
             cavalry_attack_factor = 0.05
             cavalry_defense_factor = 0.05
         }

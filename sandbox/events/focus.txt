@@ -174,24 +174,6 @@ country_event = {
         random_owned_controlled_state = {
 			limit = {
 				is_core_of = ROOT
-                NOT = {
-                    has_built = {
-                        type = land_facility
-                        value > 1
-                    }
-                    has_built = {
-                        type = nuclear_facility
-                        value > 1
-                    }
-                    has_built = {
-                        type = air_facility
-                        value > 1
-                    }
-                    has_built = {
-                        type = naval_facility
-                        value > 1
-                    }
-                }
 			}
             construct_building_in_random_province = {
                 land_facility = 1
@@ -203,24 +185,6 @@ country_event = {
         random_owned_controlled_state = {
 			limit = {
 				is_core_of = ROOT
-                NOT = {
-                    has_built = {
-                        type = land_facility
-                        value > 1
-                    }
-                    has_built = {
-                        type = nuclear_facility
-                        value > 1
-                    }
-                    has_built = {
-                        type = air_facility
-                        value > 1
-                    }
-                    has_built = {
-                        type = naval_facility
-                        value > 1
-                    }
-                }
 			}
             construct_building_in_random_province = {
                 nuclear_facility = 1
@@ -232,24 +196,6 @@ country_event = {
         random_owned_controlled_state = {
 			limit = {
 				is_core_of = ROOT
-                NOT = {
-                    has_built = {
-                        type = land_facility
-                        value > 1
-                    }
-                    has_built = {
-                        type = nuclear_facility
-                        value > 1
-                    }
-                    has_built = {
-                        type = air_facility
-                        value > 1
-                    }
-                    has_built = {
-                        type = naval_facility
-                        value > 1
-                    }
-                }
 			}
             construct_building_in_random_province = {
                 air_facility = 1
@@ -262,24 +208,6 @@ country_event = {
 			limit = {
 				is_core_of = ROOT
                 is_coastal = yes
-                NOT = {
-                    has_built = {
-                        type = land_facility
-                        value > 1
-                    }
-                    has_built = {
-                        type = nuclear_facility
-                        value > 1
-                    }
-                    has_built = {
-                        type = air_facility
-                        value > 1
-                    }
-                    has_built = {
-                        type = naval_facility
-                        value > 1
-                    }
-                }
 			}
             construct_building_in_random_province = {
                 naval_facility = 1
@@ -434,13 +362,197 @@ country_event = {
     option = {
         name = sbfocus_events.9.a
 		set_technology = {
-			marines = 1
-		}
+            popup = no
+            basic_ship_hull_carrier = 1
+        }
+        create_equipment_variant = {
+            type = ship_hull_carrier_1
+            modules = {
+                fixed_ship_engine_slot = carrier_ship_engine_2
+                fixed_ship_anti_air_slot = ship_anti_air_2
+                fixed_ship_deck_slot_1 = ship_deck_space
+                fixed_ship_deck_slot_2 = ship_deck_space
+                mid_1_custom_slot = ship_deck_space
+                mid_2_custom_slot = ship_deck_space
+            }
+        }
+        add_equipment_production = {
+            equipment = {
+                type = ship_hull_carrier_1
+            }
+            amount = 1
+            requested_factories = 5
+            progress = 0.75
+        }
+        add_equipment_production = {
+            equipment = {
+                type = ship_hull_carrier_1
+            }
+            amount = 1
+            requested_factories = 5
+            progress = 0.75
+        }
     }
     option = {
         name = sbfocus_events.9.b
-		set_technology = {
-			paratroopers = 1
-		}  
+        set_technology = {
+            popup = no
+            basic_ship_hull_heavy = 1
+        }
+        create_equipment_variant = {
+            type = ship_hull_heavy_2
+            modules = {
+                fixed_ship_armor_slot = ship_armor_bb_1
+                fixed_ship_engine_slot = heavy_ship_engine_2
+                fixed_ship_anti_air_slot = ship_anti_air_2
+                fixed_ship_battery_slot = ship_heavy_battery_2
+                fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+                front_1_custom_slot = ship_heavy_battery_2
+                mid_1_custom_slot = ship_heavy_battery_2
+                mid_2_custom_slot = ship_heavy_battery_2
+                rear_1_custom_slot = ship_heavy_battery_2
+            }
+        }
+        add_equipment_production = {
+            equipment = {
+                type = ship_hull_heavy_2
+            }
+            amount = 1
+            requested_factories = 5
+            progress = 0.75
+        }
+        add_equipment_production = {
+            equipment = {
+                type = ship_hull_heavy_2
+            }
+            amount = 1
+            requested_factories = 5
+            progress = 0.75
+        }
+    }
+}
+
+country_event = {
+    id = sbfocus_events.10
+    title = sbfocus_events.10.t
+    desc = sbfocus_events.10.d
+
+    #picture =
+
+    is_triggered_only = yes
+
+    option = {
+        name = sbfocus_events.10.a
+        set_technology = {
+            popup = no
+            basic_ship_hull_cruiser = 1
+        }
+        create_equipment_variant = {
+            type = ship_hull_cruiser_2
+            modules = {
+                fixed_ship_engine_slot = cruiser_ship_engine_2
+                fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+                fixed_ship_anti_air_slot = ship_anti_air_2
+                fixed_ship_secondaries_slot = ship_secondaries_2
+                fixed_ship_battery_slot = ship_medium_battery_2
+                front_1_custom_slot = ship_light_medium_battery_2
+                mid_1_custom_slot = ship_light_medium_battery_2
+                mid_2_custom_slot = ship_light_medium_battery_2
+                rear_1_custom_slot = ship_light_medium_battery_2
+
+            }
+        }
+        add_equipment_production = {
+            equipment = {
+                type = ship_hull_cruiser_2
+            }
+            amount = 1
+            requested_factories = 10
+            progress = 0.65
+        }
+        add_equipment_production = {
+            equipment = {
+                type = ship_hull_cruiser_2
+            }
+            amount = 1
+            requested_factories = 10
+            progress = 0.65
+        }
+        add_equipment_production = {
+            equipment = {
+                type = ship_hull_cruiser_2
+            }
+            amount = 1
+            requested_factories = 10
+            progress = 0.65
+        }
+        add_equipment_production = {
+            equipment = {
+                type = ship_hull_cruiser_2
+            }
+            amount = 1
+            requested_factories = 10
+            progress = 0.65
+        }
+    }
+    option = {
+        name = sbfocus_events.10.b
+        set_technology = {
+            popup = no
+            basic_ship_hull_light = 1
+        }
+        create_equipment_variant = {
+            type = ship_hull_light_2
+            modules = {
+                fixed_ship_engine_slot = light_ship_engine_2
+                fixed_ship_torpedo_slot = ship_torpedo_2
+                fixed_ship_radar_slot = ship_sonar_2
+                fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+                fixed_ship_anti_air_slot = ship_anti_air_2
+                fixed_ship_battery_slot = ship_light_battery_2
+                mid_1_custom_slot = ship_depth_charge_2
+                rear_1_custom_slot = ship_depth_charge_2
+            }
+        }
+        add_equipment_production = {
+            equipment = {
+                type = ship_hull_light_2
+            }
+            amount = 1
+            requested_factories = 10
+            progress = 0.65
+        }
+        add_equipment_production = {
+            equipment = {
+                type = ship_hull_light_2
+            }
+            amount = 1
+            requested_factories = 10
+            progress = 0.65
+        }
+        add_equipment_production = {
+            equipment = {
+                type = ship_hull_light_2
+            }
+            amount = 1
+            requested_factories = 10
+            progress = 0.65
+        }
+        add_equipment_production = {
+            equipment = {
+                type = ship_hull_light_2
+            }
+            amount = 1
+            requested_factories = 10
+            progress = 0.65
+        }
+        add_equipment_production = {
+            equipment = {
+                type = ship_hull_light_2
+            }
+            amount = 1
+            requested_factories = 10
+            progress = 0.65
+        }
     }
 }

@@ -7,15 +7,13 @@ focus_tree = {
 	default = yes
 	reset_on_civilwar = no
 
-	# ---- ECONOMY ----
-
 	focus = {
 		id = sbfocus_economic
-		#icon =
+		icon = GFX_focus_generic_monetary_union
 		x = 7
 		y = 0
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -28,11 +26,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_industry
-		#icon =
+		icon = GFX_SOV_fourth_five_year_plan_ccp_2d_sov_compatibility
 		x = 3
 		y = 1
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -52,11 +50,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_civil_industry_1
-		#icon =
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 1
 		y = 2
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		available = {
@@ -84,11 +82,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_civil_industry_2
-		#icon =
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 1
 		y = 3
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		available = {
@@ -116,11 +114,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_civil_industry_3
-		#icon =
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 1
 		y = 4
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		available = {
@@ -148,11 +146,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_war_industry_1
-		#icon =
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 3
 		y = 2
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		available = {
@@ -180,11 +178,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_war_industry_2
-		#icon =
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 3
 		y = 3
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		available = {
@@ -212,11 +210,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_war_industry_3
-		#icon =
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 3
 		y = 4
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		available = {
@@ -244,11 +242,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_naval_industry_1
-		#icon =
+		icon = GFX_focus_generic_refit_civilian_ships
 		x = 5
 		y = 2
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		available = {
@@ -277,11 +275,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_naval_industry_2
-		#icon =
+		icon = GFX_focus_generic_refit_civilian_ships
 		x = 5
 		y = 3
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		available = {
@@ -310,11 +308,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_naval_industry_3
-		#icon =
+		icon = GFX_focus_generic_refit_civilian_ships
 		x = 5
 		y = 4
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		available = {
@@ -343,11 +341,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_additional_infrastructure
-		#icon =
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 3
 		y = 5
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -376,11 +374,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_trains_and_convoys
-		#icon =
+		icon = GFX_focus_generic_railroad
 		x = 10
 		y = 1
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -401,11 +399,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_infrastructure_1
-		#icon =
+		icon = GFX_focus_generic_farmland
 		x = 8
 		y = 1
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -429,11 +427,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_add_research_slot_1
-		#icon =
+		icon = GFX_focus_generic_university_2
 		x = 7
 		y = 2
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -447,11 +445,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_resource_prospecting
-		#icon =
+		icon = GFX_focus_GER_factories_for_resources
 		x = 9
 		y = 2
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -465,11 +463,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_special_projects
-		#icon =
+		icon = GFX_focus_BRA_reach_out_to_military_dem
 		x = 11
 		y = 2
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -483,11 +481,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_infrastructure_2
-		#icon =
+		icon = GFX_focus_generic_road_investment
 		x = 8
 		y = 3
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -512,11 +510,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_add_research_slot_2
-		#icon =
+		icon = GFX_focus_generic_university_3
 		x = 7
 		y = 4
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -531,11 +529,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_war_economy
-		#icon =
+		icon = GFX_focus_generic_mass_production
 		x = 8
 		y = 5
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -550,11 +548,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_railroad_bonus
-		#icon =
+		icon = GFX_focus_generic_supply_line
 		x = 11
 		y = 4
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -571,11 +569,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_fortification_bonus
-		#icon =
+		icon = GFX_goal_generic_fortify_city
 		x = 13
 		y = 4
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -592,11 +590,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_license_agreement
-		#icon =
+		icon = GFX_focus_generic_license_production
 		x = 10
 		y = 5
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		available = {
@@ -614,11 +612,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_oil_rubber
-		#icon =
+		icon = GFX_focus_generic_resource_extraction
 		x = 9
 		y = 6
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -636,11 +634,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_mio_investition
-		#icon =
+		icon = GFX_focus_generic_economic_recovery
 		x = 7
 		y = 6
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -658,17 +656,13 @@ focus_tree = {
 		}
 	}
 
-	# ---- ECONOMY ----
-
-	# ---- POLITICS ----
-
 	focus = {
 		id = sbfocus_politics
-		#icon =
+		icon = GFX_focus_generic_industrialists
 		x = 16
 		y = 0
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -678,11 +672,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_democratic_path
-		#icon =
+		icon = GFX_goal_support_democracy
 		x = 13
 		y = 1
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -705,11 +699,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_neutrality_path
-		#icon =
+		icon = GFX_focus_SWI_neutrality_on_the_move
 		x = 15
 		y = 1
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -732,11 +726,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_communism_path
-		#icon =
+		icon = GFX_SOV_the_new_soviet_woman_ccp_2d_sov_compatibility
 		x = 17
 		y = 1
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -759,11 +753,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_fascism_path
-		#icon =
+		icon = GFX_focus_generic_fascist_propaganda
 		x = 19
 		y = 1
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -786,11 +780,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_consolidate_government
-		#icon =
+		icon = GFX_focus_NOR_continue_nygaardsvold_government
 		x = 21
 		y = 2
 		cost = 5
-		search_filters = {  }
+
 		available_if_capitulated = yes
 
 		mutually_exclusive = {
@@ -814,11 +808,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_war_propaganda
-		#icon =
+		icon = GFX_focus_hol_war_on_pacifism
 		x = 23
 		y = 2
 		cost = 5
-		search_filters = {  }
+
 		available_if_capitulated = yes
 
 		mutually_exclusive = {
@@ -842,11 +836,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_develop_civil_society
-		#icon =
+		icon = GFX_focus_generic_population_growth
 		x = 14
 		y = 2
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		available = {
@@ -868,11 +862,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_unity_on_war
-		#icon =
+		icon = GFX_focus_generic_full_social_mobilization
 		x = 14
 		y = 3
 		cost = 5
-		search_filters = {  }
+
 		available_if_capitulated = yes
 
 		available = {
@@ -894,11 +888,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_assemble_government
-		#icon =
+		icon = GFX_focus_generic_improve_the_administration
 		x = 16
 		y = 2
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -918,11 +912,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_elimninate_competitors
-		#icon =
+		icon = GFX_focus_generic_national_security
 		x = 18
 		y = 2
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		available = {
@@ -961,11 +955,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_cancel_elections
-		#icon =
+		icon = GFX_focus_generic_election
 		x = 18
 		y = 3
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		available = {
@@ -993,18 +987,14 @@ focus_tree = {
 			}
 		}
 	}
-
-	# ---- POLITICS ----
-
-	# ---- ARMY ----
 	
 	focus = {
 		id = sbfocus_army
-		#icon =
+		icon = GFX_focus_chi_army_reform
 		x = 32
 		y = 0
 		cost = 5
-		search_filters = {  }
+
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1014,11 +1004,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_air
-		#icon =
+		icon = GFX_goal_generic_air_doctrine
 		x = 28
 		y = 1
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1043,11 +1033,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_air_planes
-		#icon =
+		icon = GFX_focus_generic_copy_plane_designs
 		x = 26
 		y = 2
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1061,11 +1051,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_air_plane_production
-		#icon =
+		icon = GFX_SOV_increase_aircraft_production_ccp_2d_sov_compatibility
 		x = 26
 		y = 3
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1079,11 +1069,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_air_mio
-		#icon =
+		icon = GFX_focus_BRA_reach_out_to_military_dem
 		x = 29
 		y = 3
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1100,11 +1090,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_air_rockets
-		#icon =
+		icon = GFX_focus_rocketry
 		x = 27
 		y = 4
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1123,11 +1113,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_land
-		#icon =
+		icon = GFX_focus_generic_military_mission
 		x = 34
 		y = 1
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1146,11 +1136,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_develop_base
-		#icon =
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 33
 		y = 3
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1171,11 +1161,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_land_mio
-		#icon =
+		icon = GFX_focus_BRA_reach_out_to_military_dem
 		x = 35
 		y = 3
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1192,11 +1182,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_reservistes_system
-		#icon =
+		icon = GFX_focus_RAJ_headhunt_army_personell
 		x = 31
 		y = 2
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1209,11 +1199,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_motorization
-		#icon =
+		icon = GFX_focus_generic_truck
 		x = 36
 		y = 2
-		cost = 10
-		search_filters = {  }
+		cost = 5
+		
 		available_if_capitulated = yes
 
 		mutually_exclusive = {
@@ -1237,11 +1227,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_horses
-		#icon =
+		icon = GFX_focus_generic_horse_studs
 		x = 38
 		y = 2
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		mutually_exclusive = {
@@ -1259,11 +1249,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_tanks
-		#icon =
+		icon = GFX_focus_generic_tank_assembly
 		x = 30
 		y = 4
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1273,8 +1263,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
                 name = sb_armor_bonus
-				bonus = 1.0
-				uses = 2
+				bonus = 0.5
+				uses = 3
 				category = armor
 			}
 		}
@@ -1282,11 +1272,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_mechanization
-		#icon =
+		icon = GFX_focus_generic_mechanized
 		x = 32
 		y = 4
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1306,11 +1296,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_special_forces
-		#icon =
+		icon = GFX_focus_SMB_special_forces_option_1
 		x = 37
 		y = 4
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1336,11 +1326,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_navy
-		#icon =
+		icon = GFX_focus_generic_naval_discipline
 		x = 42
 		y = 1
 		cost = 5
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1358,18 +1348,18 @@ focus_tree = {
                 name = sbfocus_air_doctrine_bonus
 				cost_reduction = 1.0
 				uses = 2
-				category = navy_doctrine
+				category = naval_doctrine
 			}
 		}
 	}
 
 	focus = {
 		id = sbfocus_navy_mio
-		#icon =
+		icon = GFX_focus_BRA_reach_out_to_military_dem
 		x = 41
 		y = 2
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1378,7 +1368,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_breakthrough_progress = {
-				specialization = specialization_navy
+				specialization = specialization_naval
 				value = 1.0
 			}
 		}
@@ -1386,11 +1376,11 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_navy_ships
-		#icon =
+		icon = GFX_focus_generic_navy_research_bonus
 		x = 43
 		y = 2
 		cost = 10
-		search_filters = {  }
+		
 		available_if_capitulated = yes
 
 		prerequisite = {
@@ -1414,4 +1404,164 @@ focus_tree = {
 			}
 		}
 	}
+
+    focus = {
+        id = sbfocus_heavy_ships
+        icon = GFX_focus_generic_air_carrier
+        x = 40
+        y = 3
+        cost = 20
+
+		mutually_exclusive = {
+			focus = sbfocus_light_ships
+			focus = sbfocus_submarines
+		}
+        
+        available_if_capitulated = yes
+
+        prerequisite = {
+            focus = sbfocus_navy_ships
+        }
+
+        completion_reward = {
+            country_event = sbfocus_events.9
+        }
+    }
+
+    focus = {
+        id = sbfocus_light_ships
+        icon = GFX_focus_generic_cruiser2
+        x = 42
+        y = 3
+        cost = 15
+
+		mutually_exclusive = {
+			focus = sbfocus_submarines
+			focus = sbfocus_heavy_ships
+		}
+        
+        available_if_capitulated = yes
+
+        prerequisite = {
+            focus = sbfocus_navy_ships
+        }
+
+        completion_reward = {
+            country_event = sbfocus_events.10
+        }
+    }
+
+    focus = {
+        id = sbfocus_submarines
+        icon = GFX_focus_generic_midget_submarines
+        x = 44
+        y = 3
+        cost = 10
+        
+        available_if_capitulated = yes
+
+		mutually_exclusive = {
+			focus = sbfocus_light_ships
+			focus = sbfocus_heavy_ships
+		}
+
+        prerequisite = {
+            focus = sbfocus_navy_ships
+        }
+
+        completion_reward = {
+            set_technology = {
+                popup = no
+                basic_ship_hull_submarine = 1
+            }
+            create_equipment_variant = {
+                type = ship_hull_submarine_2
+                modules = {
+                    fixed_ship_torpedo_slot = ship_torpedo_sub_2
+                    fixed_ship_engine_slot = sub_ship_engine_2
+                    rear_1_custom_slot = ship_torpedo_sub_2
+                }
+            }
+            add_equipment_production = {
+                equipment = {
+                    type = ship_hull_submarine_2
+                }
+                amount = 1
+                requested_factories = 10
+                progress = 0.70
+            }
+            add_equipment_production = {
+                equipment = {
+                    type = ship_hull_submarine_2
+                }
+                amount = 1
+                requested_factories = 10
+                progress = 0.70
+            }
+            add_equipment_production = {
+                equipment = {
+                    type = ship_hull_submarine_2
+                }
+                amount = 1
+                requested_factories = 10
+                progress = 0.70
+            }
+            add_equipment_production = {
+                equipment = {
+                    type = ship_hull_submarine_2
+                }
+                amount = 1
+                requested_factories = 10
+                progress = 0.70
+            }
+            add_equipment_production = {
+                equipment = {
+                    type = ship_hull_submarine_2
+                }
+                amount = 1
+                requested_factories = 10
+                progress = 0.70
+            }
+            add_equipment_production = {
+                equipment = {
+                    type = ship_hull_submarine_2
+                }
+                amount = 1
+                requested_factories = 10
+                progress = 0.70
+            }
+            add_equipment_production = {
+                equipment = {
+                    type = ship_hull_submarine_2
+                }
+                amount = 1
+                requested_factories = 10
+                progress = 0.70
+            }
+            add_equipment_production = {
+                equipment = {
+                    type = ship_hull_submarine_2
+                }
+                amount = 1
+                requested_factories = 10
+                progress = 0.70
+            }
+            add_equipment_production = {
+                equipment = {
+                    type = ship_hull_submarine_2
+                }
+                amount = 1
+                requested_factories = 10
+                progress = 0.70
+            }
+            add_equipment_production = {
+                equipment = {
+                    type = ship_hull_submarine_2
+                }
+                amount = 1
+                requested_factories = 10
+                progress = 0.70
+            }
+        }
+    }
 }

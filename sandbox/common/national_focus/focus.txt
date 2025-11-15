@@ -836,7 +836,7 @@ focus_tree = {
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		x = 17
 		y = 2
-		cost = 10
+		cost = 5
 
 		available = {
 			has_government = communism
@@ -871,27 +871,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = sbfocus_world_revolution
-		icon = GFX_focus_generic_spur_communist_revolutions
-		x = 17
-		y = 4
-		cost = 10
-
-		available = {
-			has_government = communism
-		}
-
-		available_if_capitulated = yes
-
-		prerequisite = {
-			focus = sbfocus_five_year_plans
-		}
-
-		completion_reward = {
+			custom_effect_tooltip = sbfocus_five_year_plans_tooltip
 		}
 	}
 
@@ -927,7 +907,7 @@ focus_tree = {
 		icon = GFX_focus_GER_end_european_communism
 		x = 19
 		y = 2
-		cost = 10
+		cost = 5
 
 		available = {
 			has_government = fascism
@@ -1125,7 +1105,7 @@ focus_tree = {
 		icon = GFX_focus_BRA_reach_out_to_military_dem
 		x = 29
 		y = 3
-		cost = 10
+		cost = 5
 		
 		available_if_capitulated = yes
 
@@ -1217,7 +1197,7 @@ focus_tree = {
 		icon = GFX_focus_BRA_reach_out_to_military_dem
 		x = 35
 		y = 3
-		cost = 10
+		cost = 5
 		
 		available_if_capitulated = yes
 
@@ -1247,6 +1227,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = sbfocus_reservistes_system_tooltip
 			division_template = {
 				name = "Reservistes"
 				is_locked = yes
@@ -1444,7 +1425,7 @@ focus_tree = {
 		icon = GFX_focus_BRA_reach_out_to_military_dem
 		x = 41
 		y = 2
-		cost = 10
+		cost = 5
 
 		available = {
 			any_core_state = {

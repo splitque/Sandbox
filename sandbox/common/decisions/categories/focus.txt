@@ -1,3 +1,9 @@
 sbfocus_reservistes_system_decisions = {
     icon = decision_category_army_reform
+    picture = GFX_decision_cat_picture_SWI_military_readiness_decisions
+}
+
+sbfocus_five_year_plans_decisions = {
+    icon = decision_generic_factory
+    picture = GFX_decision_cat_generic_mefo_bills
 }

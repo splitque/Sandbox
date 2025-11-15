@@ -1,0 +1,150 @@
+sbfocus_five_year_plans_decisions = {
+    five_year_plans_startup_decision = {
+        visible = {
+            has_completed_focus = sbfocus_five_year_plans
+            has_government = communism
+            NOT = {
+                has_country_flag = five_year_plans_started
+            }
+        }
+        
+        cost = 100
+        fire_only_once = no
+
+        complete_effect = {
+            add_ideas = closed_economy
+            add_ideas = unsetted_planned_economy
+            set_country_flag = five_year_plans_started
+            set_variable = {
+                var = five_year_plans_goal
+                value = ROOT.num_of_factories
+            }
+            multiply_variable = {
+                var = five_year_plans_goal
+                value = 2
+            }
+        }
+    }
+
+    five_year_plans_startup_mission = {
+        activation = {
+            has_country_flag = five_year_plans_started
+        }
+        available = {
+            num_of_factories > var:five_year_plans_goal
+        }
+        
+        fire_only_once = no
+        days_mission_timeout = 1825
+        selectable_mission = yes
+        priority = 10
+
+        complete_effect = {
+            clr_country_flag = five_year_plans_started
+            add_ideas = unsetted_planned_economy
+        }
+        timeout_effect = {
+            clr_country_flag = five_year_plans_started
+            add_ideas = unsetted_planned_economy
+        }
+    }
+
+    five_year_plans_civilian_focus_decision = {
+        visible = {
+            has_completed_focus = sbfocus_five_year_plans
+            has_country_flag = five_year_plans_started
+        }
+        available = {
+            NOT = {
+                has_country_flag = five_year_plans_prioritized
+            }
+        }
+
+        cost = 100
+        fire_only_once = no
+
+        complete_effect = {
+            set_country_flag = five_year_plans_prioritized
+            add_ideas = civilian_focus_planned_economy
+        }
+    }
+
+    five_year_plans_arms_factory_focus_decision = {
+        visible = {
+            has_completed_focus = sbfocus_five_year_plans
+            has_country_flag = five_year_plans_started
+        }
+        available = {
+            NOT = {
+                has_country_flag = five_year_plans_prioritized
+            }
+        }
+
+        cost = 100
+        fire_only_once = no
+
+        complete_effect = {
+            set_country_flag = five_year_plans_prioritized
+            add_ideas = arms_factory_focus_planned_economy
+        }
+    }
+
+    five_year_plans_dockyard_focus_decision = {
+        visible = {
+            has_completed_focus = sbfocus_five_year_plans
+            has_country_flag = five_year_plans_started
+        }
+        available = {
+            NOT = {
+                has_country_flag = five_year_plans_prioritized
+            }
+        }
+
+        cost = 100
+        fire_only_once = no
+
+        complete_effect = {
+            set_country_flag = five_year_plans_prioritized
+            add_ideas = dockyard_focus_planned_economy
+        }
+    }
+
+    five_year_plans_infrastructure_focus_decision = {
+        visible = {
+            has_completed_focus = sbfocus_five_year_plans
+            has_country_flag = five_year_plans_started
+        }
+        available = {
+            NOT = {
+                has_country_flag = five_year_plans_prioritized
+            }
+        }
+
+        cost = 100
+        fire_only_once = no
+
+        complete_effect = {
+            set_country_flag = five_year_plans_prioritized
+            add_ideas = infrastructure_focus_planned_economy
+        }
+    }
+
+    five_year_plans_focused_mission = {
+        activation = {
+            has_country_flag = five_year_plans_prioritized
+        }
+        available = {
+            always = no
+        }
+
+        fire_only_once = no
+        days_mission_timeout = 90
+        selectable_mission = no
+        is_good = yes
+        priority = 10
+
+        timeout_effect = {
+            clr_country_flag = five_year_plans_prioritized
+        }
+    }
+}

@@ -351,9 +351,6 @@ every_possible_country = {
 			slot = army_chief
 			traits = { army_chief_reform_3 }
 			cost = 100
-			available = {
-				has_completed_focus = land_army
-			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -368,9 +365,6 @@ every_possible_country = {
 			slot = navy_chief
 			traits = { navy_chief_reform_3 }
 			cost = 100
-			available = {
-				has_completed_focus = navy_army
-			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -388,9 +382,6 @@ every_possible_country = {
 			slot = air_chief
 			traits = { air_chief_reform_3 }
 			cost = 100
-			available = {
-				has_completed_focus = air_army
-			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -405,9 +396,6 @@ every_possible_country = {
 			slot = air_chief
 			traits = { air_chief_all_weather_3 }
 			cost = 100
-			available = {
-				has_completed_focus = air_army
-			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -422,9 +410,6 @@ every_possible_country = {
 			slot = air_chief
 			traits = { air_chief_ground_support_3 }
 			cost = 100
-			available = {
-				has_completed_focus = air_army
-			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -439,9 +424,6 @@ every_possible_country = {
 			slot = air_chief
 			traits = { air_chief_night_operations_3 }
 			cost = 100
-			available = {
-				has_completed_focus = air_army
-			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -456,9 +438,6 @@ every_possible_country = {
 			slot = air_chief
 			traits = { air_chief_safety_3 }
 			cost = 100
-			available = {
-				has_completed_focus = air_army
-			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -476,9 +455,6 @@ every_possible_country = {
 			traits = { air_air_combat_training_3 }
 			ledger = air
 			cost = 50
-			available = {
-				has_completed_focus = air_army
-			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -494,9 +470,6 @@ every_possible_country = {
 			traits = { air_naval_strike_3 }
 			ledger = air
 			cost = 50
-			available = {
-				has_completed_focus = air_army
-			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -512,9 +485,6 @@ every_possible_country = {
 			traits = { air_bomber_interception_3 }
 			ledger = air
 			cost = 50
-			available = {
-				has_completed_focus = air_army
-			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -530,9 +500,6 @@ every_possible_country = {
 			traits = { air_air_superiority_3 }
 			ledger = air
 			cost = 50
-			available = {
-				has_completed_focus = air_army
-			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -548,9 +515,6 @@ every_possible_country = {
 			traits = { air_close_air_support_3 }
 			ledger = air
 			cost = 50
-			available = {
-				has_completed_focus = air_army
-			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -566,9 +530,6 @@ every_possible_country = {
 			traits = { air_strategic_bombing_3 }
 			ledger = air
 			cost = 50
-			available = {
-				has_completed_focus = air_army
-			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -584,9 +545,6 @@ every_possible_country = {
 			traits = { air_tactical_bombing_3 }
 			ledger = air
 			cost = 50
-			available = {
-				has_completed_focus = air_army
-			}
 			ai_will_do = {
 				factor = 1
 			}

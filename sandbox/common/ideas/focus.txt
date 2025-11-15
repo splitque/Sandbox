@@ -161,6 +161,8 @@ ideas = {
                 political_power_factor = 0.1
                 stability_factor = 0.1
                 war_support_factor = 0.1
+                communism_drift = -0.1
+                fascism_drift = -0.1
             }
         }
 

@@ -1,0 +1,342 @@
+sbfocus_reservistes_system_decisions = {
+    reserv_up_manpower_decision = {
+        visible = {
+            has_completed_focus = sbfocus_reservistes_system
+            check_variable = {
+                reserv_manpower_percentage_to_reservistes < 20
+            }
+        }
+        available = {
+            NOT = {
+                has_country_flag = reserv_called_reservistes
+            }
+            check_variable = {
+                reserv_manpower_percentage_to_reservistes < 20
+            }
+        }
+
+        custom_cost_trigger = {
+            command_power > 60
+        }
+        custom_cost_text = reserv_up_manpower_decision_cost
+
+        days_re_enable = 100
+
+        complete_effect = {
+            add_command_power = -60
+            add_to_variable = {
+                var = reserv_manpower_percentage_to_reservistes
+                value = 5
+            }
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+    }
+
+    reserv_add_units_decision = {
+        visible = {
+            has_completed_focus = sbfocus_reservistes_system
+            check_variable = {
+                reserv_additional_units < 5
+            }
+        }
+        available = {
+            NOT = {
+                has_country_flag = reserv_called_reservistes
+            }
+            check_variable = {
+                reserv_additional_units < 5
+            }
+        }
+
+        custom_cost_trigger = {
+            command_power > 20
+            has_manpower > 1000
+            has_equipment = {
+                infantry_equipment > 100
+            }
+        }
+        custom_cost_text = reserv_add_units_decision_cost
+
+        days_re_enable = 200
+
+        complete_effect = {
+            add_command_power = -20
+            add_manpower = -1000
+            add_to_variable = {
+                var = reserv_additional_units
+                value = 1
+            }
+            add_to_variable = {
+                var = reserv_divivion_manpower
+                value = 1000
+            }
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -100
+            }
+            add_units_to_division_template = {
+                template_name = "Reservistes"
+                regiments = {
+                    irregular_infantry = 1
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+    }
+
+    reserv_add_engineer_decision = {
+        visible = {
+            has_completed_focus = sbfocus_reservistes_system
+        }
+        available = {
+            NOT = {
+                has_country_flag = reserv_called_reservistes
+            }
+            has_tech = tech_engineers
+        }
+
+        custom_cost_trigger = {
+            command_power > 20
+            has_manpower > 300
+            has_equipment = {
+                support_equipment_1 > 30
+            }
+        }
+        custom_cost_text = reserv_add_engineer_decision_cost
+
+        fire_only_once = yes
+
+        complete_effect = {
+            add_command_power = -20
+            add_manpower = -300
+            add_to_variable = {
+                var = reserv_divivion_manpower
+                value = 300
+            }
+            add_equipment_to_stockpile = {
+                type = support_equipment_1
+                amount = -30
+            }
+            add_units_to_division_template = {
+                template_name = "Reservistes"
+                support = {
+                    engineer = 0
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+    }
+
+    reserv_add_recon_decision = {
+        visible = {
+            has_completed_focus = sbfocus_reservistes_system
+        }
+        available = {
+            NOT = {
+                has_country_flag = reserv_called_reservistes
+            }
+            has_tech = tech_recon
+        }
+
+        custom_cost_trigger = {
+            command_power > 20
+            has_manpower > 500
+            has_equipment = {
+                support_equipment_1 > 10
+                infantry_equipment > 40
+            }
+        }
+        custom_cost_text = reserv_add_recon_decision_cost
+
+        fire_only_once = yes
+
+        complete_effect = {
+            add_command_power = -20
+            add_manpower = -500
+            add_to_variable = {
+                var = reserv_divivion_manpower
+                value = 500
+            }
+            add_equipment_to_stockpile = {
+                type = support_equipment_1
+                amount = -10
+            }
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -30
+            }
+            add_units_to_division_template = {
+                template_name = "Reservistes"
+                support = {
+                    recon = 0
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+    }
+
+    reserv_add_artillery_decision = {
+        visible = {
+            has_completed_focus = sbfocus_reservistes_system
+        }
+        available = {
+            NOT = {
+                has_country_flag = reserv_called_reservistes
+            }
+        }
+
+        custom_cost_trigger = {
+            command_power > 20
+            has_manpower > 300
+            has_equipment = {
+                artillery_equipment_1 > 12
+            }
+        }
+        custom_cost_text = reserv_add_artillery_decision_cost
+
+        fire_only_once = yes
+
+        complete_effect = {
+            add_command_power = -20
+            add_manpower = -300
+            add_to_variable = {
+                var = reserv_divivion_manpower
+                value = 300
+            }
+            add_equipment_to_stockpile = {
+                type = artillery_equipment
+                amount = -12
+            }
+            add_units_to_division_template = {
+                template_name = "Reservistes"
+                support = {
+                    artillery = 0
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+    }
+
+    reserv_call_reservistes_decision = {
+        visible = {
+            has_completed_focus = sbfocus_reservistes_system
+            NOT = {
+                has_country_flag = reserv_called_reservistes
+            }
+        }
+        available = {
+            NOT = {
+                has_country_flag = reserv_called_reservistes
+            }
+            has_defensive_war = yes
+        }
+
+        custom_cost_trigger = {
+            command_power > 20
+        }
+        custom_cost_text = reserv_call_reservistes_decision_cost
+
+        fire_only_once = no
+
+        complete_effect = {
+            add_command_power = -20
+            set_country_flag = reserv_called_reservistes
+            set_variable = {
+                var = used_manpower
+                value = ROOT.manpower_k
+            }
+            multiply_variable = {
+                var = used_manpower
+                value = 10
+            }
+            multiply_variable = {
+                var = used_manpower
+                value = var:reserv_manpower_percentage_to_reservistes
+            }
+
+            set_variable = {
+                var = division_count
+                value = var:used_manpower
+            }
+            divide_variable = {
+                var = division_count
+                value = var:reserv_divivion_manpower
+            }
+            round_variable = division_count
+
+            log = "used_manpower: [?used_manpower]"
+            log = "division_count: [?division_count]"
+
+            for_loop_effect = {
+                end = var:division_count
+                value = temp
+                random_owned_controlled_state = {
+                    limit = {
+                        is_core_of = ROOT
+                    }
+                    owner = {
+                        save_event_target_as = picked_country
+                    }
+                    create_unit = {
+                        division = "division_template = \"Reservistes\""
+                        owner = PREV
+                    }
+                }
+            }
+
+            clear_variable = used_manpower
+            clear_variable = division_count
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+    }
+
+    reserv_recall_reservistes_decision = {
+        visible = {
+            has_completed_focus = sbfocus_reservistes_system
+            has_country_flag = reserv_called_reservistes
+        }
+        available = {
+            has_country_flag = reserv_called_reservistes
+            has_war = no
+        }
+
+        custom_cost_trigger = {
+            command_power > 20
+        }
+        custom_cost_text = reserv_recall_reservistes_decision_cost
+
+        fire_only_once = no
+
+        complete_effect = {
+            add_command_power = -20
+            clr_country_flag = reserv_called_reservistes
+            
+            delete_units = {
+                division_template = "Reservistes"
+                disband = no
+            }
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+    }
+}

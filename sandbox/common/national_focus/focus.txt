@@ -26,7 +26,7 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_industry
-		icon = GFX_SOV_fourth_five_year_plan_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_industry_3
 		x = 3
 		y = 1
 		cost = 10
@@ -251,6 +251,9 @@ focus_tree = {
 
 		available = {
 			has_idea = sbfocus_extension_naval_industry_idea
+			any_core_state = {
+				is_coastal = yes
+			}
 		}
 
 		prerequisite = {
@@ -284,6 +287,9 @@ focus_tree = {
 
 		available = {
 			has_idea = sbfocus_extension_naval_industry_idea
+			any_core_state = {
+				is_coastal = yes
+			}
 		}
 
 		prerequisite = {
@@ -317,6 +323,9 @@ focus_tree = {
 
 		available = {
 			has_idea = sbfocus_extension_naval_industry_idea
+			any_core_state = {
+				is_coastal = yes
+			}
 		}
 
 		prerequisite = {
@@ -692,8 +701,30 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = sbfocus_democratic_path_idea
-				days = 365
+				days = 730
 			}
+		}
+	}
+
+	focus = {
+		id = sbfocus_civil_society
+		icon = GFX_focus_ARG_defense_and_democracy
+		x = 13
+		y = 2
+		cost = 10
+
+		available = {
+			has_government = democratic
+		}
+		
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus =	sbfocus_democratic_path
+		}
+
+		completion_reward = {
+			add_ideas = sbfocus_civil_society_idea
 		}
 	}
 
@@ -719,14 +750,63 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = sbfocus_neutrality_path_idea
-				days = 365
+				days = 730
 			}
 		}
 	}
 
 	focus = {
+		id = sbfocus_guard_our_country
+		icon = GFX_focus_AFG_royal_guard
+		x = 15
+		y = 2
+		cost = 10
+
+		available = {
+			has_government = neutrality
+		}
+		
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus =	sbfocus_neutrality_path
+		}
+
+		completion_reward = {
+			add_ideas = sbfocus_guard_our_country_idea
+		}
+	}
+
+	focus = {
+		id = sbfocus_mobilize_country
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 14
+		y = 3
+		cost = 10
+
+		available = {
+			has_defensive_war = yes
+			OR = {
+				has_government = neutrality
+				has_government = democratic
+			}
+		}
+		
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus =	sbfocus_civil_society
+			focus = sbfocus_guard_our_country
+		}
+
+		completion_reward = {
+			add_ideas = sbfocus_mobilize_country_idea
+		}
+	}
+
+	focus = {
 		id = sbfocus_communism_path
-		icon = GFX_SOV_the_new_soviet_woman_ccp_2d_sov_compatibility
+		icon = GFX_goal_support_communism
 		x = 17
 		y = 1
 		cost = 5
@@ -739,15 +819,79 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = sbfocus_democratic_path
-			focus = sbfocus_communism_path
+			focus = sbfocus_neutrality_path
 			focus = sbfocus_fascism_path
 		}
 
 		completion_reward = {
 			add_timed_idea = {
 				idea = sbfocus_communism_path_idea
-				days = 365
+				days = 730
 			}
+		}
+	}
+
+	focus = {
+		id = sbfocus_pursuit_fascists
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 17
+		y = 2
+		cost = 10
+
+		available = {
+			has_government = communism
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus = sbfocus_communism_path
+		}
+
+		completion_reward = {
+			add_ideas = sbfocus_pursuit_fascists_idea
+		}
+	}
+
+	focus = {
+		id = sbfocus_five_year_plans
+		icon = GFX_focus_GER_prioritize_the_four_year_plan
+		x = 17
+		y = 3
+		cost = 10
+
+		available = {
+			has_government = communism
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus = sbfocus_pursuit_fascists
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = sbfocus_world_revolution
+		icon = GFX_focus_generic_spur_communist_revolutions
+		x = 17
+		y = 4
+		cost = 10
+
+		available = {
+			has_government = communism
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus = sbfocus_five_year_plans
+		}
+
+		completion_reward = {
 		}
 	}
 
@@ -773,8 +917,53 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = sbfocus_fascism_path_idea
-				days = 365
+				days = 730
 			}
+		}
+	}
+
+	focus = {
+		id = sbfocus_pursuit_communists
+		icon = GFX_focus_GER_end_european_communism
+		x = 19
+		y = 2
+		cost = 10
+
+		available = {
+			has_government = fascism
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus = sbfocus_fascism_path
+		}
+
+		completion_reward = {
+			add_ideas = sbfocus_pursuit_communists_idea
+		}
+	}
+
+	focus = {
+		id = sbfocus_corporatism
+		icon = GFX_focus_ICE_state_corporatism
+		x = 19
+		y = 3
+		cost = 10
+
+		available = {
+			has_government = fascism
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = {
+			focus = sbfocus_pursuit_communists
+		}
+
+		completion_reward = {
+			add_ideas = war_economy
+			add_ideas = autarkic_economy
 		}
 	}
 
@@ -782,7 +971,7 @@ focus_tree = {
 		id = sbfocus_consolidate_government
 		icon = GFX_focus_NOR_continue_nygaardsvold_government
 		x = 21
-		y = 2
+		y = 3
 		cost = 5
 
 		available_if_capitulated = yes
@@ -792,10 +981,7 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = sbfocus_democratic_path
-			focus = sbfocus_neutrality_path
-			focus = sbfocus_communism_path
-			focus = sbfocus_fascism_path
+			focus = sbfocus_assemble_government
 		}
 
 		completion_reward = {
@@ -810,7 +996,7 @@ focus_tree = {
 		id = sbfocus_war_propaganda
 		icon = GFX_focus_hol_war_on_pacifism
 		x = 23
-		y = 2
+		y = 3
 		cost = 5
 
 		available_if_capitulated = yes
@@ -820,10 +1006,7 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = sbfocus_democratic_path
-			focus = sbfocus_neutrality_path
-			focus = sbfocus_communism_path
-			focus = sbfocus_fascism_path
+			focus = sbfocus_assemble_government
 		}
 
 		completion_reward = {
@@ -835,61 +1018,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = sbfocus_develop_civil_society
-		icon = GFX_focus_generic_population_growth
-		x = 14
-		y = 2
-		cost = 5
-		
-		available_if_capitulated = yes
-
-		available = {
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
-		}
-
-		prerequisite = {
-			focus = sbfocus_democratic_path
-			focus = sbfocus_neutrality_path
-		}
-
-		completion_reward = {
-			add_ideas = sbfocus_civil_society_idea
-		}
-	}
-
-	focus = {
-		id = sbfocus_unity_on_war
-		icon = GFX_focus_generic_full_social_mobilization
-		x = 14
-		y = 3
-		cost = 5
-
-		available_if_capitulated = yes
-
-		available = {
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
-			has_war = yes
-		}
-
-		prerequisite = {
-			focus = sbfocus_develop_civil_society
-		}
-
-		completion_reward = {
-			add_ideas = sbfocus_unity_on_war_idea
-		}
-	}
-
-	focus = {
 		id = sbfocus_assemble_government
 		icon = GFX_focus_generic_improve_the_administration
-		x = 16
+		x = 21
 		y = 2
 		cost = 5
 		
@@ -906,84 +1037,6 @@ focus_tree = {
 			add_timed_idea = {
 				idea = sbfocus_assemble_government_idea
 				days = 365
-			}
-		}
-	}
-
-	focus = {
-		id = sbfocus_elimninate_competitors
-		icon = GFX_focus_generic_national_security
-		x = 18
-		y = 2
-		cost = 5
-		
-		available_if_capitulated = yes
-
-		available = {
-			OR = {
-				has_government = fascism
-				has_government = communism
-			}
-		}
-
-		prerequisite = {
-			focus = sbfocus_communism_path
-			focus = sbfocus_fascism_path
-		}
-
-		completion_reward = {
-			if = {
-				limit = {
-					has_government = communism
-				}
-				add_timed_idea = {
-					idea = sbfocus_elimninate_competitors_communism_idea
-					days = 365
-				}
-			}
-			if = {
-				limit = {
-					has_government = fascism
-				}
-				add_timed_idea = {
-					idea = sbfocus_elimninate_competitors_fascism_idea
-					days = 365
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = sbfocus_cancel_elections
-		icon = GFX_focus_generic_election
-		x = 18
-		y = 3
-		cost = 5
-		
-		available_if_capitulated = yes
-
-		available = {
-			if = {
-				limit = {
-					has_government = communism
-				}
-				party_popularity@communism > 80
-			}
-			if = {
-				limit = {
-					has_government = fascism
-				}
-				party_popularity@fascism > 80
-			}
-		}
-
-		prerequisite = {
-			focus = sbfocus_elimninate_competitors
-		}
-
-		completion_reward = {
-			set_politics = {
-				elections_allowed = no
 			}
 		}
 	}
@@ -1051,7 +1104,7 @@ focus_tree = {
 
 	focus = {
 		id = sbfocus_air_plane_production
-		icon = GFX_SOV_increase_aircraft_production_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_aircraft_production
 		x = 26
 		y = 3
 		cost = 10
@@ -1194,6 +1247,33 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			division_template = {
+				name = "Reservistes"
+				is_locked = yes
+				force_allow_recruiting = no
+				priority = 0
+				regiments = {
+					irregular_infantry = { x = 0 y = 0 }
+					irregular_infantry = { x = 0 y = 1 }
+					irregular_infantry = { x = 0 y = 2 }
+				}
+			}
+
+			set_variable = {
+				var = reserv_manpower_percentage_to_reservistes
+				value = 5
+			}
+			set_variable = {
+				var = reserv_divivion_manpower
+				value = 3000
+			}
+			set_variable = {
+				var = reserv_additional_units
+				value = 0
+			}
+			log = "reserv_manpower_percentage_to_reservistes: [?reserv_manpower_percentage_to_reservistes]"
+			log = "reserv_divivion_manpower: [?reserv_divivion_manpower]"
+			log = "reserv_additional_units: [?reserv_additional_units]"
 		}
 	}
 
@@ -1330,6 +1410,12 @@ focus_tree = {
 		x = 42
 		y = 1
 		cost = 5
+
+		available = {
+			any_core_state = {
+				is_coastal = yes
+			}
+		}
 		
 		available_if_capitulated = yes
 
@@ -1359,6 +1445,12 @@ focus_tree = {
 		x = 41
 		y = 2
 		cost = 10
+
+		available = {
+			any_core_state = {
+				is_coastal = yes
+			}
+		}
 		
 		available_if_capitulated = yes
 
@@ -1380,6 +1472,12 @@ focus_tree = {
 		x = 43
 		y = 2
 		cost = 10
+
+		available = {
+			any_core_state = {
+				is_coastal = yes
+			}
+		}
 		
 		available_if_capitulated = yes
 
@@ -1416,6 +1514,12 @@ focus_tree = {
 			focus = sbfocus_light_ships
 			focus = sbfocus_submarines
 		}
+
+		available = {
+			any_core_state = {
+				is_coastal = yes
+			}
+		}
         
         available_if_capitulated = yes
 
@@ -1438,6 +1542,12 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = sbfocus_submarines
 			focus = sbfocus_heavy_ships
+		}
+
+		available = {
+			any_core_state = {
+				is_coastal = yes
+			}
 		}
         
         available_if_capitulated = yes
@@ -1463,6 +1573,12 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = sbfocus_light_ships
 			focus = sbfocus_heavy_ships
+		}
+
+		available = {
+			any_core_state = {
+				is_coastal = yes
+			}
 		}
 
         prerequisite = {

@@ -31,7 +31,10 @@ sbfocus_five_year_plans_decisions = {
             has_country_flag = five_year_plans_started
         }
         available = {
-            num_of_factories > var:five_year_plans_goal
+            custom_trigger_tooltip = {
+                tooltip = five_year_plans_startup_mission_tooltip_trigger
+                num_of_factories > var:five_year_plans_goal
+            }
         }
         
         fire_only_once = no
@@ -40,12 +43,20 @@ sbfocus_five_year_plans_decisions = {
         priority = 10
 
         complete_effect = {
-            clr_country_flag = five_year_plans_started
-            add_ideas = unsetted_planned_economy
+            custom_effect_tooltip = five_year_plans_startup_mission_tooltip_successful
+            add_ideas = sbfocus_five_year_plans_successful_idea
+            hidden_effect = {
+                clr_country_flag = five_year_plans_started
+                add_ideas = unsetted_planned_economy
+            }
         }
         timeout_effect = {
-            clr_country_flag = five_year_plans_started
-            add_ideas = unsetted_planned_economy
+            custom_effect_tooltip = five_year_plans_startup_mission_tooltip_failed
+            add_ideas = sbfocus_five_year_plans_failed_idea
+            hidden_effect = {
+                clr_country_flag = five_year_plans_started
+                add_ideas = unsetted_planned_economy
+            }
         }
     }
 
@@ -57,6 +68,7 @@ sbfocus_five_year_plans_decisions = {
         available = {
             NOT = {
                 has_country_flag = five_year_plans_prioritized
+                has_idea = civilian_focus_planned_economy
             }
         }
 
@@ -77,6 +89,7 @@ sbfocus_five_year_plans_decisions = {
         available = {
             NOT = {
                 has_country_flag = five_year_plans_prioritized
+                has_idea = arms_factory_focus_planned_economy
             }
         }
 
@@ -97,6 +110,7 @@ sbfocus_five_year_plans_decisions = {
         available = {
             NOT = {
                 has_country_flag = five_year_plans_prioritized
+                has_idea = dockyard_focus_planned_economy
             }
         }
 
@@ -117,6 +131,7 @@ sbfocus_five_year_plans_decisions = {
         available = {
             NOT = {
                 has_country_flag = five_year_plans_prioritized
+                has_idea = infrastructure_focus_planned_economy
             }
         }
 
@@ -126,6 +141,27 @@ sbfocus_five_year_plans_decisions = {
         complete_effect = {
             set_country_flag = five_year_plans_prioritized
             add_ideas = infrastructure_focus_planned_economy
+        }
+    }
+
+    five_year_plans_fuel_focus_decision = {
+        visible = {
+            has_completed_focus = sbfocus_five_year_plans
+            has_country_flag = five_year_plans_started
+        }
+        available = {
+            NOT = {
+                has_country_flag = five_year_plans_prioritized
+                has_idea = fuel_focus_planned_economy
+            }
+        }
+
+        cost = 100
+        fire_only_once = no
+
+        complete_effect = {
+            set_country_flag = five_year_plans_prioritized
+            add_ideas = fuel_focus_planned_economy
         }
     }
 

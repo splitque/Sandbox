@@ -78,7 +78,7 @@ country_event = {
         }
     }
     option = {
-        name = sbfocus_events.1.d
+        name = sbfocus_events.1.e
         random_owned_controlled_state = {
 			limit = {
 				is_core_of = ROOT
@@ -165,8 +165,6 @@ country_event = {
     title = sbfocus_events.4.t
     desc = sbfocus_events.4.d
 
-    picture = GFX_news_event_generic_research_lab
-
     is_triggered_only = yes
 
     option = {
@@ -203,7 +201,7 @@ country_event = {
         }
     }
     option = {
-        name = sbfocus_events.4.d
+        name = sbfocus_events.4.e
         random_owned_controlled_state = {
 			limit = {
 				is_core_of = ROOT

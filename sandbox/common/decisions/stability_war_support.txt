@@ -489,12 +489,20 @@ demobilization = {
 		activation = {
 			has_unsupported_economic_law = yes
 			has_war = no
+			NOT = {
+				has_completed_focus = sbfocus_war_economy
+				has_completed_focus = sbfocus_corporatism
+			}
 		}
 		cost = 50
 
 		visible = {
 			has_war = no
 			has_unsupported_economic_law = yes
+			NOT = {
+				has_completed_focus = sbfocus_war_economy
+				has_completed_focus = sbfocus_corporatism
+			}
 		}
 		complete_effect = {
 			if = {
@@ -556,6 +564,10 @@ demobilization = {
 		activation = {
 			has_unsupported_economic_law = yes
 			has_war = no
+			NOT = {
+				has_completed_focus = sbfocus_war_economy
+				has_completed_focus = sbfocus_corporatism
+			}
 		}
 		icon = revolt
 		is_good = no

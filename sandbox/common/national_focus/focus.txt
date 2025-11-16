@@ -663,7 +663,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_timed_idea = {
-				idea = sbfocus_mio_investition
+				idea = sbfocus_mio_investition_idea
 				days = 730
 			}
 		}

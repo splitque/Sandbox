@@ -63,7 +63,7 @@ ideas = {
             }
         }
 
-        sbfocus_mio_investition = {
+        sbfocus_mio_investition_idea = {
             picture = RAJ_external_investments
             modifier = {
                 military_industrial_organization_research_bonus = 0.1

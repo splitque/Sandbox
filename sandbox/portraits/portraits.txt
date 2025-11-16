@@ -1908,6 +1908,44 @@ continent = {
 			"GFX_operative_asia_10"
 		}
 	}
+	scientist = {
+		male = {
+			"GFX_scientist_asia_1"
+			"GFX_scientist_asia_2"
+			"GFX_scientist_asia_3"
+			"GFX_scientist_asia_4"
+			"GFX_scientist_asia_5"
+			"GFX_scientist_asia_6"
+			"GFX_scientist_asia_7"
+			"GFX_scientist_asia_8"
+			"GFX_scientist_asia_9"
+			"GFX_scientist_asia_10"
+			"GFX_scientist_asia_11"
+			"GFX_scientist_asia_12"
+			"GFX_scientist_asia_13"
+			"GFX_scientist_asia_14"
+			"GFX_scientist_asia_15"
+			"GFX_scientist_asia_16"
+		}
+		female = {
+			"GFX_scientist_asia_1"
+			"GFX_scientist_asia_2"
+			"GFX_scientist_asia_3"
+			"GFX_scientist_asia_4"
+			"GFX_scientist_asia_5"
+			"GFX_scientist_asia_6"
+			"GFX_scientist_asia_7"
+			"GFX_scientist_asia_8"
+			"GFX_scientist_asia_9"
+			"GFX_scientist_asia_10"
+			"GFX_scientist_asia_11"
+			"GFX_scientist_asia_12"
+			"GFX_scientist_asia_13"
+			"GFX_scientist_asia_14"
+			"GFX_scientist_asia_15"
+			"GFX_scientist_asia_16"
+		}
+	}
 }
 
 continent = {

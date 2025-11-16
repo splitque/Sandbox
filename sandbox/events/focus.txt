@@ -5,7 +5,7 @@ country_event = {
     title = sbfocus_events.0.t
     desc = sbfocus_events.0.d
 
-    #picture =
+    picture = GFX_report_event_tur_industry
 
     is_triggered_only = yes
 
@@ -37,7 +37,7 @@ country_event = {
     title = sbfocus_events.1.t
     desc = sbfocus_events.1.d
 
-    #picture =
+    picture = GFX_report_event_generic_research_lab
 
     is_triggered_only = yes
 
@@ -96,7 +96,7 @@ country_event = {
     title = sbfocus_events.2.t
     desc = sbfocus_events.2.d
 
-    #picture =
+    picture = GFX_report_event_tur_industry
 
     is_triggered_only = yes
 
@@ -116,7 +116,7 @@ country_event = {
     title = sbfocus_events.3.t
     desc = sbfocus_events.3.d
 
-    #picture = 
+    picture = GFX_report_event_generic_research_lab
 
     is_triggered_only = yes
 
@@ -165,7 +165,7 @@ country_event = {
     title = sbfocus_events.4.t
     desc = sbfocus_events.4.d
 
-    #picture = 
+    picture = GFX_news_event_generic_research_lab
 
     is_triggered_only = yes
 
@@ -221,7 +221,7 @@ country_event = {
     title = sbfocus_events.5.t
     desc = sbfocus_events.5.d
 
-    #picture = 
+    picture = GFX_report_event_bul_soviet_army_sofia
 
     is_triggered_only = yes
 
@@ -253,7 +253,7 @@ country_event = {
     title = sbfocus_events.6.t
     desc = sbfocus_events.6.d
 
-    #picture = 
+    picture = GFX_report_event_tur_industry
 
     is_triggered_only = yes
 
@@ -303,7 +303,7 @@ country_event = {
     title = sbfocus_events.7.t
     desc = sbfocus_events.7.d
 
-    #picture = 
+    picture = GFX_report_event_tur_industry
 
     is_triggered_only = yes
 
@@ -326,7 +326,7 @@ country_event = {
     title = sbfocus_events.8.t
     desc = sbfocus_events.8.d
 
-    #picture = 
+    picture = GFX_report_event_GER_black_reichswehr_forces
 
     is_triggered_only = yes
 
@@ -355,7 +355,7 @@ country_event = {
     title = sbfocus_events.9.t
     desc = sbfocus_events.9.d
 
-    #picture = 
+    picture = GFX_report_event_SOV_purge_navy
 
     is_triggered_only = yes
 
@@ -437,7 +437,7 @@ country_event = {
     title = sbfocus_events.10.t
     desc = sbfocus_events.10.d
 
-    #picture =
+    picture = GFX_report_event_SOV_purge_navy
 
     is_triggered_only = yes
 

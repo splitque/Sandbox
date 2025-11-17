@@ -725,6 +725,9 @@ focus_tree = {
 
 		prerequisite = {
 			focus =	sbfocus_democratic_path
+			focus = sbfocus_neutrality_path
+			focus = sbfocus_communism_path
+			focus = sbfocus_fascism_path
 		}
 
 		completion_reward = {
@@ -773,7 +776,10 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		prerequisite = {
-			focus =	sbfocus_neutrality_path
+			focus =	sbfocus_democratic_path
+			focus = sbfocus_neutrality_path
+			focus = sbfocus_communism_path
+			focus = sbfocus_fascism_path
 		}
 
 		completion_reward = {
@@ -849,7 +855,10 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		prerequisite = {
+			focus =	sbfocus_democratic_path
+			focus = sbfocus_neutrality_path
 			focus = sbfocus_communism_path
+			focus = sbfocus_fascism_path
 		}
 
 		completion_reward = {
@@ -920,6 +929,9 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		prerequisite = {
+			focus =	sbfocus_democratic_path
+			focus = sbfocus_neutrality_path
+			focus = sbfocus_communism_path
 			focus = sbfocus_fascism_path
 		}
 

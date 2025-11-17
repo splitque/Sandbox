@@ -44,7 +44,10 @@ sbfocus_five_year_plans_decisions = {
 
         complete_effect = {
             custom_effect_tooltip = five_year_plans_startup_mission_tooltip_successful
-            add_ideas = sbfocus_five_year_plans_successful_idea
+            add_timed_idea = {
+                idea = sbfocus_five_year_plans_successful_idea
+                days = 365
+            }
             hidden_effect = {
                 clr_country_flag = five_year_plans_started
                 add_ideas = unsetted_planned_economy
@@ -52,7 +55,10 @@ sbfocus_five_year_plans_decisions = {
         }
         timeout_effect = {
             custom_effect_tooltip = five_year_plans_startup_mission_tooltip_failed
-            add_ideas = sbfocus_five_year_plans_failed_idea
+            add_timed_idea = {
+                idea = sbfocus_five_year_plans_failed_idea
+                days = 365
+            }
             hidden_effect = {
                 clr_country_flag = five_year_plans_started
                 add_ideas = unsetted_planned_economy

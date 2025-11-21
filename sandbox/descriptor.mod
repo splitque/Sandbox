@@ -1,5 +1,5 @@
 name="Sandbox [RUS/ENG]"
-version = v6
+version = v7
 picture="thumbnail.png"
 tags={
 	"Alternative History"
@@ -22,5 +22,5 @@ replace_path="common/bookmarks"
 replace_path="common/difficulty_settings"
 replace_path="events"
 replace_path="common/military_industrial_organization/organizations"
-supported_version="1.16.*"
+supported_version="1.17.*"
 remote_file_id="3470116979"

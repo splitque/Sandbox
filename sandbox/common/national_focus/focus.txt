@@ -1073,7 +1073,7 @@ focus_tree = {
 			}
 			add_doctrine_cost_reduction = {
                 name = sbfocus_air_doctrine_bonus
-				cost_reduction = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = air_doctrine
 			}
@@ -1176,7 +1176,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
                 name = sbfocus_land_doctrine_bonus
-				cost_reduction = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
 			}
@@ -1426,7 +1426,7 @@ focus_tree = {
 			}
 			add_doctrine_cost_reduction = {
                 name = sbfocus_navy_doctrine_bonus
-				cost_reduction = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine
 			}

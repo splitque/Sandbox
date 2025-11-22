@@ -7,7 +7,6 @@ division_template = {
 		ranger_battalion = { x = 0 y = 3 }
 		ranger_battalion = { x = 1 y = 0 }
 		ranger_battalion = { x = 1 y = 1 }
-		artillery_brigade = { x = 1 y = 2 }
 	}
 	is_locked = no
 	priority = 2

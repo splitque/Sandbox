@@ -1,14 +1,14 @@
 
 
-### #   #   # ### #  #  ##      ###   ##  #   # ###   ##
-#   #    # #   #  ## # #        #  # #  # ## ## #  # #
-##  #     #    #  # ## # ##     ###  #  # # # # ###   #
-#   #     #    #  #  # #  #     #  # #  # #   # #  #   #
-#   ###   #   ### #  #  ##      ###   ##  #   # ###  ##
+### #   #   # ### #  #  ##      ###   ##  #   # ###   ## 
+#   #    # #   #  ## # #        #  # #  # ## ## #  # #   
+##  #     #    #  # ## # ##     ###  #  # # # # ###   #  
+#   #     #    #  #  # #  #     #  # #  # #   # #  #   # 
+#   ###   #   ### #  #  ##      ###   ##  #   # ###  ##  
 
 
 sp_rockets_flying_bomb = {
-	specialization = specialization_air
+	specialization = specialization_air 
 	icon = GFX_sp_rockets_flying_bomb
 
 	project_tags = {
@@ -21,7 +21,7 @@ sp_rockets_flying_bomb = {
 	}
 
 	resource_cost = {
-		resources = {
+		resources = { 
 			steel = 8
 			aluminium = 8
 			tungsten = 2
@@ -46,25 +46,25 @@ sp_rockets_flying_bomb = {
 
 	complexity = sp_complexity.medium
 
-	available = {
+	available = { 
 		FROM = {
 			has_tech = experimental_rockets
 		}
 	}
 
-
+	
 	prototype_time = sp_time.prototype.medium
 
 	project_output = {
 		country_effects = {
-			if = {
+			if = { 
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
 				custom_effect_tooltip = {
 					localization_key = SP_ROCKET_AND_SUBMARINE_SITE_REMINDER_PROJECT
 					PROJECT = sp_rockets_flying_bomb
-				}
+				}				
 			}
 			else = {
 				custom_effect_tooltip = {
@@ -74,16 +74,16 @@ sp_rockets_flying_bomb = {
 			}
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_TECH
-				TECH = sp_rockets_improved_guidance
+				TECH = sp_rockets_improved_guidance	
 			}
-			if = {
+			if = { 
 				limit = {
 					has_dlc = "By Blood Alone"
 				}
 				custom_effect_tooltip = {
 					localization_key = SP_UNLOCK_TECH
-					TECH = sp_rockets_rocket_bomber
-				}
+					TECH = sp_rockets_rocket_bomber	
+				}		
 			}
 		}
 		enable_equipments = {
@@ -112,12 +112,12 @@ sp_rockets_flying_bomb = {
 	}
 
 	unique_prototype_rewards = {
-
+		
 		# Design Choice
 		sp_rocket_design_choice_reward = {
 			fire_only_once = yes
 
-			threshold = {
+			threshold = { 
 				min = 0
 				max = 50
 			}
@@ -125,18 +125,18 @@ sp_rockets_flying_bomb = {
 			weight = {
 				base = 50
 			}
-
+			
 			option = {
 				token = sp_rocket_design_choice_reward_balanced
-
+				
 				iteration_output = {
-
+	
 				}
 			}
 
 			option = {
 				token = sp_rocket_design_choice_reward_range
-
+				
 				iteration_output = {
 					equipment_bonus = {
 						guided_missile_equipment = {
@@ -149,7 +149,7 @@ sp_rockets_flying_bomb = {
 			}
 			option = {
 				token = sp_rocket_design_choice_reward_payload
-
+				
 				iteration_output = {
 					equipment_bonus = {
 						guided_missile_equipment = {
@@ -165,19 +165,19 @@ sp_rockets_flying_bomb = {
 		# Pulsejet Design
 		sp_rockets_flying_bomb_technical_breakthrough_in_pulsejet_design_reward = {
 			fire_only_once = yes
-
-			threshold = {
+			
+			threshold = { 
 				min = 0
 				max = 50
 			}
-
+			
 			weight = {
 				base = 1
 			}
-
+			
 			option = {
 				token = sp_rockets_flying_bomb_technical_breakthrough_in_pulsejet_design_reward_option
-
+						
 				iteration_output = {
 					equipment_bonus = {
 						guided_missile_equipment = {
@@ -192,19 +192,19 @@ sp_rockets_flying_bomb = {
 		# Launch ramp innovations
 		sp_rockets_flying_bomb_launch_ramp_innovations_reward = {
 			fire_only_once = yes
-
-			threshold = {
+			
+			threshold = { 
 				min = 0
 				max = 75
 			}
-
+			
 			weight = {
 				base = 1
 			}
-
+			
 			option = {
 				token = sp_rockets_flying_bomb_launch_ramp_innovations_reward_option
-
+						
 				iteration_output = {
 					country_effects = {
 						FROM = { add_project_progress_ratio = constant:sp_progress.gain.low }
@@ -216,19 +216,19 @@ sp_rockets_flying_bomb = {
 		# Mass Production
 		sp_rockets_flying_bomb_mass_production_scaling_reward = {
 			fire_only_once = yes
-
-			threshold = {
+			
+			threshold = { 
 				min = 0
 				max = 75
 			}
-
+			
 			weight = {
 				base = 1
 			}
-
+			
 			option = {
 				token = sp_rockets_flying_bomb_mass_production_scaling_reward_option
-
+						
 				iteration_output = {
 					equipment_bonus = {
 						guided_missile_equipment = {
@@ -242,19 +242,19 @@ sp_rockets_flying_bomb = {
 		# Engine Optimization
 		sp_rockets_flying_bomb_engine_optimization_breakthrough_reward = {
 			fire_only_once = yes
-
-			threshold = {
+			
+			threshold = { 
 				min = 0
 				max = 75
 			}
-
+			
 			weight = {
 				base = 1
 			}
-
+			
 			option = {
 				token = sp_rockets_flying_bomb_engine_optimization_breakthrough_reward_option
-
+						
 				iteration_output = {
 					equipment_bonus = {
 						guided_missile_equipment = {
@@ -268,19 +268,19 @@ sp_rockets_flying_bomb = {
 		# Technological Innovations
 		sp_rockets_flying_bomb_technological_innovation_in_guidance_systems_reward = {
 			fire_only_once = yes
-
-			threshold = {
+			
+			threshold = { 
 				min = 0
 				max = 75
 			}
-
+			
 			weight = {
 				base = 1
 			}
-
+			
 			option = {
 				token = sp_rockets_flying_bomb_technological_innovation_in_guidance_systems_reward_option
-
+						
 				iteration_output = {
 					equipment_bonus = {
 						guided_missile_equipment = {
@@ -294,19 +294,19 @@ sp_rockets_flying_bomb = {
 		# Test Flight Failures
 		sp_rockets_flying_bomb_test_flight_failures_reward = {
 			fire_only_once = yes
-
-			threshold = {
+			
+			threshold = { 
 				min = 0
 				max = 75
 			}
-
+			
 			weight = {
 				base = 1
 			}
-
+			
 			option = {
 				token = sp_rockets_flying_bomb_test_flight_failures_reward_option
-
+						
 				iteration_output = {
 					country_effects = {
 						FROM = { add_project_progress_ratio = constant:sp_progress.loss.low }
@@ -324,35 +324,35 @@ sp_rockets_flying_bomb = {
 }
 
 
-###   ##  #   #   ###  ## ### ###  ##      #   # ###  ##  ## ### #   ###  ##
-#  # #  # #   #    #  #    #   #  #  #     ## ##  #  #   #    #  #   #   #
-###  #### #   #    #   #   #   #  #        # # #  #   #   #   #  #   ##   #
-#  # #  # #   #    #    #  #   #  #  #     #   #  #    #   #  #  #   #     #
-###  #  # ### ### ### ##   #  ###  ##      #   # ### ##  ##  ### ### ### ##
+###   ##  #   #   ###  ## ### ###  ##      #   # ###  ##  ## ### #   ###  ## 
+#  # #  # #   #    #  #    #   #  #  #     ## ##  #  #   #    #  #   #   #   
+###  #### #   #    #   #   #   #  #        # # #  #   #   #   #  #   ##   #  
+#  # #  # #   #    #    #  #   #  #  #     #   #  #    #   #  #  #   #     # 
+###  #  # ### ### ### ##   #  ###  ##      #   # ### ##  ##  ### ### ### ##  
 
 
 # Ballistic Missiles - The V2 programme
 sp_rockets_ballistic_missile = {
-	specialization = specialization_air
+	specialization = specialization_air 
 	breakthrough_cost = {
 		specialization_air = 3
 	}
-
+	
 	icon = GFX_sp_rockets_ballistic_missile
-
+	
 	project_tags = sp_tag_rocket
 
 	complexity = sp_complexity.large
 
 	resource_cost = {
 		resources = {
-			steel = 9
+			steel = 9 
 			aluminium = 9
 			chromium = 9
 		}
 	}
 
-	available = {
+	available = { 
 		FROM = {
 			has_tech = experimental_rockets
 		}
@@ -373,26 +373,26 @@ sp_rockets_ballistic_missile = {
 			ROOT = { NOT = { has_tech = radio_detection } }
 		}
 	}
-
+	
 	prototype_time = sp_time.prototype.medium
 
 	project_output = {
 		country_effects = {
-			if = {
+			if = { 
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
 				custom_effect_tooltip = {
 					localization_key = SP_ROCKET_AND_SUBMARINE_SITE_REMINDER_PROJECT
 					PROJECT = sp_rockets_ballistic_missile
-				}
+				}				
 			}
 			else = {
 				custom_effect_tooltip = {
 					localization_key = SP_ROCKET_SITE_REMINDER_PROJECT
 					PROJECT = sp_rockets_ballistic_missile
 				}
-			}
+			}		
 		}
 
 		enable_equipments = {
@@ -407,7 +407,7 @@ sp_rockets_ballistic_missile = {
 			}
 			guided_missile_equipment_2
 		}
-
+		
 	}
 
 	generic_prototype_rewards = {
@@ -427,14 +427,14 @@ sp_rockets_ballistic_missile = {
 		sp_air_generic_reward_major_progress_3
 		sp_air_generic_reward_test_failure_1
 		sp_air_generic_reward_test_failure_2
-		sp_air_generic_reward_test_failure_3
+		sp_air_generic_reward_test_failure_3	
 	}
 
 	unique_prototype_rewards = {
 		sp_rocket_wind_tunnel_choice_reward = {
 			fire_only_once = yes
 
-			threshold = {
+			threshold = { 
 				min = 0
 				max = 20
 			}
@@ -445,17 +445,17 @@ sp_rockets_ballistic_missile = {
 
 			option = {
 				token = sp_rocket_wind_tunnel_choice_reward_reject
-
+				
 				iteration_output = {
 					country_effects = {
-
+						
 					}
 				}
 			}
 
 			option = {
 				token = sp_rocket_wind_tunnel_choice_reward_agree
-
+				
 				iteration_output = {
 					country_effects = {
 						add_timed_idea = {
@@ -471,7 +471,7 @@ sp_rockets_ballistic_missile = {
 		sp_rocket_glass_wool_choice_reward = {
 			fire_only_once = yes
 
-			threshold = {
+			threshold = { 
 				min = 70
 				max = 90
 			}
@@ -486,7 +486,7 @@ sp_rockets_ballistic_missile = {
 
 			option = {
 				token = sp_rocket_glass_wool_choice_reward_accept
-
+				
 				iteration_output = {
 					country_effects = {
 						FROM = { add_project_progress_ratio = constant:sp_progress.loss.low }
@@ -504,7 +504,7 @@ sp_rockets_ballistic_missile = {
 		sp_rocket_guidance_system_choice_reward = {
 			fire_only_once = yes
 
-			threshold = {
+			threshold = { 
 				min = 30
 				max = 60
 			}
@@ -513,7 +513,7 @@ sp_rockets_ballistic_missile = {
 				base = 1000.0
 				modifier = {
 					factor = 0
-					FROM = {
+					FROM = {	
 						NOT = {
 							AND = {
 								has_tech = radio
@@ -559,17 +559,17 @@ sp_rockets_ballistic_missile = {
 
 # Medium range Missiles
 sp_rockets_medium_range_ballistic_missile = {
-	specialization = specialization_air
-
+	specialization = specialization_air 
+	
 	icon = GFX_sp_rockets_medium_range_ballistic_missiles
-
+	
 	project_tags = sp_tag_rocket
 
 	complexity = sp_complexity.large
 
 	resource_cost = {
 		resources = {
-			steel = 12
+			steel = 12 
 			aluminium = 9
 			chromium = 9
 		}
@@ -579,34 +579,34 @@ sp_rockets_medium_range_ballistic_missile = {
 		sp_rockets_ballistic_missile
 	}
 
-	available = {
-
+	available = { 
+		
 	}
 
 	ai_will_do = {
 		base = 1
 	}
-
-	prototype_time = sp_time.prototype.medium
+	
+	prototype_time = sp_time.prototype.medium	
 
 	project_output = {
 		country_effects = {
-			if = {
+			if = { 
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
 				custom_effect_tooltip = {
 					localization_key = SP_ROCKET_AND_SUBMARINE_SITE_REMINDER_PROJECT
 					PROJECT = sp_rockets_medium_range_ballistic_missile
-				}
+				}				
 			}
 			else = {
 				custom_effect_tooltip = {
 					localization_key = SP_ROCKET_SITE_REMINDER_PROJECT
 					PROJECT = sp_rockets_medium_range_ballistic_missile
 				}
-			}
-		}
+			}		
+		}	
 		enable_equipments = {
 			limit = {
 				has_dlc = "Gotterdammerung"
@@ -619,7 +619,7 @@ sp_rockets_medium_range_ballistic_missile = {
 			}
 			guided_missile_equipment_3
 		}
-
+		
 	}
 
 	generic_prototype_rewards = {
@@ -639,14 +639,14 @@ sp_rockets_medium_range_ballistic_missile = {
 		sp_air_generic_reward_major_progress_3
 		sp_air_generic_reward_test_failure_1
 		sp_air_generic_reward_test_failure_2
-		sp_air_generic_reward_test_failure_3
+		sp_air_generic_reward_test_failure_3		
 	}
 
 	unique_prototype_rewards = {
 		sp_rocket_turbo_pump_froth_reward = {
 			fire_only_once = yes
 
-			threshold = {
+			threshold = { 
 				min = 40
 				max = 70
 			}
@@ -657,7 +657,7 @@ sp_rockets_medium_range_ballistic_missile = {
 
 			option = {
 				token = sp_rocket_turbo_pump_froth_reward_accept
-
+				
 				iteration_output = {
 					country_effects = {
 						FROM = { add_project_progress_ratio = constant:sp_progress.loss.medium }
@@ -670,12 +670,12 @@ sp_rockets_medium_range_ballistic_missile = {
 					}
 				}
 			}
-		}
+		}	
 
 		sp_rocket_relay_failure_reward = {
 			fire_only_once = yes
 
-			threshold = {
+			threshold = { 
 				min = 70
 				max = 95
 			}
@@ -686,7 +686,7 @@ sp_rockets_medium_range_ballistic_missile = {
 
 			option = {
 				token = sp_rocket_relay_failure_reward_accept
-
+				
 				iteration_output = {
 					country_effects = {
 						FROM = { add_project_progress_ratio = constant:sp_progress.loss.low }
@@ -710,10 +710,10 @@ sp_rockets_medium_range_ballistic_missile = {
 
 # Long range Missiles
 sp_rockets_long_range_ballistic_missile = {
-	specialization = specialization_air
-
+	specialization = specialization_air 
+	
 	icon = GFX_sp_rockets_icbm
-
+	
 	project_tags = {
 		sp_tag_rocket
 		sp_tag_nuclear_warfare
@@ -722,7 +722,7 @@ sp_rockets_long_range_ballistic_missile = {
 	complexity = sp_complexity.large
 	resource_cost = {
 		resources = {
-			steel = 12
+			steel = 12 
 			aluminium = 12
 			chromium = 12
 		}
@@ -742,7 +742,7 @@ sp_rockets_long_range_ballistic_missile = {
 	ai_will_do = {
 		base = 1
 	}
-
+	
 	prototype_time = sp_time.prototype.medium
 
 	project_output = {
@@ -750,13 +750,13 @@ sp_rockets_long_range_ballistic_missile = {
 			custom_effect_tooltip = {
 				localization_key = SP_ROCKET_AND_SUBMARINE_SITE_REMINDER_PROJECT
 				PROJECT = sp_rockets_long_range_ballistic_missile
-			}
-		}
+			}						
+		}	
 		enable_equipments = {
 			#ballistic_missile_equipment_3
 			nuclear_missile_equipment_2
 		}
-
+		
 	}
 
 	generic_prototype_rewards = {
@@ -776,14 +776,14 @@ sp_rockets_long_range_ballistic_missile = {
 		sp_air_generic_reward_major_progress_3
 		sp_air_generic_reward_test_failure_1
 		sp_air_generic_reward_test_failure_2
-		sp_air_generic_reward_test_failure_3
+		sp_air_generic_reward_test_failure_3		
 	}
 
 	unique_prototype_rewards = {
 		sp_rocket_outercoating_reward = {
 			fire_only_once = yes
 
-			threshold = {
+			threshold = { 
 				min = 40
 				max = 90
 			}
@@ -800,7 +800,7 @@ sp_rockets_long_range_ballistic_missile = {
 
 			option = {
 				token = sp_rocket_outercoating_reward_accept
-
+				
 				iteration_output = {
 					country_effects = {
 						FROM = { add_project_progress_ratio = constant:sp_progress.gain.low }
@@ -812,7 +812,7 @@ sp_rockets_long_range_ballistic_missile = {
 		sp_rocket_launch_site_choice_reward = {
 			fire_only_once = yes
 
-			threshold = {
+			threshold = { 
 				min = 30
 				max = 60
 			}
@@ -827,7 +827,7 @@ sp_rockets_long_range_ballistic_missile = {
 
 			option = {
 				token = sp_rocket_launch_site_choice_reward_reject
-
+				
 				iteration_output = {
 					country_effects = {
 						#Do nothing, this is the default option
@@ -838,7 +838,7 @@ sp_rockets_long_range_ballistic_missile = {
 
 			option = {
 				token = sp_rocket_launch_site_choice_reward_accept
-
+				
 				iteration_output = {
 
 					country_effects = {
@@ -857,7 +857,7 @@ sp_rockets_long_range_ballistic_missile = {
 									}
 									rocket_site < 2
 								}
-
+							
 							add_building_construction = {
 								type = rocket_site
 								level = 2
@@ -871,21 +871,21 @@ sp_rockets_long_range_ballistic_missile = {
 	}
 }
 
- ##  ###   ##  #  # #  # ###      ###  ##       ##  ### ###
-#    #  # #  # #  # ## # #  #      #  #  #     #  #  #  #  #
-# ## ###  #  # #  # # ## #  #      #  #  #     ####  #  ###
-#  # #  # #  # #  # #  # #  #      #  #  #     #  #  #  #  #
- ##  #  #  ##   ##  #  # ###       #   ##      #  # ### #  #
+ ##  ###   ##  #  # #  # ###      ###  ##       ##  ### ###  
+#    #  # #  # #  # ## # #  #      #  #  #     #  #  #  #  # 
+# ## ###  #  # #  # # ## #  #      #  #  #     ####  #  ###  
+#  # #  # #  # #  # #  # #  #      #  #  #     #  #  #  #  # 
+ ##  #  #  ##   ##  #  # ###       #   ##      #  # ### #  # 
 
 
 # Ground to Air Missiles - The Wasserfall Project
 sp_rockets_ground_to_air_missile = {
-	specialization = specialization_air
+	specialization = specialization_air 
 	breakthrough_cost = {
 		specialization_air = 2
 	}
-
-	icon = GFX_sp_rockets_surface_to_air_missiles
+	
+	icon = GFX_sp_rockets_surface_to_air_missiles 
 
 	project_tags = {
 		sp_tag_rocket
@@ -893,12 +893,12 @@ sp_rockets_ground_to_air_missile = {
 	}
 	resource_cost = {
 		resources = {
-			steel = 6
+			steel = 6 
 			aluminium = 9
 			tungsten = 6
 		}
-	}
-	complexity = sp_complexity.large
+	}	
+	complexity = sp_complexity.large 
 
 	allowed = {
 		has_dlc = "Gotterdammerung"
@@ -908,17 +908,17 @@ sp_rockets_ground_to_air_missile = {
 		sp_rockets_ballistic_missile
 	}
 
-	available = {
+	available = { 
 		FROM = {
 			has_tech = experimental_rockets
 		}
 	}
-
+	
 	ai_will_do = {
 		base = 1
 	}
-
-	prototype_time = sp_time.prototype.medium
+	
+	prototype_time = sp_time.prototype.medium	 
 
 	project_output = {
 		country_effects = {
@@ -932,7 +932,7 @@ sp_rockets_ground_to_air_missile = {
 		enable_equipments = {
 			sam_missile_equipment_1
 		}
-
+		
 	}
 
 	generic_prototype_rewards = {
@@ -952,26 +952,26 @@ sp_rockets_ground_to_air_missile = {
 		sp_air_generic_reward_major_progress_3
 		sp_air_generic_reward_test_failure_1
 		sp_air_generic_reward_test_failure_2
-		sp_air_generic_reward_test_failure_3
+		sp_air_generic_reward_test_failure_3		
 	}
 
 	unique_prototype_rewards = {
 		# Ground control improvements
 		sp_rockets_ground_control_improvements_reward = {
 			fire_only_once = yes
-
-			threshold = {
+			
+			threshold = { 
 				min = 0
 				max = 75
 			}
-
+			
 			weight = {
 				base = 1
 			}
-
+			
 			option = {
 				token = sp_rockets_flying_bomb_launch_ramp_innovations_reward_option
-
+						
 				iteration_output = {
 					country_effects = {
 						FROM = { add_project_progress_ratio = constant:sp_progress.gain.low }
@@ -983,19 +983,19 @@ sp_rockets_ground_to_air_missile = {
 		# Ground control improvements
 		sp_rockets_vertical_launch_reward = {
 			fire_only_once = yes
-
-			threshold = {
+			
+			threshold = { 
 				min = 0
 				max = 30
 			}
-
+			
 			weight = {
 				base = 1
 			}
-
+			
 			option = {
 				token = sp_rockets_flying_bomb_launch_ramp_innovations_reward_option
-
+						
 				iteration_output = {
 					country_effects = {
 						FROM = { add_project_progress_ratio = constant:sp_progress.gain.low }
@@ -1014,26 +1014,26 @@ sp_rockets_ground_to_air_missile = {
 		# High Speed Flight Control
 		sp_rockets_high_speed_flight_control_reward = {
 			fire_only_once = yes
-
-			threshold = {
+			
+			threshold = { 
 				min = 25
 				max = 80
 			}
-
+			
 			weight = {
 				base = 1
 			}
-
+			
 			option = {
 				token = sp_rockets_flying_bomb_launch_ramp_innovations_reward_option
-
+						
 				iteration_output = {
 					country_effects = {
 						add_tech_bonus = {
 							name = sp_rockets_high_speed_flight_control_bonus
 							bonus = 0.15
 							uses = 1
-							category = air_equipment
+							category = air_equipment 
 						}
 					}
 				}
@@ -1043,19 +1043,19 @@ sp_rockets_ground_to_air_missile = {
 		# Warhead Detonation Mechanisms
 		sp_rockets_warhead_detonation_mechanisms_reward = {
 			fire_only_once = yes
-
-			threshold = {
+			
+			threshold = { 
 				min = 30
 				max = 100
 			}
-
+			
 			weight = {
 				base = 1
 			}
-
+			
 			option = {
 				token = sp_rockets_flying_bomb_launch_ramp_innovations_reward_option
-
+						
 				iteration_output = {
 					country_effects = {
 						add_equipment_bonus = {
@@ -1082,9 +1082,9 @@ sp_rockets_ground_to_air_missile = {
 
 
 sp_rocket_interceptor = {
-	specialization = specialization_air
-
-	icon = GFX_sp_rockets_rocket_interceptor
+	specialization = specialization_air 
+	
+	icon = GFX_sp_rockets_rocket_interceptor 
 
 	project_tags = {
 		sp_tag_rocket
@@ -1093,13 +1093,13 @@ sp_rocket_interceptor = {
 	complexity = sp_complexity.large
 	resource_cost = {
 		resources = {
-			tungsten = 6
+			tungsten = 6 
 			aluminium = 12
 			chromium = 6
 		}
 	}
 
-	available = {
+	available = { 
 		FROM = {
 			has_tech = experimental_rockets
 		}
@@ -1116,23 +1116,23 @@ sp_rocket_interceptor = {
 			ROOT = { is_major = no }
 		}
 	}
-
+	
 	prototype_time = sp_time.prototype.medium
 
 	project_output = {
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_TECH
-				TECH = improved_rocket_engines
+				TECH = improved_rocket_engines	
 			}
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_TECH
-				TECH = advanced_rocket_engines
+				TECH = advanced_rocket_engines	
 			}
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
-				 SP_create_variant_based_on_country_improved_small_airframe_rocket_engine = yes
-			}
+				 SP_create_variant_based_on_country_improved_small_airframe_rocket_engine = yes	
+			}		
 		}
 		enable_equipments = {
 			limit = {
@@ -1141,12 +1141,12 @@ sp_rocket_interceptor = {
 			rocket_interceptor_equipment_1
 		}
 		enable_equipment_modules = {
-			limit = {
-				has_dlc = "By Blood Alone"
+			limit = { 
+				has_dlc = "By Blood Alone" 
 			}
 			rocket_engine_1
 		}
-
+		
 	}
 
 	generic_prototype_rewards = {
@@ -1166,11 +1166,11 @@ sp_rocket_interceptor = {
 		sp_air_generic_reward_major_progress_3
 		sp_air_generic_reward_test_failure_1
 		sp_air_generic_reward_test_failure_2
-		sp_air_generic_reward_test_failure_3
+		sp_air_generic_reward_test_failure_3		
 	}
 }
 
 
-
+	
 
 

@@ -248,6 +248,7 @@
  sbfocus_events.8.a: "Marines"
  sbfocus_events.8.b: "Paratroopers"
  sbfocus_events.8.c: "Mountaineers"
+ sbfocus_events.9.e: "Rangers"
  sbfocus_events.9.t: "Heavy Fleet Selection"
  sbfocus_events.9.d: "Choose the type of heavy fleet for production"
  sbfocus_events.9.a: "Carriers"

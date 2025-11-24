@@ -346,6 +346,12 @@ country_event = {
 			tech_mountaineers = 1
 		}  
     }
+    option = {
+        name = sbfocus_events.9.e
+        set_technology = {
+            rangers_tech = 1
+        }
+    }
 }
 
 country_event = {

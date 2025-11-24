@@ -24,6 +24,7 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = 0.3
 				max_fuel_factor = -0.25
 				fuel_gain_factor = -0.4
+				factory_energy_consumption = -0.3
 			}
 
 			default = yes
@@ -49,6 +50,7 @@ ideas = {
 				production_speed_arms_factory_factor = -0.1
 				production_speed_dockyard_factor = -0.1
 				fuel_gain_factor = -0.25
+				factory_energy_consumption = -0.15
 			}
 
 			cancel_if_invalid = no
@@ -135,6 +137,7 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = 0.2
 				industrial_capacity_factory = -0.2
 				industrial_capacity_dockyard = -0.2
+				factory_energy_consumption = 0.15
 			}
 		}
 
@@ -170,6 +173,7 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = -0.3
 				industrial_capacity_factory = -0.2
 				industrial_capacity_dockyard = -0.2
+				factory_energy_consumption = 0.15
 			}
 		}
 
@@ -205,6 +209,7 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = 0.2
 				industrial_capacity_factory = 0.3
 				industrial_capacity_dockyard = -0.2
+				factory_energy_consumption = 0.15
 			}
 		}
 
@@ -240,6 +245,7 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = 0.2
 				industrial_capacity_factory = -0.2
 				industrial_capacity_dockyard = 0.3
+				factory_energy_consumption = 0.15
 			}
 		}
 
@@ -275,6 +281,7 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = 0.2
 				industrial_capacity_factory = -0.2
 				industrial_capacity_dockyard = -0.2
+				factory_energy_consumption = 0.15
 			}
 		}
 
@@ -310,12 +317,11 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = 0.2
 				industrial_capacity_factory = -0.2
 				industrial_capacity_dockyard = -0.2
+				factory_energy_consumption = 0.15
 			}
 		}
 
 		war_economy = {
-
-
 			available = {
 				NOT = {
 					has_country_flag = five_year_plans_started
@@ -348,6 +354,7 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = -0.2
 				industrial_capacity_factory = 0.02
 				industrial_capacity_dockyard = 0.02
+				factory_energy_consumption = 0.25
 			}
 
 			cancel_if_invalid = no
@@ -464,6 +471,7 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = -0.3
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
+				factory_energy_consumption = 0.5
 			}
 
 			cancel_if_invalid = no

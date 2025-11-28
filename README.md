@@ -11,7 +11,7 @@
 
 If you want to support development you can do so:
 
-1. [Donate!](https://www.donationalerts.com/r/splitque)
+1. [Donate!](https://dalink.to/splitque)
 2. If you find a bug, send it to [issues!](https://github.com/splitque/Sandbox/issues)
 3. [Contribute!](https://github.com/splitque/Sandbox/pulls)
 
